@@ -1,0 +1,393 @@
+
+body {
+  font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /*font-size: 12px;*/
+}
+
+.box-card {
+  height: auto;
+}
+
+.header-text-custom {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  color: #000000;
+}
+
+.pagination-container {
+  background: #fff;
+  padding: 15px;
+}
+
+.pagination-container.hidden {
+  display: none;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.el-card__header {
+  padding: 7px 10px !important;
+}
+
+.el-form-item__label {
+  line-height: 0 !important;
+  font-size: 13px !important;
+  font-weight: bold !important;
+  word-break: break-word !important;
+}
+
+.step-header-container {
+  position: relative;
+  height: 71px;
+  margin: -20px -20px -50px;
+  background-color: #FAFAFA;
+}
+
+.declaration-container {
+  padding: 0.4rem;
+}
+
+.declaration-container > .active {
+  background-color: #eaf3ff !important;
+  border: 1px solid #7ab6ff;
+  font-size: 25px !important;
+  margin: 15px;
+}
+
+#active {
+  background-color: #eaf3ff !important;
+  border: 1px solid #7ab6ff;
+  font-size: 25px !important;
+  margin: 15px;
+}
+
+
+.visible-tooltip {
+  padding: 10px 10px 0 !important;
+  min-width: auto !important;
+}
+
+.icon-wrapper {
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.el-steps {
+  width: 70%;
+  margin: auto;
+}
+
+/*.step-content-container {
+  margin: 27px 0 0;
+  max-height: calc(100vh - 335px);
+  border: none !important;
+}*/
+
+.el-step.is-center .el-step__line {
+  display: none;
+}
+
+.step-content {
+  padding: 10px;
+  height: calc(100vh - 390px);
+  overflow-y: auto;
+}
+
+.step-success {
+  color: #13ce66;
+
+  /*   background-color: #ECFFEC !important;
+     border-radius: 8px;
+     border: 1px solid #AFFFAD;
+     color: #24BD20;*/
+}
+
+.el-table__cell {
+  font-size: 14px;
+}
+
+.success {
+  background-color: #ECFFEC !important;
+  border-radius: 8px;
+  border: 1px solid #AFFFAD;
+  color: #24BD20;
+}
+
+.step-failure, .step-success {
+  position: absolute;
+  top: 22px;
+  right: -12px;
+  font-size: 20px;
+}
+
+.step-failure {
+  color: #ffba00;
+}
+
+.step-title {
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 3em 0 1em 0;
+  font-size: large;
+}
+
+
+.footer-container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 15px -145px -17px -27px;
+  background: #fafafa;
+  padding: 12px 150px 12px 30px
+}
+.label-dropdown {
+  color: #1472e6;
+  font-weight: 700;
+}
+
+.desc {
+  color: rgba(0, 0, 0, .4);
+  font-size: 12px;
+}
+
+.collapse-container .el-collapse {
+  border-top: none;
+  border-bottom: none;
+}
+
+.collapse-container .el-collapse .el-collapse-item__header .is-active .el-collapse-item__arrow {
+  visibility: hidden;
+}
+
+.el-collapse-item .el-collapse-item__wrap {
+  border-bottom: none !important;
+}
+
+.collapse-container .custom-collapse {
+  font-size: 32px;
+  margin-right: 10px;
+  transition: transform .2s;
+}
+
+.collapse-container .is-collapse {
+  transform: rotate(-90deg);
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+::v-deep .el-divider--horizontal {
+  margin: 2px 0;
+}
+
+::v-deep .el-collapse-item__wrap {
+  border-top: none;
+  border-bottom: none;
+}
+
+::v-deep .el-collapse-item__arrow {
+  visibility: hidden;
+}
+
+::v-deep .el-collapse-item__header {
+  border-bottom: none;
+}
+
+::v-deep .el-collapse-item__content {
+  padding-bottom: 5px;
+}
+#svg-icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+
+.svg-external-icon {
+  background-color: currentColor;
+  mask-size: cover !important;
+  display: inline-block;
+}
+
+
+
+
+.el-collapse {
+  border-top: none !important;
+  border-bottom: none;
+}
+
+.el-collapse-item__wrap {
+  border-bottom: none !important;
+}
+
+.el-collapse-item__header {
+  border-bottom: none !important;
+}
+
+
+.el-collapse-item__header .is-active .el-collapse-item__arrow {
+  visibility: hidden;
+}
+
+
+.custom-collapse {
+  font-size: 32px;
+  margin-right: 10px;
+  transition: transform .2s;
+}
+
+.is-collapse {
+  transform: rotate(-90deg);
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.el-divider--horizontal {
+  margin: 2px 0;
+}
+
+.el-collapse-item__wrap {
+  border-top: none;
+  border-bottom: none;
+}
+
+.el-collapse-item__arrow {
+  visibility: hidden;
+}
+
+.el-collapse-item__header {
+  border-bottom: none;
+}
+
+.el-collapse-item__content {
+  padding-bottom: 5px;
+}
+
+.step-name {
+  color: #777;
+  margin: 10px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.svg-icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 1366px) {
+  .fixSizeWhenScale {
+    -webkit-transform: scale(0.8);
+  }
+}
+
+.appen-input .with-prefix .el-input__inner {
+  border-radius: 0px;
+}
+
+.appen-input .without-prefix .el-input__inner {
+  border-radius: 4px 0px 0px 4px;
+}
+
+.appen-input .without-prefix .el-input__inner {
+  border-radius: 4px 0px 0px 4px;
+}
+
+.appen-input .suffix {
+  height: 2em;
+}
+
+.appen-input .suffix .el-button {
+  border-left: 0px;
+}
+
+.custom-delete-button .el-icon-error {
+  color: red;
+  margin: -1px;
+  padding: 0;
+}
+
+.custom-delete-button .el-button--mini .el-button--mini.is-round {
+  padding: 4px 8px;
+}
+
+.table-header-edit {
+  background: #fafafa !important;
+  padding-bottom: 0.2rem;
+  padding-top: 0.2rem;
+  font-weight: bold;
+  border-bottom: 1px solid #E8E8E8 !important;
+  color: #000000 !important;
+  font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 13px;
+}
+
+.content-dialog-hanghoa {
+  height: 580px;
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.EmptyBox20 {
+  height: 20px !important
+}
+
+.el-textarea__inner {
+  max-height: 1em !important;
+}
+
+.el-input__count {
+  top: 0.5em !important;
+}
+
+.append-two-component .prefix .el-button {
+  width: 100%;
+  border-radius: 4px 0px 0px 4px;
+  border-right: 0px;
+}
+
+.append-two-component .suffix .el-button {
+  border-radius: 0px 4px 4px 0px;
+  border-left: 0px;
+
+}
+
+.append-two-component .prefix-text {
+  width: 100%;
+  background-color: #E8E8E8;
+  color: #686868;
+  font-weight: bold;
+  cursor: context-menu;
+}
+
+.append-two-component  .with-prefix .el-input__inner{
+  border-radius: 0px;
+}
+
+.append-two-component .without-prefix .el-input__inner{
+  border-radius: 4px 0px 0px 4px;
+}
+
+.custom_error ::v-deep .el-form-item__error {
+  position: unset !important;
+}

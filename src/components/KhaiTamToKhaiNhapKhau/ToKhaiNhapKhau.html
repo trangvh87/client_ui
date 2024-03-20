@@ -1,0 +1,4702 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <!-- import CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <style>
+      body {
+          font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          /*font-size: 12px;*/
+      }
+
+      .box-card {
+          height: auto;
+      }
+
+      .header-text-custom {
+          font-style: normal;
+          font-weight: 700;
+          font-size: 18px;
+          color: #000000;
+      }
+
+      .pagination-container {
+        background: #fff;
+        padding: 15px;
+      }
+
+      .pagination-container.hidden {
+        display: none;
+      }
+
+      .card-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+      }
+
+      .el-card__header {
+          padding: 7px 10px !important;
+      }
+
+      .el-form-item__label {
+          line-height: 0 !important;
+          font-size: 13px !important;
+          font-weight: bold !important;
+          word-break: break-word !important;
+      }
+
+      .step-header-container {
+          position: relative;
+          height: 71px;
+          margin: -20px -20px -50px;
+          background-color: #FAFAFA;
+      }
+
+      .declaration-container {
+          padding: 0.4rem;
+      }
+
+      .declaration-container > .active {
+          background-color: #eaf3ff !important;
+          border: 1px solid #7ab6ff;
+          font-size: 25px !important;
+          margin: 15px;
+      }
+
+      #active {
+          background-color: #eaf3ff !important;
+          border: 1px solid #7ab6ff;
+          font-size: 25px !important;
+          margin: 15px;
+      }
+
+
+      .visible-tooltip {
+          padding: 10px 10px 0 !important;
+          min-width: auto !important;
+      }
+
+      .icon-wrapper {
+          padding: 10px;
+          border-radius: 8px;
+      }
+
+      .el-steps {
+          width: 70%;
+          margin: auto;
+      }
+
+      .step-content-container {
+          margin: 27px 0 0;
+          max-height: calc(100vh - 335px);
+          border: none !important;
+      }
+
+      .el-step.is-center .el-step__line {
+          display: none;
+      }
+
+      .step-content {
+          padding: 10px;
+          height: calc(100vh - 390px);
+          overflow-y: auto;
+      }
+
+      .step-success {
+        color: #13ce66;
+
+     /*   background-color: #ECFFEC !important;
+        border-radius: 8px;
+        border: 1px solid #AFFFAD;
+        color: #24BD20;*/
+      }
+
+      .el-table__cell {
+        font-size: 14px;
+      }
+
+      .success {
+        background-color: #ECFFEC !important;
+        border-radius: 8px;
+        border: 1px solid #AFFFAD;
+        color: #24BD20;
+      }
+
+      .step-failure, .step-success {
+        position: absolute;
+        top: 22px;
+        right: -12px;
+        font-size: 20px;
+      }
+
+      .step-failure {
+        color: #ffba00;
+      }
+
+      .step-title {
+          text-transform: uppercase;
+          font-weight: 700;
+          padding: 20px 0;
+      }
+
+
+      .footer-container {
+          position: relative;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+          justify-content: space-between;
+          margin: 15px -145px -17px -27px;
+          background: #fafafa;
+          padding: 12px 150px 12px 30px
+      }
+      .label-dropdown {
+          color: #1472e6;
+          font-weight: 700;
+      }
+
+      .desc {
+          color: rgba(0, 0, 0, .4);
+          font-size: 12px;
+      }
+
+      .collapse-container .el-collapse {
+        border-top: none;
+        border-bottom: none;
+      }
+
+      .collapse-container .el-collapse .el-collapse-item__header .is-active .el-collapse-item__arrow {
+        visibility: hidden;
+      }
+
+      .el-collapse-item .el-collapse-item__wrap {
+        border-bottom: none !important;
+      }
+
+     .collapse-container .custom-collapse {
+        font-size: 32px;
+        margin-right: 10px;
+        transition: transform .2s;
+      }
+
+    .collapse-container .is-collapse {
+        transform: rotate(-90deg);
+      }
+
+      .title {
+        font-size: 16px;
+        font-weight: 700;
+      }
+
+      ::v-deep .el-divider--horizontal {
+        margin: 2px 0;
+      }
+
+      ::v-deep .el-collapse-item__wrap {
+        border-top: none;
+        border-bottom: none;
+      }
+
+      ::v-deep .el-collapse-item__arrow {
+        visibility: hidden;
+      }
+
+      ::v-deep .el-collapse-item__header {
+        border-bottom: none;
+      }
+
+      ::v-deep .el-collapse-item__content {
+        padding-bottom: 5px;
+      }
+      #svg-icon {
+        width: 1em;
+        height: 1em;
+        vertical-align: -0.15em;
+        fill: currentColor;
+        overflow: hidden;
+      }
+
+      .svg-external-icon {
+        background-color: currentColor;
+        mask-size: cover !important;
+        display: inline-block;
+      }
+
+
+
+
+      .el-collapse {
+          border-top: none !important;
+          border-bottom: none;
+      }
+
+      .el-collapse-item__wrap {
+          border-bottom: none !important;
+      }
+
+      .el-collapse-item__header {
+          border-bottom: none !important;
+      }
+
+
+      .el-collapse-item__header .is-active .el-collapse-item__arrow {
+          visibility: hidden;
+      }
+
+
+      .custom-collapse {
+          font-size: 32px;
+          margin-right: 10px;
+          transition: transform .2s;
+      }
+
+      .is-collapse {
+          transform: rotate(-90deg);
+      }
+
+      .title {
+          font-size: 16px;
+          font-weight: 700;
+      }
+
+      .el-divider--horizontal {
+          margin: 2px 0;
+      }
+
+      .el-collapse-item__wrap {
+          border-top: none;
+          border-bottom: none;
+      }
+
+      .el-collapse-item__arrow {
+          visibility: hidden;
+      }
+
+      .el-collapse-item__header {
+          border-bottom: none;
+      }
+
+      .el-collapse-item__content {
+          padding-bottom: 5px;
+      }
+
+      .step-name {
+          color: #777;
+          margin: 10px;
+          font-size: 14px;
+          text-transform: uppercase;
+      }
+
+      .svg-icon {
+          width: 1em;
+          height: 1em;
+          vertical-align: -0.15em;
+          fill: currentColor;
+          overflow: hidden;
+      }
+
+      @media only screen and (max-width: 1366px) {
+          .fixSizeWhenScale {
+              -webkit-transform: scale(0.8);
+          }
+      }
+
+      .appen-input .with-prefix .el-input__inner {
+          border-radius: 0px;
+      }
+
+      .appen-input .without-prefix .el-input__inner {
+          border-radius: 4px 0px 0px 4px;
+      }
+
+      .appen-input .without-prefix .el-input__inner {
+          border-radius: 4px 0px 0px 4px;
+      }
+
+      .appen-input .suffix {
+          height: 2em;
+      }
+
+      .appen-input .suffix .el-button {
+          border-left: 0px;
+      }
+
+      .custom-delete-button .el-icon-error {
+          color: red;
+          margin: -1px;
+          padding: 0;
+      }
+
+      .custom-delete-button .el-button--mini .el-button--mini.is-round {
+          padding: 4px 8px;
+      }
+
+      .table-header-edit {
+          background: #fafafa !important;
+          padding-bottom: 0.2rem;
+          padding-top: 0.2rem;
+          font-weight: bold;
+          border-bottom: 1px solid #E8E8E8 !important;
+          color: #000000 !important;
+          font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          font-size: 13px;
+      }
+
+      .content-dialog-hanghoa {
+          height: 580px;
+          width: 100%;
+          overflow-y: scroll;
+          overflow-x: hidden;
+      }
+
+      .EmptyBox20 {
+          height: 20px !important
+      }
+
+      .el-textarea__inner {
+          max-height: 1em !important;
+      }
+
+      .el-input__count {
+          top: 0.5em !important;
+      }
+
+      .append-two-component .prefix .el-button {
+          width: 100%;
+          border-radius: 4px 0px 0px 4px;
+          border-right: 0px;
+      }
+
+      .append-two-component .suffix .el-button {
+          border-radius: 0px 4px 4px 0px;
+          border-left: 0px;
+
+      }
+
+      .append-two-component .prefix-text {
+          width: 100%;
+          background-color: #E8E8E8;
+          color: #686868;
+          font-weight: bold;
+          cursor: context-menu;
+      }
+
+      .append-two-component  .with-prefix .el-input__inner{
+          border-radius: 0px;
+      }
+
+      .append-two-component .without-prefix .el-input__inner{
+          border-radius: 4px 0px 0px 4px;
+      }
+
+      .custom_error ::v-deep .el-form-item__error {
+          position: unset !important;
+      }
+
+  </style>
+</head>
+<body>
+<div id="app">
+  <template>
+    <el-card>
+      <template #header>
+        <div class="card-header">
+          <div style="padding-left: 10px;">
+            <el-button type="text" icon="el-icon-back" style="padding-right: 20px">
+              <span>Quay lại</span>
+            </el-button>
+            <span class="header-text-custom">Tờ khai nhập khẩu</span>
+          </div>
+          <div>
+            <el-button type="text" icon="el-icon-connection">
+              <span>Kết nối chữ ký số</span>
+            </el-button>
+
+            <el-button type="text" icon="el-icon-document">
+              <span>Quản lý mẫu tờ khai</span>
+            </el-button>
+
+          </div>
+        </div>
+      </template>
+      <div class="step-header-container">
+
+      </div>
+
+      <div class="declaration-container">
+        <div class="step">
+
+          <el-steps :active="active" align-center>
+            <el-step
+              v-for="(step, index) of steps"
+              :key="step.title"
+              icon="el-icon-plus"
+              title=""
+            >
+              <el-popover
+                ref="popover"
+                slot="icon"
+                :open-delay="400"
+                :title="step.title"
+                placement="top"
+                popper-class="visible-tooltip"
+                trigger="hover"
+                width="auto"
+              >
+                <em
+                  slot="reference"
+                  id="active"
+                  :class="active === index ? `active ${step.icon}` : step.icon"
+                  class="icon-wrapper"
+                  @click="setActive(index)"
+                >
+                  <em v-if="active === index" class="triangle"></em>
+                            <em
+                              v-else-if="stepStatus[index] === 'success'"
+                              class="step-success el-icon-success"
+                            ></em>
+                            <em
+                              v-else-if="stepStatus[index] === 'error'"
+                              class="step-failure el-icon-warning"
+                            ></em>
+                </em>
+              </el-popover>
+
+
+            </el-step>
+          </el-steps>
+        </div>
+
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26" fill="none" id="icon-collapse-icon">
+          <rect width="26" height="26" rx="6" fill="#F4F9FF"></rect>
+          <path d="M18 11L13 16L8 11" stroke="#1472E6" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round"
+          ></path>
+        </symbol>
+
+        <div class="step-content-container">
+          <div class="step-title">
+            {{ titleStep }}
+          </div>
+          <div class="step-content">
+            <!--            form thong tin chung-->
+            <div v-if="flagShowContent === TAB_CONTENT.THONG_TIN_CHUNG">
+              <el-form :label-position="'top'" label-width="100px" :model="formToKhai" size="mini" :rules="ruleFormToKhai" ref="thongTinChung">
+                <el-row :gutter="20">
+                  <input-text
+                    prop="soTkDautien"
+                    label="Số TK đầu tiên"
+                    :v-model.sync="formToKhai.soTkDautien"
+                    maxlength="12"
+                    number-gird-responsive="8"
+                  ></input-text>
+
+                  <input-text
+                    prop="soTkNhanh"
+                    label="Số nhánh/Tổng số"
+                    :v-model.sync="formToKhai.soTkNhanh"
+                    maxlength="2"
+                    number-gird-responsive="5"
+                  ></input-text>
+
+                  <input-text
+                    prop="soTkTong"
+                    label=" "
+                    :v-model.sync="formToKhai.soTkTong"
+                    maxlength="2"
+                    number-gird-responsive="3"
+                  ></input-text>
+
+                </el-row>
+
+                <el-row :gutter="20">
+                  <input-select
+                    label="HQ tiếp nhận khai báo"
+                    :v-modal.sync="formToKhai.maHq"
+                    prop="maHq"
+                    :list-option-select="listHq"
+                    :number-gird-responsive="8"
+                  >
+                  </input-select>
+
+                  <input-select
+                    label="Mã bộ phận xử lý tờ khai (NK)"
+                    :v-modal.sync="formToKhai.maBophan"
+                    prop="maBophan"
+                    :list-option-select="listMaBp"
+                    :number-gird-responsive="8"
+                  >
+                  </input-select>
+
+                  <input-select
+                    label="Kênh khai báo"
+                    :v-modal.sync="formToKhai.loaiDnKb"
+                    prop="loaiDnKb"
+                    :list-option-select="listKenhKhaiBao"
+                    :number-gird-responsive="8"
+                  >
+                  </input-select>
+
+                </el-row>
+
+                <el-row :gutter="20">
+                  <input-date
+                    label="Ngày khai báo dự kiến"
+                    v-model="formToKhai.ngayKhDk"
+                    prop="ngayKhDk"
+                    :number-gird-responsive="8"
+                    :picker-options="notBeforeToday"
+                  >
+                  </input-date>
+
+                  <input-select
+                    label="Mã loại hình"
+                    :v-modal.sync="formToKhai.maLh"
+                    prop="maLh"
+                    :list-option-select="listLoaHinh"
+                    :number-gird-responsive="8"
+                  >
+                  </input-select>
+
+                  <input-select
+                    label="Phân loại cá nhân/tổ chức"
+                    :v-modal.sync="formToKhai.plTcCn"
+                    prop="plTcCn"
+                    :list-option-select="listCaNhan"
+                    :number-gird-responsive="8"
+                  >
+                  </input-select>
+
+                </el-row>
+
+                <el-row :gutter="20">
+                  <input-select
+                    label="Mã phân loại HH"
+                    :v-modal.sync="formToKhai.maPlhh"
+                    prop="maPlhh"
+                    :list-option-select="listHoaHoc"
+                    :number-gird-responsive="8"
+                  >
+                  </input-select>
+
+                  <input-select
+                    label="Mã hiệu phương thức VC"
+                    :v-modal.sync="formToKhai.ptvtMa"
+                    prop="ptvtMa"
+                    :list-option-select="listPhuongThuc"
+                    :number-gird-responsive="8"
+                  >
+                  </input-select>
+
+                  <input-text
+                    prop="soTkTnTx"
+                    label="Số TK TNTX tương ứng"
+                    :v-model.sync="formToKhai.soTkTnTx"
+                    maxlength="12"
+                    number-gird-responsive="8"
+                  ></input-text>
+
+                </el-row>
+
+                <el-row :gutter="20">
+                  <input-date
+                    label="Thời hạn tái xuất"
+                    v-model="formToKhai.thoiHanTnTx"
+                    prop="thoiHanTnTx"
+                    :number-gird-responsive="8"
+                  >
+                  </input-date>
+
+                  <input-text
+                    prop="maDnKb"
+                    label="Mã người khai HQ"
+                    :v-model.sync="formToKhai.maDnKb"
+                    disabled
+                    number-gird-responsive="8"
+                  ></input-text>
+
+                  <input-text
+                    prop="tenDnKb"
+                    label="Tên người khai HQ"
+                    :v-model.sync="formToKhai.tenDnKb"
+                    disabled
+                    number-gird-responsive="8"
+                  ></input-text>
+
+                </el-row>
+
+              </el-form>
+            </div>
+
+            <!--            //table ds hang-->
+            <div v-if="flagShowContent === TAB_CONTENT.DANH_SACH_HANG">
+
+              <div style="display: flex; justify-content: flex-end;">
+                <el-button type="text" icon="el-icon-download">
+                  <span>Tải file Excel mẫu</span>
+                </el-button>
+
+                <el-button type="text" icon="el-icon-tickets" style="margin: 0 3.5em">
+                  <span>Thêm mới từ Excel</span>
+                </el-button>
+                <el-button type="text" icon="el-icon-plus" @click="onShowDialogHangHoa">
+                  <span>Thêm mới hàng hóa</span>
+                </el-button>
+              </div>
+              <pagination
+                      style="float: right"
+                      v-show="syncTotal > 0"
+                      :limit.sync="size"
+                      :page.sync="page"
+                      :total="syncTotal"
+                      @pagination="pagination"
+              ></pagination>
+
+              <el-table
+                      border
+                      :data="lstTkHh"
+              >
+                <el-table-column
+                        type="index"
+                        label="STT"
+                        width="50"
+                align="center">
+                </el-table-column>
+                <el-table-column
+                        prop="maHang"
+                        label="Mã hàng hóa"
+                        min-width="180">
+                </el-table-column>
+                <el-table-column
+                        prop="tenHang"
+                        label="Mô tả hàng hóa"
+                        width="180">
+                </el-table-column>
+                <el-table-column
+                        prop="maHs"
+                        label="Mã số hàng hóa"
+                        min-width="180">
+                </el-table-column>
+                <el-table-column
+                        prop="nuocXxMa"
+                        label="Mã nước xuất xứ"
+                        min-width="180">
+                </el-table-column>
+                <el-table-column
+                        prop="luong"
+                        label="Số lượng (1)"
+                        min-width="180">
+                </el-table-column>
+                <el-table-column
+                        prop="maDvt"
+                        label="Mã đơn vị tính (1)"
+                        min-width="180">
+                </el-table-column>
+                <el-table-column
+                        prop="luong2"
+                        label="Số lượng (2)"
+                        min-width="180">
+                </el-table-column>
+                <el-table-column
+                        prop="maDvt2"
+                        label="Mã đơn vị tính (2)"
+                        min-width="180">
+                </el-table-column>
+                <el-table-column
+                        prop="thueMaBieuThue"
+                        label="Mã biểu thuế NK"
+                        min-width="180">
+                </el-table-column>
+                <el-table-column
+                        prop="dgiaKb"
+                        label="Đơn giá hóa đơn"
+                        min-width="180">
+                </el-table-column>
+                <el-table-column
+                        prop="triGiaKb"
+                        label="Trị giá hóa đơn"
+                        min-width="180">
+                </el-table-column>
+                <el-table-column
+                        prop="triGiaTtKb"
+                        label="Trị giá tính thuế"
+                        summarize
+                        min-width="180">
+                </el-table-column>
+                <el-table-column
+                        align="center"
+                        fixed="right"
+                        label="Thao tác"
+                        min-width="200"
+                >
+<!--                  v-if="checkShowBtnThaoTac(scope.row)"-->
+                  <template slot-scope="scope">
+                    <div>
+                      <el-button
+                              size="mini"
+                              icon="el-icon-delete"
+                              plain
+                              type="danger"
+                              title="Xoá hàng hóa"
+                              @click="onDeleteGoods(scope)"
+                      ></el-button>
+                      <el-button
+                              size="mini"
+                              icon="el-icon-document-copy"
+                              plain
+                              title="Sao chép"
+                              type="primary"
+                              @click="onCopyRow(scope)"
+                      ></el-button>
+                      <el-button
+                              size="mini"
+                              icon="el-icon-edit"
+                              plain
+                              title="Chỉnh sửa đơn hàng"
+                              type="primary"
+                              @click="onEditDetailGoods(scope)"
+                      ></el-button>
+                     <!-- <el-button
+                              plain
+                              title="Xem chi tiết"
+                              type="primary"
+                              @click="onViewDetail(scope)"
+                      >
+                        Xem
+                      </el-button>-->
+                    </div>
+                  </template>
+                </el-table-column>
+              </el-table>
+
+
+              <!--              //dialog hang hoa-->
+              <el-dialog
+                :title="titleDialogHangHoa"
+                :visible.sync="dialogHangHoaVisible"
+                :before-close="handleClose"
+                :close-on-click-modal="false"
+                top="5vh"
+                :width="windowHeight <= 1366 ? (windowHeight <= 1200 ? '70%' : '60%') : '55%'"
+              >
+                <el-form
+                  :label-position="'top'"
+                  label-width="100px"
+                  size="mini"
+                  ref="formThemMoiHangHoa"
+                  :model="formThemMoiHangHoa"
+                  :rules="rulesThemMoiHangHoa"
+                >
+
+                  <el-card class="box-card content-dialog-hanghoa" shadow="never">
+                    <el-row :gutter="20">
+                      <el-col :xs="24" :sm="12" :md="24" :lg="24" :xl="24">
+                        <el-form-item label="" >
+                          <el-checkbox
+                            v-model="tuDongTinh"
+                            style="border: 1px solid #E8E8E8; border-radius: 5px;padding: 3px 6px;"
+                          >
+                            Tự động tính Trị giá = SL * Đơn giá hoặc Đơn giá = Trị giá / SL
+                          </el-checkbox>
+                        </el-form-item>
+                      </el-col>
+                    </el-row>
+
+                    <custom-collapse title="Thông tin chung" default-open icon-class="collapse-icon">
+                      <el-row :gutter="20">
+                        <input-text
+                                prop="maHang"
+                                label="Mã hàng hóa (NPL, SP, TB, HM)"
+                                :v-model.sync="formThemMoiHangHoa.maHang"
+                                maxlength="50"
+                                number-gird-responsive="12"
+                        ></input-text>
+
+                        <input-select
+                                label="Loại hàng hoá"
+                                :v-modal.sync="formThemMoiHangHoa.loaiHang"
+                                prop="loaiHang"
+                                :list-option-select="listHangHoa"
+                                number-gird-responsive="12"
+                        >
+                        </input-select>
+                      </el-row>
+
+                      <el-row :gutter="20">
+                        <input-text
+                                prop="tenHang"
+                                label="Mô tả hàng hoá"
+                                :v-model.sync="formThemMoiHangHoa.tenHang"
+                                maxlength="500"
+                                type="textarea"
+                                number-gird-responsive="24"
+                        ></input-text>
+                      </el-row>
+
+                      <el-row :gutter="20">
+                        <input-text
+                                prop="maHs"
+                                label="Mã số hàng hoá"
+                                :v-model.sync="formThemMoiHangHoa.maHs"
+                                maxlength="12"
+                                number-gird-responsive="12"
+                        ></input-text>
+
+                        <input-select
+                                label="Mã nước xuất xứ"
+                                :v-modal.sync="formThemMoiHangHoa.nuocXxMa"
+                                prop="nuocXxMa"
+                                :list-option-select="listNuocXuatXu"
+                                number-gird-responsive="12"
+                        >
+                        </input-select>
+                      </el-row>
+
+                      <el-row :gutter="20">
+                        <input-select
+                                label="Mã ngoài hạn ngạch"
+                                :v-modal.sync="formThemMoiHangHoa.maNgoaiHanNgach"
+                                prop="maNgoaiHanNgach"
+                                :list-option-select="listNgoaiHanNgach"
+                                number-gird-responsive="12"
+                        >
+                        </input-select>
+
+                        <input-text
+                                prop="maQlr"
+                                label="Mã quản lý riêng"
+                                :v-model.sync="formThemMoiHangHoa.maQlr"
+                                maxlength="7"
+                                number-gird-responsive="12"
+                        ></input-text>
+                      </el-row>
+                    </custom-collapse>
+
+                    <h3>Thông tin thuế</h3>
+
+                    <custom-collapse title="Thông tin thuế" default-open icon-class="collapse-icon">
+                      <el-row :gutter="20">
+                        <input-select
+                                label="Mã biểu thuế nhập khẩu"
+                                :v-modal.sync="formThemMoiHangHoa.thueMaBieuThue"
+                                prop="thueMaBieuThue"
+                                :list-option-select="listNgoaiHanNgach"
+                                number-gird-responsive="12"
+                        >
+                        </input-select>
+
+                        <input-select
+                                label="Mã áp dụng mức thuế tuyệt đối"
+                                :v-modal.sync="formThemMoiHangHoa.maXdThueNkTheoLuong"
+                                prop="maXdThueNkTheoLuong"
+                                :list-option-select="listHq"
+                                number-gird-responsive="12"
+                        >
+                        </input-select>
+                      </el-row>
+
+                      <el-row :gutter="20">
+                        <input-text
+                                prop="thueSuat"
+                                label="Thuế suất"
+                                :v-model.sync="formThemMoiHangHoa.thueSuat"
+                                maxlength="21"
+                                number-gird-responsive="6"
+                        ></input-text>
+
+                        <input-text
+                                prop="thueSuatTuyetDoi"
+                                label="Mức thuế tuyệt đối"
+                                :v-model.sync="formThemMoiHangHoa.thueSuatTuyetDoi"
+                                maxlength="21"
+                                number-gird-responsive="6"
+                        ></input-text>
+
+
+                        <input-select
+                                label="Đơn vị tính"
+                                :disabled="!formThemMoiHangHoa.thueSuatTuyetDoi"
+                                :v-modal.sync="formThemMoiHangHoa.thueSuatTuyetDoiDvt"
+                                prop="thueSuatTuyetDoiDvt"
+                                :list-option-select="listDvt"
+                                number-gird-responsive="6"
+                        >
+                        </input-select>
+
+                        <input-select
+                                label="Đơn vị tiền tệ"
+                                :disabled="!formThemMoiHangHoa.thueSuatTuyetDoi"
+                                :v-modal.sync="formThemMoiHangHoa.thueSuatTuyetDoiMaNt"
+                                prop="thueSuatTuyetDoiMaNt"
+                                :list-option-select="listTienTe"
+                                number-gird-responsive="6"
+                        >
+                        </input-select>
+                      </el-row>
+                    </custom-collapse>
+
+                    <custom-collapse title="Số lượng" default-open icon-class="collapse-icon">
+                      <el-row :gutter="20"
+                              style="margin: 10px;
+                  padding: 15px;
+                  background: #E2EFFF;
+                  border-radius: 6px;"
+                      >
+
+                        <input-text
+                                prop="luong"
+                                label="Số lượng (1)"
+                                :v-model.number.sync="formThemMoiHangHoa.luong"
+                                maxlength="21"
+                                number-gird-responsive="5"
+                        ></input-text>
+
+                        <input-select
+                                label="Đơn vị tính (1)"
+                                :v-modal.sync="formThemMoiHangHoa.maDvt"
+                                prop="maDvt"
+                                :list-option-select="listDvt"
+                                number-gird-responsive="6"
+                        >
+                        </input-select>
+
+                        <el-col :span="3">
+                          <div class="text-center">
+                            <el-form-item label=" " prop="luong2">
+                              <el-button
+                                      icon="el-icon-document-copy"
+                                      size="mini"
+                                      @click="onCopyQuantity1To2()"
+                              >
+                                Copy <i class="el-icon-arrow-right el-icon-right"></i>
+                              </el-button>
+                            </el-form-item>
+                          </div>
+                        </el-col>
+
+                        <input-text
+                                prop="luong2"
+                                label="Số lượng (2)"
+                                :v-model.sync="formThemMoiHangHoa.luong2"
+                                maxlength="21"
+                                number-gird-responsive="5"
+                        ></input-text>
+
+                        <input-select
+                                label="Đơn vị tính (2)"
+                                :v-modal.sync="formThemMoiHangHoa.maDvt2"
+                                :disabled="!formThemMoiHangHoa.luong2"
+                                prop="maDvt2"
+                                :list-option-select="listHq"
+                                number-gird-responsive="5"
+                        >
+                        </input-select>
+                      </el-row>
+                    </custom-collapse>
+
+                    <h3>Hóa đơn</h3>
+                    <custom-collapse title="Hóa đơn" default-open icon-class="collapse-icon">
+                      <el-row :gutter="20">
+                        <input-text
+                                prop="triGiaKb"
+                                label="Trị giá hóa đơn"
+                                :v-model.sync="formThemMoiHangHoa.triGiaKb"
+                                maxlength="21"
+                                number-gird-responsive="6"
+                                @blur="onCalcDonGia"
+                        ></input-text>
+
+                        <input-text
+                                prop="dgiaKb"
+                                label="Đơn giá hóa đơn"
+                                :v-model.sync="formThemMoiHangHoa.dgiaKb"
+                                maxlength="21"
+                                number-gird-responsive="6"
+                                @blur="onCalcTriGia"
+                        ></input-text>
+
+                        <input-select
+                                label="Đơn vị tiền tệ"
+                                :disabled="!formThemMoiHangHoa.dgiaKb"
+                                :v-modal.sync="formThemMoiHangHoa.dgiaKbDvt"
+                                prop="dgiaKbDvt"
+                                :list-option-select="listTienTe"
+                                number-gird-responsive="6"
+                        ></input-select>
+
+                        <input-select
+                                label="Đơn vị tính"
+                                :disabled="!formThemMoiHangHoa.dgiaKb"
+                                :v-modal.sync="formThemMoiHangHoa.dgiaKbMaNt"
+                                prop="dgiaKbMaNt"
+                                :list-option-select="listDvt"
+                                number-gird-responsive="6"
+                        ></input-select>
+                      </el-row>
+
+                      <el-row :gutter="20">
+                        <input-text
+                                prop="triGiaTtKb"
+                                label="Trị giá tính thuế"
+                                :v-model.sync="formThemMoiHangHoa.triGiaTtKb"
+                                maxlength="21"
+                                number-gird-responsive="6"
+                        ></input-text>
+
+                        <input-select
+                                label="Đơn vị tiền tệ"
+                                :disabled="!formThemMoiHangHoa.triGiaTtKb"
+                                :v-modal.sync="formThemMoiHangHoa.triGiaTtKbMaNt"
+                                prop="triGiaTtKbMaNt"
+                                :list-option-select="listDvt"
+                                number-gird-responsive="6"
+                        >
+                        </input-select>
+                      </el-row>
+
+                      <el-row :gutter="20">
+                        <el-col :span="24">
+                          <el-form-item label="Số của mục khai khoản điều chỉnh">
+                            <div>
+                              <el-form
+                                      v-if="formThemMoiHangHoa.lstTkHhMkdc && formThemMoiHangHoa.lstTkHhMkdc.length > 0"
+                                      ref="lstTkHhMkdc"
+                                      :model="formThemMoiHangHoa"
+                                      size="mini"
+                                      :rules="rulesThemMoiHangHoa"
+                              >
+                                  <div>
+                                <div
+                                        v-for="(value, index) in formThemMoiHangHoa.lstTkHhMkdc"
+                                        :key="index"
+                                        style="width: 30%; float: left; margin-right: 15px; min-width: 220px;"
+                                >
+                                  <el-form-item  :prop="'lstTkHhMkdc[' + index + '].soDc'" style="margin-top: 1em">
+                                    <append-two-input
+                                            is-remove-star-second
+                                            :span-props="[0, 16, 5]"
+                                    >
+                                      <div slot="input">
+
+                                          <el-input
+                                                  prop="soDc"
+                                                  v-model="formThemMoiHangHoa.lstTkHhMkdc[index].soDc"
+                                                  maxlength="1"
+                                                  placeholder="Số của mục khai khoản điều chỉnh"
+                                                  show-word-limit
+                                                  clearable
+                                          ></el-input>
+                                      </div>
+                                      <div slot="suffix">
+                                        <div class="custom-delete-button">
+                                          <el-button
+                                                  size="mini"
+                                                  icon="el-icon-error"
+                                                  @click="delItem(formThemMoiHangHoa.lstTkHhMkdc, index, validateKhoanDc)"
+                                          />
+                                        </div>
+                                      </div>
+                                    </append-two-input>
+                                  </el-form-item>
+                                </div>
+                                    </div>
+                              </el-form>
+                            </div>
+
+                          </el-form-item>
+                        </el-col>
+                      </el-row>
+
+                      <el-row>
+                        <div>
+                          <el-button
+                                  type="primary"
+                                  plain
+                                  size="mini"
+                                  icon="el-icon-circle-plus-outline"
+                                  @click="addNewItem(formThemMoiHangHoa.lstTkHhMkdc, DEFAULT_VALUE_KHOAN_DC, 'lstTkHhMkdc')"
+                          >
+                            <span>Thêm số mục</span>
+                          </el-button>
+                        </div>
+                      </el-row>
+                    </custom-collapse>
+
+                    <custom-collapse title="Danh mục hàng" default-open icon-class="collapse-icon">
+                      <el-row :gutter="20">
+                        <input-text
+                                prop="sttHangTntx"
+                                label="STT của dòng hàng trên tờ khai TNTX tương ứng"
+                                :v-model.sync="formThemMoiHangHoa.sttHangTntx"
+                                maxlength="2"
+                                number-gird-responsive="12"
+                        ></input-text>
+                      </el-row>
+
+                      <el-row :gutter="20">
+                        <input-text
+                                prop="soDkMienThue"
+                                label="Số đăng ký danh mục miễn thuế NK"
+                                :v-model.sync="formThemMoiHangHoa.soDkMienThue"
+                                maxlength="21"
+                                number-gird-responsive="12"
+                        ></input-text>
+
+                        <input-text
+                                prop="sttHangDmMienThue"
+                                label="Số dòng tương ứng trong danh mục"
+                                :v-model.sync="formThemMoiHangHoa.sttHangDmMienThue"
+                                :disabled="!(formThemMoiHangHoa.soDkMienThue !== null && formThemMoiHangHoa.soDkMienThue !== undefined && `${formThemMoiHangHoa.soDkMienThue}`.length > 0)"
+                                number-gird-responsive="12"
+                        ></input-text>
+                      </el-row>
+
+                      <el-row :gutter="20">
+                        <input-select
+                                label="Mã miễn/giảm/không chịu thuế NK"
+                                :v-modal.sync="formThemMoiHangHoa.thueMienGiamMa"
+                                prop="thueMienGiamMa"
+                                :list-option-select="listMienGiamMa"
+                                number-gird-responsive="12"
+                        >
+                        </input-select>
+                        <input-text
+                                prop="thueGiam"
+                                label="Số tiền giảm thuế nhập khẩu"
+                                :v-model.sync="formThemMoiHangHoa.thueGiam"
+                                number-gird-responsive="12"
+                        ></input-text>
+                      </el-row>
+                    </custom-collapse>
+
+                    <custom-collapse title="Thuế và thu khác" default-open icon-class="collapse-icon">
+                      <div
+                              class="border-el-table"
+                      >
+                        <el-row :gutter="20" class="text-center table-header-edit">
+                          <el-col :span="2" style="word-break: break-word;">
+                            STT
+                          </el-col>
+                          <el-col :span="7" style="word-break: break-word;">
+                            Mã áp dụng thuế suất/Mức thuế
+                          </el-col>
+                          <el-col :span="7" style="word-break: break-word;">
+                            Mã miễn/giảm/không chịu thuế
+                          </el-col>
+                          <el-col :span="7" style="word-break: break-word;">
+                            Số tiền giảm thuế
+                          </el-col>
+                        </el-row>
+                      </div>
+
+                      <div
+                              v-if="!formThemMoiHangHoa.lstTkHhThue || formThemMoiHangHoa.lstTkHhThue.length === 0"
+                              class="el-table__empty-block"
+                              style="height: 100%; width: 100%;"
+                      >
+                        <span class="el-table__empty-text">Không có dữ liệu</span>
+                      </div>
+
+                      <el-form
+                              v-else
+                              ref="thueThuKhac"
+                              :model="formThemMoiHangHoa"
+                              :rules="rulesThemMoiHangHoa"
+                              style="padding-top: 0px"
+                              size="mini"
+                              label-width="0px"
+                              label-position="top"
+
+                      >
+                        <el-row
+                                v-for="(value, index) in formThemMoiHangHoa.lstTkHhThue"
+                                :key="index"
+                                :gutter="10"
+                                class="border-bot"
+                                style="padding: 15px 0 0 0; margin-top: 0px;"
+                        >
+                          <el-col :span="1" style="padding-top: 5px; text-align: center">
+                            {{ index + 1 }}
+                          </el-col>
+
+                          <input-select
+                                  :v-modal.sync="formThemMoiHangHoa.lstTkHhThue[index].thueMst"
+                                  :prop="'lstTkHhThue[' + index + '].thueMst'"
+                                  :list-option-select="listHq"
+                                  number-gird-responsive="7"
+                          >
+                          </input-select>
+
+                          <input-select
+                                  :v-modal.sync="formThemMoiHangHoa.lstTkHhThue[index].thueMienGiamMa"
+                                  :prop="'lstTkHhThue[' + index + '].thueMienGiamMa'"
+                                  :list-option-select="listHq"
+                                  number-gird-responsive="7"
+                          >
+                          </input-select>
+
+                          <input-text
+                                  :prop="'lstTkHhThue[' + index + '].thueGiam'"
+                                  :v-model.sync="formThemMoiHangHoa.lstTkHhThue[index].thueGiam"
+                                  maxlength="21"
+                                  number-gird-responsive="7"
+                          ></input-text>
+
+                          <el-col :span="2" class="text-center">
+                            <el-tooltip :open-delay="400" content="Xóa" effect="light" placement="top">
+                              <div class="custom-delete-button">
+                                <el-button
+                                        size="mini"
+                                        icon="el-icon-error"
+                                        @click="delItem(formThemMoiHangHoa.lstTkHhThue, index, validateThueThuKhac)"
+                                />
+                              </div>
+                            </el-tooltip>
+                          </el-col>
+                        </el-row>
+                        <div class="EmptyBox20"></div>
+                      </el-form>
+
+                      <div class="text-left">
+                        <el-button
+                                type="primary"
+                                size="mini"
+                                plain
+                                icon="el-icon-circle-plus-outline"
+                                @click="addNewItem(formThemMoiHangHoa.lstTkHhThue, DEFAULT_VALUE_THUE_THU_KHAC, 'thueThuKhac', true)"
+                        >
+                          <span>Thêm thuế và thu khác</span>
+                        </el-button>
+                      </div>
+                      </el-collapse-item>
+                    </custom-collapse>
+
+                    <custom-collapse title="Chứng từ chứng nhận xuất xứ C/O" default-open icon-class="collapse-icon">
+                      <el-row :gutter="20">
+                        <input-select
+                                prop="loaiCo"
+                                label="Chế độ ưu đãi thuế (Loại C/O (Form A, D, E, AK))"
+                                :v-modal.sync="coLoai"
+                                :list-option-select="listHq"
+                                number-gird-responsive="12"
+                                @change="onChangeCoLoai"
+                        ></input-select>
+                      </el-row>
+
+                      <el-row :gutter="20">
+                        <el-col :span="24">
+                          <div
+                                  v-for="(value, index) in formThemMoiHangHoa.lstTkHhCo"
+                                  :key="index"
+                          >
+                            <div class="custom-delete-button">
+                              <el-button
+                                      v-show="formThemMoiHangHoa.lstTkHhCo.length"
+                                      icon="el-icon-error"
+                                      style=" font-size: x-large; margin: -12px; padding-top: 0px; position: absolute; right: 1.4em;"
+                                      type="text"
+                                      @click="delItem(formThemMoiHangHoa.lstTkHhCo, index, validateCo)"
+                              >
+                              </el-button>
+                            </div>
+                            <el-card shadow="never" style="width: 98%">
+                              <el-row :gutter="20">
+                                <input-text
+                                        :prop="'lstTkHhCo[' + index + '].coSo'"
+                                        label="Số C/O"
+                                        :v-model.sync="formThemMoiHangHoa.lstTkHhCo[index].coSo"
+                                        maxlength="50"
+                                        number-gird-responsive="12"
+                                        @blur="validateCacField(formThemMoiHangHoa.lstTkHhCo, index, validateCo)"
+                                        @input="validateCacField(formThemMoiHangHoa.lstTkHhCo, index, validateCo)"
+                                ></input-text>
+
+                                <input-text
+                                        :prop="'lstTkHhCo[' + index + '].coNguoiCap'"
+                                        label="Người cấp C/O"
+                                        :v-model.sync="formThemMoiHangHoa.lstTkHhCo[index].coNguoiCap"
+                                        maxlength="50"
+                                        number-gird-responsive="12"
+                                ></input-text>
+
+                                <input-text
+                                        :prop="'lstTkHhCo[' + index + '].coToChucCap'"
+                                        label="Nơi cấp C/O"
+                                        :v-model.sync="value.coToChucCap"
+                                        maxlength="255"
+                                        type="textarea"
+                                        number-gird-responsive="24"
+                                ></input-text>
+
+                                <input-date
+                                        label="Ngày cấp C/O"
+                                        :prop="'lstTkHhCo[' + index + '].coNgay'"
+                                        v-model="value.coNgay"
+                                        number-gird-responsive="12"
+                                >
+                                </input-date>
+
+                                <input-date
+                                        label="Ngày hết hạn C/O"
+                                        v-model="value.coNgayHh"
+                                        :prop="'lstTkHhCo[' + index + '].coNgayHh'"
+                                        number-gird-responsive="12"
+                                >
+                                </input-date>
+                              </el-row>
+                            </el-card>
+                            <div class="EmptyBox20"></div>
+                          </div>
+                        </el-col>
+                      </el-row>
+
+                      <el-row class="text-left">
+                        <el-button
+                                :disabled="isAddButtonDisabledCo"
+                                size="mini"
+                                type="primary"
+                                plain
+                                icon="el-icon-circle-plus-outline"
+                                @click="addNewItemCo"
+                        >
+                          <span>Thêm chứng từ</span>
+                        </el-button>
+                      </el-row>
+                    </custom-collapse>
+
+
+                  </el-card>
+                  <div style="margin-top: 1.5em;text-align: center">
+                    <el-button  icon="el-icon-close" size="small" @click="handleClose">Hủy bỏ</el-button>
+                    <el-button icon="el-icon-check" size="small" type="primary" @click="onAddItemHangHoa">Lưu</el-button>
+                  </div>
+                </el-form>
+              </el-dialog>
+            </div>
+
+            <!--            Đơn vị xuất nhập khẩu-->
+            <div v-if="flagShowContent === TAB_CONTENT.DON_VI_XUAT_NHAP">
+              <el-form :label-position="'top'" label-width="100px" :model="formDonviXuatNhapKhau" size="mini"
+                       :rules="rulesFormDonViXuatNhapKhau"
+                       ref="formDonviXuatNhapKhau"
+              >
+                <custom-collapse title="Thông tin người nhập khẩu" default-open icon-class="collapse-icon">
+                  <el-row :gutter="20">
+                    <input-select
+                            label="Mã người nhập khẩu"
+                            :v-modal.sync="formDonviXuatNhapKhau.dvXnkMa"
+                            prop="dvXnkMa"
+                            :list-option-select="listHq"
+                            number-gird-responsive="8"
+                    >
+                    </input-select>
+
+                    <input-text
+                            prop="dvXnkTen"
+                            label="Tên người nhập khẩu"
+                            :v-model.sync="formDonviXuatNhapKhau.dvXnkTen"
+                            maxlength="200"
+                            type="textarea"
+                            number-gird-responsive="16"
+                    ></input-text>
+                  </el-row>
+
+                  <el-row :gutter="20">
+                    <input-text
+                            prop="dvXnkMaBuuChinh"
+                            label="Mã bưu chính người nhập khẩu"
+                            :v-model.sync="formDonviXuatNhapKhau.dvXnkMaBuuChinh"
+                            maxlength="9"
+                            number-gird-responsive="4"
+                    ></input-text>
+
+                    <input-text
+                            prop="dvXnkDienThoai"
+                            label="Điện thoại người nhập khẩu"
+                            :v-model.sync="formDonviXuatNhapKhau.dvXnkDienThoai"
+                            maxlength="20"
+                            number-gird-responsive="4"
+                    ></input-text>
+
+                    <input-text
+                            prop="dvXnkDiaChi"
+                            label="Địa chỉ người nhập khẩu"
+                            :v-model.sync="formDonviXuatNhapKhau.dvXnkDiaChi"
+                            maxlength="200"
+                            type="textarea"
+                            number-gird-responsive="16"
+                    ></input-text>
+                  </el-row>
+
+                  <el-row :gutter="20">
+                    <input-text
+                            prop="dvUyThacMa"
+                            label="Mã người ủy thác nhập khẩu"
+                            :v-model.sync="formDonviXuatNhapKhau.dvUyThacMa"
+                            maxlength="13"
+                            number-gird-responsive="8"
+                    ></input-text>
+
+                    <input-text
+                            prop="dvUyThacTen"
+                            label="Tên người ủy thác nhập khẩu"
+                            :v-model.sync="formDonviXuatNhapKhau.dvUyThacTen"
+                            maxlength="200"
+                            type="textarea"
+                            number-gird-responsive="16"
+                    ></input-text>
+                  </el-row>
+                </custom-collapse>
+
+                <custom-collapse title="Thông tin người xuất khẩu" default-open icon-class="collapse-icon">
+                  <el-row :gutter="20">
+                    <input-text
+                            prop="dvDoiTacMa"
+                            label="Mã người xuất khẩu"
+                            :v-model.sync="formDonviXuatNhapKhau.dvDoiTacMa"
+                            maxlength="13"
+                            number-gird-responsive="8"
+                    ></input-text>
+
+                    <input-text
+                            prop="dvDoiTacTen"
+                            label="Tên người xuất khẩu"
+                            :v-model.sync="formDonviXuatNhapKhau.dvDoiTacTen"
+                            maxlength="200"
+                            type="textarea"
+                            number-gird-responsive="16"
+                    ></input-text>
+                  </el-row>
+
+                  <el-row :gutter="20">
+                    <input-text
+                            prop="dvDoiTacDiaChi1"
+                            label="Địa chỉ người xuất khẩu"
+                            :v-model.sync="formDonviXuatNhapKhau.dvDoiTacDiaChi1"
+                            type="textarea"
+                            maxlength="200"
+                            number-gird-responsive="8"
+                    ></input-text>
+
+                    <input-text
+                            prop="dvDoiTacDiaChi2"
+                            label="Tên đường và số nhà/số hòm thư bưu điện (P.O.BOX)"
+                            :v-model.sync="formDonviXuatNhapKhau.dvDoiTacDiaChi2"
+                            maxlength="200"
+                            type="textarea"
+                            number-gird-responsive="8"
+                    ></input-text>
+                  </el-row>
+
+                  <el-row :gutter="20">
+                    <input-text
+                            prop="dvDoiTacDiaChi3"
+                            label="Tên thành phố"
+                            :v-model.sync="formDonviXuatNhapKhau.dvDoiTacDiaChi3"
+                            maxlength="200"
+                            type="textarea"
+                            number-gird-responsive="8"
+                    ></input-text>
+
+                    <input-text
+                            prop="dvDoiTacDiaChi4"
+                            label="Tên nước"
+                            :v-model.sync="formDonviXuatNhapKhau.dvDoiTacDiaChi4"
+                            maxlength="200"
+                            type="textarea"
+                            number-gird-responsive="8"
+                    ></input-text>
+                  </el-row>
+
+                  <el-row :gutter="20">
+                    <input-text
+                            prop="dvDoiTacMaBuuChinh"
+                            label="Mã bưu chính người xuất khẩu"
+                            :v-model.sync="formDonviXuatNhapKhau.dvDoiTacMaBuuChinh"
+                            maxlength="9"
+                            number-gird-responsive="8"
+                    ></input-text>
+
+                    <input-select
+                            label="Mã nước người xuất khẩu"
+                            :v-modal.sync="formDonviXuatNhapKhau.nuocXkMa"
+                            prop="nuocXkMa"
+                            :list-option-select="listHq"
+                            number-gird-responsive="8"
+                    >
+                    </input-select>
+
+
+                    <input-text
+                            prop="dlHqMa"
+                            label="Mã đại lý hải quan"
+                            :v-model.sync="formDonviXuatNhapKhau.dlHqMa"
+                            maxlength="5"
+                            number-gird-responsive="8"
+                    ></input-text>
+
+                  </el-row>
+
+                  <el-row :gutter="20">
+                    <input-text
+                            prop="dvUyThacDoiTacTen"
+                            label="Tên người ủy thác xuất khẩu"
+                            :v-model.sync="formDonviXuatNhapKhau.dvUyThacDoiTacTen"
+                            maxlength="200"
+                            type="textarea"
+                            number-gird-responsive="16"
+                    ></input-text>
+                  </el-row>
+                </custom-collapse>
+              </el-form>
+            </div>
+
+            <!--            Vận đơn-->
+            <div v-if="flagShowContent === TAB_CONTENT.VAN_DON">
+              <el-form :label-position="'top'" label-width="100px" :model="formVanDon" size="mini"
+                       :rules="rulesFormVanDon" ref="formVanDon"
+              >
+                <custom-collapse title="Danh sách vận đơn" default-open icon-class="collapse-icon">
+                  <div
+                          class="border-el-table"
+                          style="vertical-align: middle"
+                  >
+                    <el-row :gutter="20" class="text-center table-header-edit">
+                      <el-col :span="1" style="word-break: break-word;">
+                        STT
+                      </el-col>
+                      <el-col :span="3" style="word-break: break-word;">
+                        Số vận đơn
+                      </el-col>
+                      <el-col :span="3" style="word-break: break-word;">
+                        Ngày vận đơn
+                      </el-col>
+                      <el-col :span="3" style="word-break: break-word;">
+                        Số định danh
+                      </el-col>
+                      <el-col :span="3" style="word-break: break-word;">
+                        Số lượng kiện
+                      </el-col>
+                      <el-col :span="3" style="word-break: break-word;">
+                        Đơn vị tính số lượng kiện
+                      </el-col>
+                      <el-col :span="3" style="word-break: break-word;">
+                        Tổng trọng lượng
+                      </el-col>
+                      <el-col :span="3" style="word-break: break-word;">
+                        Đơn vị tính tổng trọng lượng
+                      </el-col>
+                    </el-row>
+                  </div>
+
+                  <div
+                          v-if="!formVanDon.lstTkVd || formVanDon.lstTkVd.length === 0"
+                          class="el-table__empty-block"
+                          style="height: 100%; width: 100%;"
+                  >
+                    <span class="el-table__empty-text">Không có dữ liệu</span>
+                  </div>
+                  <el-form
+                          v-else
+                          ref="formVanDon"
+                          :model="formVanDon"
+                          :rules="rulesFormVanDon"
+                          style="padding-top: 0px"
+                          size="mini"
+                          label-width="0px"
+                          label-position="top"
+
+                  >
+                    <el-row
+                            v-for="(value, index) in formVanDon.lstTkVd"
+                            :key="index"
+                            :gutter="10"
+                            class="border-bot"
+                            style="padding: 15px 0 0 0; margin-top: 0px;"
+                    >
+
+                      <el-col :span="1" style="padding-top: 5px">
+                        {{ index + 1 }}
+                      </el-col>
+
+                      <input-text
+                              :prop="'lstTkVd[' + index + '].vanDonSo'"
+                              :v-model.sync="formVanDon.lstTkVd[index].vanDonSo"
+                              maxlength="35"
+                              number-gird-responsive="3"
+                      ></input-text>
+
+                      <input-date
+                              :prop="'lstTkVd[' + index + '].ngayVanDon'"
+                              v-model="formVanDon.lstTkVd[index].ngayVanDon"
+                              number-gird-responsive="3"
+                      >
+                      </input-date>
+
+                      <input-text
+                              :prop="'lstTkVd[' + index + '].soDinhDanh'"
+                              :v-model.sync="formVanDon.lstTkVd[index].soDinhDanh"
+                              maxlength="50"
+                              number-gird-responsive="3"
+                      ></input-text>
+
+                      <input-text
+                              :prop="'lstTkVd[' + index + '].soLuongKien'"
+                              :v-model.sync="formVanDon.lstTkVd[index].soLuongKien"
+                              maxlength="8"
+                              number-gird-responsive="3"
+                      ></input-text>
+
+
+                      <input-select
+                              :prop="'lstTkVd[' + index + '].soLuongKienDvt'"
+                              :v-modal.sync="formVanDon.lstTkVd[index].soLuongKienDvt"
+                              :list-option-select="listHq"
+                              number-gird-responsive="3"
+                      >
+                      </input-select>
+
+                      <input-text
+                              :prop="'lstTkVd[' + index + '].tongTrongLuong'"
+                              :v-model.sync="formVanDon.lstTkVd[index].tongTrongLuong"
+                              maxlength="8"
+                              number-gird-responsive="3"
+                      ></input-text>
+
+                      <input-select
+                              :prop="'lstTkVd[' + index + '].tongTrongLuongDvt'"
+                              :v-modal.sync="formVanDon.lstTkVd[index].tongTrongLuongDvt"
+                              :list-option-select="listHq"
+                              number-gird-responsive="3"
+                      >
+                      </input-select>
+                      <el-col :span="2" class="text-center">
+                        <el-tooltip :open-delay="400" content="Xóa" effect="light" placement="top">
+                          <div class="custom-delete-button" style="font-size: medium">
+                            <el-button
+                                    size="mini"
+                                    icon="el-icon-error"
+                                    @click="delItem(formVanDon.lstTkVd, index, validateVanDon)"
+                            />
+                          </div>
+                        </el-tooltip>
+                      </el-col>
+                    </el-row>
+                    <div class="EmptyBox20"></div>
+                  </el-form>
+
+                  <div class="text-left">
+                    <el-button
+                            type="primary"
+                            size="mini"
+                            plain
+                            icon="el-icon-circle-plus-outline"
+                            @click="addNewItem(formVanDon.lstTkVd, DEFAULT_VALUE_CO, 'formVanDon', true)"
+                    >
+                      <span>Thêm số vận đơn</span>
+                    </el-button>
+                  </div>
+                </custom-collapse>
+
+                <custom-collapse title="Thông tin hàng" default-open icon-class="collapse-icon">
+                  <el-row :gutter="20">
+                    <el-col :lg="8" :md="24" :sm="24" :xl="8" :xs="24">
+                      <append-two-input
+                              is-remove-star-second
+                              :span-props = "[0, 12, 12]"
+                      >
+                        <div slot="input">
+                          <input-text
+                                  prop="soLuong"
+                                  :v-model.sync="formVanDon.soLuong"
+                                  maxlength="8"
+                                  label="Số lượng"
+                          ></input-text>
+                        </div>
+                        <div slot="suffix">
+                            <input-select
+                                    label=" "
+                                    :v-modal.sync="formVanDon.soLuongDvt"
+                                    prop="soLuongDvt"
+                                    :list-option-select="listDvt"
+                            ></input-select>
+                        </div>
+                      </append-two-input>
+                    </el-col>
+
+                    <el-col :lg="8" :md="24" :sm="24" :xl="8" :xs="24">
+                      <append-two-input
+                              is-remove-star-second
+                              :span-props = "[0, 12, 12]"
+                      >
+                        <div slot="input">
+                          <input-text
+                                  prop="tongTrongLuong"
+                                  :v-model.sync="formVanDon.tongTrongLuong"
+                                  maxlength="21"
+                                  label="Tổng trọng lượng hàng (Gross)"
+                          ></input-text>
+
+                        </div>
+                        <div slot="suffix">
+                          <input-select
+                                  label=" "
+                                  :v-modal.sync="formVanDon.tongTrongLuongDvt"
+                                  prop="tongTrongLuongDvt"
+                                  :list-option-select="listDvt"
+                          ></input-select>
+                        </div>
+
+                      </append-two-input>
+                    </el-col>
+                  </el-row>
+
+                  <el-row :gutter="20">
+                    <input-text
+                            prop="ptvcMa"
+                            label="Mã phương tiện vận chuyển"
+                            :v-model.sync="formDonviXuatNhapKhau.ptvcMa"
+                            maxlength="9"
+                            number-gird-responsive="8"
+                    ></input-text>
+
+                    <input-text
+                            prop="ptvtTen"
+                            label="Tên phương tiện vận chuyển"
+                            :v-model.sync="formDonviXuatNhapKhau.ptvtTen"
+                            maxlength="200"
+                            type="textarea"
+                            number-gird-responsive="16"
+                    ></input-text>
+                  </el-row>
+
+                  <el-row :gutter="20">
+                    <input-text
+                            prop="khSh"
+                            label="Ký hiệu số và số hiệu bao bì"
+                            :v-model.sync="formDonviXuatNhapKhau.khSh"
+                            type="textarea"
+                            maxlength="140"
+                            number-gird-responsive="16"
+                    ></input-text>
+                  </el-row>
+
+                  <el-row :gutter="20">
+                    <input-date
+                            label="Ngày hàng đến"
+                            v-model="formDonviXuatNhapKhau.coNgay"
+                            prop="ngayKhDk"
+                            number-gird-responsive="8"
+                    >
+                    </input-date>
+
+                    <input-select
+                            is-remote-search
+                            prop="diaDiemLuuKhoMa"
+                            label="Địa điểm lưu kho chờ thông quan"
+                            :v-modal.sync="formDonviXuatNhapKhau.diaDiemLuuKhoMa"
+                            :list-option-select="listHq"
+                            number-gird-responsive="8"
+                    ></input-select>
+                  </el-row>
+
+                  <el-row :gutter="20">
+                    <input-select
+                            prop="ckNhapTen"
+                            label="Địa điểm dỡ hàng"
+                            :v-modal.sync="formDonviXuatNhapKhau.ckNhapTen"
+                            :list-option-select="listHq"
+                            number-gird-responsive="8"
+                    ></input-select>
+
+                    <input-select
+                            prop="ckNhapMa"
+                            label="Địa điểm dỡ hàng"
+                            :disabled="!formDonviXuatNhapKhau.ckNhapTen"
+                            :v-modal.sync="formDonviXuatNhapKhau.ckNhapMa"
+                            :list-option-select="listHq"
+                            number-gird-responsive="8"
+                    ></input-select>
+                  </el-row>
+
+                  <el-row :gutter="20">
+                    <input-select
+                            prop="ckXuatTen"
+                            label="Địa điểm xếp hàng"
+                            :v-modal.sync="formDonviXuatNhapKhau.ckXuatTen"
+                            :list-option-select="listHq"
+                            number-gird-responsive="8"
+                    ></input-select>
+
+                    <input-select
+                            prop="ckXuatMa"
+                            label="Địa điểm xếp hàng"
+                            :disabled="!formDonviXuatNhapKhau.ckXuatTen"
+                            :v-modal.sync="formDonviXuatNhapKhau.ckXuatMa"
+                            :list-option-select="listHq"
+                            number-gird-responsive="8"
+                    ></input-select>
+                  </el-row>
+
+                  <el-row :gutter="20">
+                    <input-select
+                            label="Mã kết quả kiểm tra nội dung"
+                            :v-modal.sync="formDonviXuatNhapKhau.maKqKt"
+                            prop="maKqKt"
+                            :list-option-select="listHq"
+                            number-gird-responsive="8"
+                    >
+                    </input-select>
+
+                    <input-text
+                            prop="soLuongContainer"
+                            label="Số lượng container"
+                            :v-model.sync="formDonviXuatNhapKhau.soLuongContainer"
+                            maxlength="3"
+                            number-gird-responsive="8"
+                    ></input-text>
+                  </el-row>
+                </custom-collapse>
+              </el-form>
+            </div>
+
+            <!--            HỢP ĐỒNG, HÓA ĐƠN, GIẤY PHÉP-->
+            <div v-if="flagShowContent === TAB_CONTENT.HOP_DONG">
+              <el-form :label-position="'top'" label-width="100px" :model="formHopDong" size="mini"
+                       :rules="rulesFormHopDong" ref="formHopDong"
+              >
+
+                <el-row :gutter="20">
+                  <el-col :span="24">
+                    <el-form-item label="Mã văn bản pháp quy khác">
+                      <el-row :gutter="0">
+                        <div>
+                          <div
+                            v-for="(lstTkVbpqKhac, idx) in formHopDong.lstTkVbpqKhac"
+                            :key="idx"
+                            style=" float: left"
+                          >
+                            <el-col :span="18" style="padding-right: 10px">
+                              <el-form-item v-if="checkShowFields.lstTkVbpqKhac" label="" label-width="0"
+                                            :prop="'lstTkVbpqKhac[' + idx + '].maVb'"
+                              >
+                                <el-select v-model="formHopDong.lstTkVbpqKhac[idx].maVb"
+                                           placeholder="Mã văn bản pháp quy khác" style="width: 100%"
+                                >
+                                  <el-option
+                                    v-for="item in listHq"
+                                    :key="item.value"
+                                    :label="item.label"
+                                    :value="item.value"
+                                  >
+                                  </el-option>
+                                </el-select>
+                              </el-form-item>
+
+                              <el-form-item
+                                v-else
+                                :label="'(' + (idx + 1).toString() + ')'"
+                                label-width="60px"
+                              >
+                                <span>{{ formHopDong.lstTkVbpqKhac[idx].maVb }}</span>
+                              </el-form-item>
+                            </el-col>
+                            <el-col :span="3">
+                              <el-button
+                                      size="mini"
+                                icon="el-icon-delete"
+                                plain
+                                circle
+                                :disabled="isDeleteLegalButtonDisabled"
+                                @click="deleteLegal(idx)"
+                              />
+                            </el-col>
+                          </div>
+                          <div>
+                            <el-button
+                              v-if="checkShowFields.buttonAdd"
+                              size="mini"
+                              type="primary"
+                              plain
+                              icon="el-icon-circle-plus-outline"
+                              :disabled="isAddLegalButtonDisabled"
+                              style="float: left"
+                              @click="addLegal"
+                            >Thêm mã văn bản</el-button>
+                          </div>
+                        </div>
+                      </el-row>
+                    </el-form-item>
+                  </el-col>
+                </el-row>
+
+                <custom-collapse title="Giấy phép nhập khẩu" default-open icon-class="collapse-icon">
+                  <el-row :gutter="20">
+                    <el-col :span="16">
+                      <div
+                              class="border-el-table"
+                              style="vertical-align: middle"
+                      >
+                        <el-row :gutter="20" class="text-center table-header-edit">
+                          <el-col :span="1" style="word-break: break-word;">
+                            STT
+                          </el-col>
+                          <el-col :span="11" style="word-break: break-word;">
+                            Phân loại giấy phép nhập khẩu
+                          </el-col>
+                          <el-col :span="11" style="word-break: break-word;">
+                            Số giấy phép nhập khẩu
+                          </el-col>
+                        </el-row>
+                      </div>
+
+                      <div
+                              v-if="!formHopDong.lstTkGp || formHopDong.lstTkGp.length === 0"
+                              class="el-table__empty-block"
+                              style="height: 100%; width: 100%;"
+                      >
+                        <span class="el-table__empty-text">Không có dữ liệu</span>
+                      </div>
+                      <el-form
+                              v-else
+                              ref="formHopDong"
+                              :model="formHopDong"
+                              :rules="rulesFormHopDong"
+                              style="padding-top: 0px"
+                              size="mini"
+                              label-width="0px"
+                              label-position="top"
+                      >
+                        <el-row
+                                v-for="(value, index) in formHopDong.lstTkGp"
+                                :key="index"
+                                :gutter="10"
+                                class="border-bot"
+                                style="padding: 15px 0 0 0; margin-top: 0px;"
+                        >
+
+                          <el-col :span="1" style="padding-top: 5px">
+                            {{ index + 1 }}
+                          </el-col>
+
+                          <input-select
+                                  style="margin-top: -1.7em"
+                                  :prop="'lstTkGp[' + index + '].giayPhepMa'"
+                                  label=" "
+                                  :v-modal.sync="formHopDong.lstTkGp[index].giayPhepMa"
+                                  :list-option-select="listHq"
+                                  number-gird-responsive="11"
+                          >
+                          </input-select>
+
+                          <input-text
+                                  style="margin-top: -1.7em"
+                                  label=" "
+                                  :prop="'lstTkGp[' + index + '].giayPhepSo'"
+                                  :v-modal.sync="formHopDong.lstTkGp[index].giayPhepSo"
+                                  maxlength="35"
+                                  number-gird-responsive="11"
+                          ></input-text>
+
+                          <el-col :span="1" class="text-center">
+                            <el-tooltip :open-delay="400" content="Xóa" effect="light" placement="top">
+                              <div class="custom-delete-button" style="font-size: medium">
+                                <el-button
+                                        size="mini"
+                                        icon="el-icon-error"
+                                        @click="deleteItemGiayPhepNhapKhau(index)"
+                                />
+                              </div>
+                            </el-tooltip>
+                          </el-col>
+                        </el-row>
+                        <div class="EmptyBox20"></div>
+                      </el-form>
+
+                      <div class="text-left">
+                        <el-button
+                                type="primary"
+                                size="mini"
+                                plain
+                                icon="el-icon-circle-plus-outline"
+                                @click="addNewItemGiayPhepNhapKhau"
+                        >
+                          <span>Thêm giấy phép nhập khẩu</span>
+                        </el-button>
+                      </div>
+                    </el-col>
+                  </el-row>
+                </custom-collapse>
+
+                <custom-collapse title="Thông tin hàng" default-open icon-class="collapse-icon">
+                  <el-row :gutter="20">
+                    <el-col :lg="8" :md="24" :sm="24" :xl="8" :xs="24">
+                      <append-two-input
+                              is-remove-star-second
+                      >
+                        <div slot="first">
+                          <el-form-item label="Số lượng" prop="soLuong">
+                            <el-input
+                                    prop="soLuong"
+                                    :v-model.sync="formVanDon.soLuong"
+                                    maxlength="8"
+                                    placeholder="Số lượng"
+                                    show-word-limit
+                                    clearable
+                            ></el-input>
+                          </el-form-item>
+                        </div>
+                        <div slot="second">
+                          <el-form-item label=" " prop="soLuongDvt">
+                            <el-select
+                                    v-model="formVanDon.soLuongDvt"
+                                    placeholder="Đơn vị tính"
+                                    clearable
+                                    style="width: 100%"
+                            >
+                              <el-option
+                                      v-for="item in listHq"
+                                      :key="item.value"
+                                      :label="item.label"
+                                      :value="item.value"
+                              >
+                              </el-option>
+                            </el-select>
+                          </el-form-item>
+                        </div>
+                      </append-two-input>
+                    </el-col>
+
+                    <el-col :lg="8" :md="24" :sm="24" :xl="8" :xs="24">
+                      <append-two-input
+                              is-remove-star-second
+                      >
+                        <div slot="first">
+                          <el-form-item label="Tổng trọng lượng hàng (Gross)" prop="tongTrongLuong">
+                            <el-input
+                                    prop="soLuong"
+                                    :v-model.sync="formVanDon.tongTrongLuong"
+                                    maxlength="21"
+                                    show-word-limit
+                                    placeholder="Tổng trọng lượng hàng (Gross)"
+                                    clearable
+                            ></el-input>
+                          </el-form-item>
+                        </div>
+                        <div slot="second">
+                          <el-form-item label=" " prop="tongTrongLuongDvt">
+                            <el-select
+                                    v-model="formVanDon.tongTrongLuongDvt"
+                                    placeholder="Tổng trọng lượng đơn vị tính"
+                                    clearable
+                                    style="width: 100%"
+                            >
+                              <el-option
+                                      v-for="item in listHq"
+                                      :key="item.value"
+                                      :label="item.label"
+                                      :value="item.value"
+                              >
+                              </el-option>
+                            </el-select>
+                          </el-form-item>
+                        </div>
+
+                      </append-two-input>
+                    </el-col>
+                  </el-row>
+
+                  <el-row :gutter="20">
+                    <input-text
+                            prop="ptvcMa"
+                            label="Mã phương tiện vận chuyển"
+                            :v-model.sync="formDonviXuatNhapKhau.ptvcMa"
+                            maxlength="9"
+                            number-gird-responsive="8"
+                    ></input-text>
+
+                    <input-text
+                            prop="ptvtTen"
+                            label="Tên phương tiện vận chuyển"
+                            :v-model.sync="formDonviXuatNhapKhau.ptvtTen"
+                            maxlength="200"
+                            type="textarea"
+                            number-gird-responsive="16"
+                    ></input-text>
+                  </el-row>
+
+                  <el-row :gutter="20">
+                    <input-text
+                            prop="khSh"
+                            label="Ký hiệu số và số hiệu bao bì"
+                            :v-model.sync="formDonviXuatNhapKhau.khSh"
+                            type="textarea"
+                            maxlength="140"
+                            number-gird-responsive="16"
+                    ></input-text>
+                  </el-row>
+
+                  <el-row :gutter="20">
+                    <input-date
+                            label="Ngày hàng đến"
+                            v-model="formDonviXuatNhapKhau.coNgay"
+                            prop="ngayKhDk"
+                            number-gird-responsive="8"
+                    >
+                    </input-date>
+
+                    <input-select
+                            is-remote-search
+                            prop="diaDiemLuuKhoMa"
+                            label="Địa điểm lưu kho chờ thông quan"
+                            :v-model.sync="formDonviXuatNhapKhau.diaDiemLuuKhoMa"
+                            :list-option-select="listHq"
+                            number-gird-responsive="8"
+                    ></input-select>
+                  </el-row>
+
+                  <el-row :gutter="20">
+                    <input-select
+                            prop="ckNhapTen"
+                            label="Địa điểm dỡ hàng"
+                            :v-modal.sync="formDonviXuatNhapKhau.ckNhapTen"
+                            :list-option-select="listHq"
+                            number-gird-responsive="8"
+                    ></input-select>
+
+                    <input-select
+                            prop="ckNhapMa"
+                            label="Địa điểm dỡ hàng"
+                            :disabled="!formDonviXuatNhapKhau.ckNhapTen"
+                            :v-modal.sync="formDonviXuatNhapKhau.ckNhapMa"
+                            :list-option-select="listHq"
+                            number-gird-responsive="8"
+                    ></input-select>
+                  </el-row>
+
+                  <el-row :gutter="20">
+                    <input-select
+                            prop="ckXuatTen"
+                            label="Địa điểm xếp hàng"
+                            :v-modal.sync="formDonviXuatNhapKhau.ckXuatTen"
+                            :list-option-select="listHq"
+                            number-gird-responsive="8"
+                    ></input-select>
+
+                    <input-select
+                            prop="ckXuatMa"
+                            label="Địa điểm xếp hàng"
+                            :disabled="!formDonviXuatNhapKhau.ckXuatTen"
+                            :v-modal.sync="formDonviXuatNhapKhau.ckXuatMa"
+                            :list-option-select="listHq"
+                            number-gird-responsive="8"
+                    ></input-select>
+                  </el-row>
+
+                  <el-row :gutter="20">
+                    <input-select
+                            label="Mã kết quả kiểm tra nội dung"
+                            :v-modal.sync="formDonviXuatNhapKhau.maKqKt"
+                            prop="maKqKt"
+                            :list-option-select="listHq"
+                            number-gird-responsive="8"
+                    >
+                    </input-select>
+
+                    <input-text
+                            prop="soLuongContainer"
+                            label="Số lượng container"
+                            :v-model.sync="formDonviXuatNhapKhau.soLuongContainer"
+                            maxlength="3"
+                            number-gird-responsive="8"
+                    ></input-text>
+                  </el-row>
+                </custom-collapse>
+              </el-form>
+            </div>
+
+            <!--            TỜ KHAI TRỊ GIÁ-->
+            <div v-if="flagShowContent === TAB_CONTENT.TO_KHAI_TRI_GIA">
+              <el-form :label-position="'top'" label-width="100px" :model="formToKhaiTriGia" size="mini"
+                       :rules="rulesFormToKhaiTriGia" ref="formToKhaiTriGia"
+              >
+
+                <el-row :gutter="20">
+                  <input-select
+                    prop="maPlTg"
+                    label="Mã phân loại khai trị giá"
+                    :v-modal.sync="formDonviXuatNhapKhau.maPlTg"
+                    :list-option-select="listHq"
+                    number-gird-responsive="8"
+                  ></input-select>
+
+                  <input-text
+                    prop="soTnTktg"
+                    label="Số tiếp nhận tờ khai trị giá tổng hợp"
+                    :v-model.sync="formDonviXuatNhapKhau.soTnTktg"
+                    maxlength="9"
+                    number-gird-responsive="8"
+                  ></input-text>
+                </el-row>
+
+                <el-row :gutter="20">
+                  <input-select
+                    prop="vanChuyenMaPl"
+                    label="Mã phân loại phí vận chuyển"
+                    :v-modal.sync="formDonviXuatNhapKhau.vanChuyenMaPl"
+                    :list-option-select="listHq"
+                    number-gird-responsive="16"
+                  ></input-select>
+
+                  <el-col :lg="8" :md="24" :sm="24" :xl="8" :xs="24">
+                    <append-two-input
+                      is-remove-star-second
+                      :span-props = '[0, 12, 12]'
+                    >
+                      <div slot="input">
+                        <el-form-item label="Phí vận chuyển" prop="vanChuyenPhi">
+                          <el-input
+                            prop="vanChuyenPhi"
+                            v-model="formVanDon.vanChuyenPhi"
+                            maxlength="21"
+                            placeholder="Phí vận chuyển"
+                            show-word-limit
+                            clearable
+                          ></el-input>
+                        </el-form-item>
+                      </div>
+                      <div slot="suffix">
+                        <el-form-item label=" " prop="vanChuyenMaNt">
+                          <el-select
+                            v-model="formVanDon.vanChuyenMaNt"
+                            placeholder="Mã tiền tệ của phí vận chuyển"
+                            clearable
+                            style="width: 100%"
+                          >
+                            <el-option
+                              v-for="item in listHq"
+                              :key="item.value"
+                              :label="item.label"
+                              :value="item.value"
+                            >
+                            </el-option>
+                          </el-select>
+                        </el-form-item>
+                      </div>
+                    </append-two-input>
+                  </el-col>
+                </el-row>
+
+                <el-row :gutter="20">
+                  <input-select
+                    prop="baoHiemMaPl"
+                    label="Mã phân loại bảo hiểm"
+                    :v-model.sync="formDonviXuatNhapKhau.baoHiemMaPl"
+                    :list-option-select="listHq"
+                    number-gird-responsive="8"
+                  ></input-select>
+
+                  <input-text
+                    prop="baoHiemSoDk"
+                    label="Số đăng ký bảo hiểm tổng hợp"
+                    :v-model.sync="formDonviXuatNhapKhau.baoHiemSoDk"
+                    maxlength="9"
+                    number-gird-responsive="8"
+                  ></input-text>
+
+                  <el-col :lg="8" :md="24" :sm="24" :xl="8" :xs="24">
+                    <append-two-input
+                      is-remove-star-second
+                    >
+                      <div slot="first">
+                        <el-form-item label="Phí bảo hiểm" prop="phiBaoHiem">
+                          <el-input
+                            prop="phiBaoHiem"
+                            :v-model.sync="formVanDon.phiBaoHiem"
+                            maxlength="21"
+                            placeholder="Phí bảo hiểm"
+                            show-word-limit
+                            clearable
+                          ></el-input>
+                        </el-form-item>
+                      </div>
+                      <div slot="second">
+                        <el-form-item label=" " prop="baoHiemMaNt">
+                          <el-select
+                            v-model="formVanDon.baoHiemMaNt"
+                            placeholder="Mã tiền tệ của phí vận chuyển"
+                            clearable
+                            style="width: 100%"
+                          >
+                            <el-option
+                              v-for="item in listHq"
+                              :key="item.value"
+                              :label="item.label"
+                              :value="item.value"
+                            >
+                            </el-option>
+                          </el-select>
+                        </el-form-item>
+                      </div>
+                    </append-two-input>
+                  </el-col>
+                </el-row>
+
+                <p style="font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 19px;
+    color: #555555;
+    margin: 10px 0;"
+                >
+                  Khoản điều chỉnh
+                </p>
+
+                <p style="font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #686868;
+    margin-bottom: 10px;"
+                >
+                  Có thể nhập tối đa 5 khoản điều chỉnh
+                </p>
+                <div
+                  class="border-el-table"
+                  style="vertical-align: middle"
+                >
+                  <el-row :gutter="20" class="text-center table-header-edit">
+                    <el-col :span="1" style="word-break: break-word;">
+                      STT
+                    </el-col>
+                    <el-col :span="5" style="word-break: break-word;">
+                      Mã tên khoản điều chỉnh
+                    </el-col>
+                    <el-col :span="4" style="word-break: break-word;">
+                      Mã phân loại
+                    </el-col>
+                    <el-col :span="4" style="word-break: break-word;">
+                      Mã tiền tệ
+                    </el-col>
+                    <el-col :span="4" style="word-break: break-word;">
+                      Trị giá khoản điều chỉnh
+                    </el-col>
+                    <el-col :span="5" style="word-break: break-word;">
+                      Tổng hệ số phân bổ trị giá
+                    </el-col>
+                  </el-row>
+                </div>
+
+                <div
+                  v-if="!formToKhaiTriGia.lstTkKdc || formToKhaiTriGia.lstTkKdc.length === 0"
+                  class="el-table__empty-block"
+                  style="height: 100%; width: 100%;"
+                >
+                  <span class="el-table__empty-text">Không có dữ liệu</span>
+                </div>
+                <el-form
+                  v-else
+                  ref="formToKhaiTriGia"
+                  :model="formToKhaiTriGia"
+                  :rules="rulesFormToKhaiTriGia"
+                  style="padding-top: 0px"
+                  size="mini"
+                  label-width="0px"
+                  label-position="top"
+
+                >
+                  <el-row
+                    v-for="(value, index) in formToKhaiTriGia.lstTkKdc"
+                    :key="index"
+                    :gutter="10"
+                    class="border-bot"
+                    style="padding: 15px 0 0 0; margin-top: 0px;"
+                  >
+                    <el-col :span="1" style="padding-top: 5px">
+                      {{ index + 1 }}
+                    </el-col>
+
+                    <input-select
+                      :prop="'lstTkKdc[' + index + '].dcTriGiaMa'"
+                      :v-modal.sync="formToKhaiTriGia.lstTkKdc[index].dcTriGiaMa"
+                      :list-option-select="listHq"
+                      number-gird-responsive="5"
+                    >
+                    </input-select>
+
+                    <input-select
+                      :prop="'lstTkKdc[' + index + '].dcTriGiaMaPl'"
+                      :v-modal.sync="formToKhaiTriGia.lstTkKdc[index].dcTriGiaMaPl"
+                      :list-option-select="listHq"
+                      number-gird-responsive="4"
+                    >
+                    </input-select>
+
+                    <input-select
+                      :prop="'lstTkKdc[' + index + '].dcTriGiaMaNt'"
+                      :v-modal.sync="formToKhaiTriGia.lstTkKdc[index].dcTriGiaMaNt"
+                      :list-option-select="listHq"
+                      number-gird-responsive="4"
+                    >
+                    </input-select>
+
+                    <input-text
+                      :prop="'lstTkKdc[' + index + '].dcTriGia'"
+                      :v-model.sync="formToKhaiTriGia.lstTkKdc[index].dcTriGia"
+                      maxlength="21"
+                      number-gird-responsive="4"
+                    ></input-text>
+
+                    <input-text
+                      :prop="'lstTkKdc[' + index + '].dcTriGiaTongHsPhanBo'"
+                      :v-model.sync="formToKhaiTriGia.lstTkKdc[index].dcTriGiaTongHsPhanBo"
+                      maxlength="21"
+                      number-gird-responsive="5"
+                    ></input-text>
+
+                    <el-col :span="1" class="text-center">
+                      <el-tooltip :open-delay="400" content="Xóa" effect="light" placement="top">
+                        <div class="custom-delete-button" style="font-size: medium">
+                          <el-button
+                            size="mini"
+                            icon="el-icon-error"
+                            @click="delItem(formToKhaiTriGia.lstTkKdc, index,  validateTriGia)"
+                          />
+                        </div>
+                      </el-tooltip>
+                    </el-col>
+                  </el-row>
+                  <div class="EmptyBox20"></div>
+                </el-form>
+
+                <div class="text-left">
+                  <el-button
+                    type="primary"
+                    size="mini"
+                    plain
+                    icon="el-icon-circle-plus-outline"
+                    @click="addNewItem(formToKhaiTriGia.lstTkKdc, DEFAULT_VALUE_KHOAN_DIEU_CHINH, 'formToKhaiTriGia', true)"
+                  >
+                    <span>Thêm khoản điều chỉnh</span>
+                  </el-button>
+                </div>
+
+                <div class="EmptyBox20"></div>
+
+                <el-row :gutter="20">
+                  <input-text
+                    prop="ctKhaiTriGia"
+                    label="Chi tiết khai trị giá"
+                    :v-model.sync="formDonviXuatNhapKhau.ctKhaiTriGia"
+                    maxlength="300"
+                    type="textarea"
+                    number-gird-responsive="16"
+                  ></input-text>
+
+                  <input-text
+                    prop="tongHsPhanBoTg"
+                    label="Số tiếp nhận tờ khai trị giá tổng hợp"
+                    :v-model.sync="formDonviXuatNhapKhau.tongHsPhanBoTg"
+                    maxlength="21"
+                    number-gird-responsive="8"
+                  ></input-text>
+                </el-row>
+              </el-form>
+            </div>
+
+            <!--            THUẾ VÀ BẢO LÃNH-->
+            <div v-if="flagShowContent === TAB_CONTENT.THUE_BAO_LANH">
+              <el-form :label-position="'top'" label-width="100px" :model="formThueBaoLanh" size="mini" :rules="ruleFormBaoLanh">
+                <el-row :gutter="20">
+                  <input-select
+                    label="Người nộp thuế"
+                    :v-modal.sync="formThueBaoLanh.nguoiNopThue"
+                    prop="nguoiNopThue"
+                    :list-option-select="listHq"
+                    number-gird-responsive="8"
+                  >
+                  </input-select>
+
+                  <input-select
+                    label="Mã lý do đề nghị BP"
+                    :v-modal.sync="formThueBaoLanh.maLyDoBp"
+                    prop="maLyDoBp"
+                    :list-option-select="listHq"
+                    number-gird-responsive="8"
+                  >
+                  </input-select>
+                </el-row>
+
+                <el-row :gutter="20">
+                  <input-select
+                    label="Mã xác định thời hạn nộp thuế"
+                    :v-modal.sync="formThueBaoLanh.loaiAh"
+                    prop="loaiAh"
+                    :list-option-select="listHq"
+                    :number-gird-responsive="8"
+                  >
+                  </input-select>
+                </el-row>
+
+                <el-row :gutter="20">
+                  <input-select
+                    label="Mã ngân hàng trả thuế thay"
+                    :v-modal.sync="formThueBaoLanh.maNh"
+                    prop="maNh"
+                    type="textarea"
+                    is-remote-search
+                    number-gird-responsive="8"
+                  >
+                  </input-select>
+
+                  <input-date
+                    label="Năm phát hành hạn mức"
+                    v-model="formThueBaoLanh.namNh"
+                    prop="namNh"
+                    date-type="year"
+                    format="yyyy"
+                    number-gird-responsive="4"
+                  >
+                  </input-date>
+
+                  <input-text
+                    prop="kyhieuNh"
+                    label="Ký hiệu chứng từ hạn mức"
+                    :v-model.sync="formThueBaoLanh.kyhieuNh"
+                    maxlength="12"
+                    number-gird-responsive="4"
+                  ></input-text>
+
+                  <input-text
+                    prop="soNh"
+                    label="Số chứng từ hạn mức"
+                    :v-model.sync="formThueBaoLanh.soNh"
+                    maxlength="12"
+                    number-gird-responsive="4"
+                  ></input-text>
+                </el-row>
+
+                <el-row :gutter="20">
+                  <input-select
+                    label="Mã ngân hàng bảo lãnh"
+                    :v-modal.sync="formThueBaoLanh.maNhBl"
+                    prop="maNhBl"
+                    type="textarea"
+                    is-remote-search
+                    number-gird-responsive="8"
+                  >
+                  </input-select>
+
+                  <input-date
+                    label="Năm phát hành bảo lãnh"
+                    v-model="formThueBaoLanh.namBl"
+                    prop="namBl"
+                    date-type="year"
+                    format="yyyy"
+                    number-gird-responsive="4"
+                  >
+                  </input-date>
+
+                  <input-text
+                    prop="kyhieuBl"
+                    label="Ký hiệu chứng từ bảo lãnh"
+                    :v-model.sync="formThueBaoLanh.kyhieuBl"
+                    maxlength="12"
+                    number-gird-responsive="4"
+                  ></input-text>
+
+                  <input-text
+                    prop="soBl"
+                    label="Số chứng từ bảo lãnh"
+                    :v-model.sync="formThueBaoLanh.soBl"
+                    maxlength="12"
+                    number-gird-responsive="4"
+                  ></input-text>
+                </el-row>
+
+              </el-form>
+            </div>
+
+            <!--            DÍNH KÈM KHAI BÁO-->
+            <div v-if="flagShowContent === TAB_CONTENT.DINH_KEM_KHAI_BAO">
+              <el-form :label-position="'top'" label-width="100px" :model="formDinhKemKhaiBao" size="mini"
+                       :rules="formDinhKemKhaiBao" ref="formDinhKemKhaiBao"
+              >
+
+                <p style="font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #686868;
+    margin-bottom: 10px;"
+                >
+                  Có thể nhập tối đa 03 loại đính kèm khai báo điện tử
+                </p>
+                <el-row :gutter="20">
+                  <el-col :span="16">
+                    <div
+                      class="border-el-table"
+                      style="vertical-align: middle"
+                    >
+                      <el-row :gutter="20" class="text-center table-header-edit">
+                        <el-col :span="1" style="word-break: break-word;">
+                          STT
+                        </el-col>
+                        <el-col :span="11" style="word-break: break-word;">
+                          Phân loại đính kèm
+                        </el-col>
+                        <el-col :span="11" style="word-break: break-word;">
+                          Số đính kèm
+                        </el-col>
+                      </el-row>
+                    </div>
+
+                    <div
+                      v-if="!formDinhKemKhaiBao.lstTkKbdt || formDinhKemKhaiBao.lstTkKbdt.length === 0"
+                      class="el-table__empty-block"
+                      style="height: 100%; width: 100%;"
+                    >
+                      <span class="el-table__empty-text">Không có dữ liệu</span>
+                    </div>
+
+                    <el-form
+                      v-else
+                      ref="formToKhaiTriGia"
+                      :model="formDinhKemKhaiBao"
+                      :rules="ruleFormDinhKemKhaiBao"
+                      style="padding-top: 0px"
+                      size="mini"
+                      label-width="0px"
+                      label-position="top"
+
+                    >
+                      <el-row
+                        v-for="(value, index) in formDinhKemKhaiBao.lstTkKbdt"
+                        :key="index"
+                        :gutter="10"
+                        class="border-bot"
+                        style="padding: 15px 0 0 0; margin-top: 0px;"
+                      >
+
+                        <el-col :span="1" style="padding-top: 5px">
+                          {{ index + 1 }}
+                        </el-col>
+
+                        <input-select
+                          style="margin-top: -1.4em"
+                          :prop="'lstTkKbdt[' + index + '].plDinhKemDt'"
+                          label=" "
+                          :v-modal.sync="formDinhKemKhaiBao.lstTkKbdt[index].plDinhKemDt"
+                          :list-option-select="listHq"
+                          number-gird-responsive="11"
+                        >
+                        </input-select>
+
+                        <input-text
+                          style="margin-top: -1.4em"
+                          label=" "
+                          :prop="'lstTkKbdt[' + index + '].soDinhKemDt'"
+                          :v-model.sync="formDinhKemKhaiBao.lstTkKbdt[index].soDinhKemDt"
+                          maxlength="21"
+                          number-gird-responsive="11"
+                        ></input-text>
+
+                        <el-col :span="1" class="text-center">
+                          <el-tooltip :open-delay="400" content="Xóa" effect="light" placement="top">
+                            <div class="custom-delete-button" style="font-size: medium">
+                              <el-button
+                                size="mini"
+                                icon="el-icon-error"
+                                @click="delItem(formDinhKemKhaiBao.lstTkKbdt, index, validateDinhKem)"
+                              />
+                            </div>
+                          </el-tooltip>
+                        </el-col>
+                      </el-row>
+                      <div class="EmptyBox20"></div>
+                    </el-form>
+
+                    <div class="text-left">
+                      <el-button
+                        type="primary"
+                        size="mini"
+                        plain
+                        icon="el-icon-circle-plus-outline"
+                        @click="addNewItem(formDinhKemKhaiBao.lstTkKbdt, DEFAULT_VALUE_DINH_KEM_KHAI_BAO, 'formDinhKemKhaiBao', )"
+                      >
+                        <span>Thêm loại đính kèm</span>
+                      </el-button>
+                    </div>
+
+                    <div class="EmptyBox20"></div>
+                  </el-col>
+                </el-row>
+
+              </el-form>
+            </div>
+
+            <!--            ĐÍNH KÈM DANH SÁCH CTDT KHAI BÁO TRƯỚC-->
+            <div v-if="flagShowContent === TAB_CONTENT.DINH_KEM_DANH_SACH_CTDT">
+                <el-row :gutter="20">
+                  <el-col :span="16">
+                    <div
+                      class="border-el-table"
+                      style="vertical-align: middle"
+                    >
+                      <el-row :gutter="20" class="text-center table-header-edit">
+                        <el-col :span="1" style="word-break: break-word;">
+                          STT
+                        </el-col>
+                        <el-col :span="7" style="word-break: break-word;text-align: center">
+                          Phân loại CTDT
+                        </el-col>
+                        <el-col :span="7" style="word-break: break-word;text-align: center">
+                          Số chứng từ
+                        </el-col>
+                        <el-col :span="7" style="word-break: break-word;text-align: center">
+                          Năm chứng từ
+                        </el-col>
+                      </el-row>
+                    </div>
+
+                    <div
+                      v-if="!formDinhKemDanhSachCTDT.lstTkCtdt || formDinhKemDanhSachCTDT.lstTkCtdt.length === 0"
+                      class="el-table__empty-block"
+                      style="height: 100%; width: 100%;"
+                    >
+                      <span class="el-table__empty-text">Không có dữ liệu</span>
+                    </div>
+
+                    <el-form
+                      v-else
+                      ref="formDinhKemDanhSachCTDT"
+                      :model="formDinhKemDanhSachCTDT"
+                      :rules="ruleFormDinhKemDanhSachCTDT"
+                      style="padding-top: 0px"
+                      size="mini"
+                      label-width="0px"
+                      label-position="top"
+
+                    >
+                      <el-row
+                        v-for="(value, index) in formDinhKemDanhSachCTDT.lstTkCtdt"
+                        :key="index"
+                        :gutter="10"
+                        class="border-bot"
+                        style="padding: 15px 0 0 0; margin-top: 0px;"
+                      >
+
+                        <el-col :span="1" style="padding-top: 5px">
+                          {{ index + 1 }}
+                        </el-col>
+
+                        <input-select
+                          :prop="'lstTkCtdt[' + index + '].loaiCtdt'"
+                          :v-modal.sync="formDinhKemDanhSachCTDT.lstTkCtdt[index].loaiCtdt"
+                          :list-option-select="listHq"
+                          number-gird-responsive="7"
+                        >
+                        </input-select>
+
+                        <input-text
+                          :prop="'lstTkCtdt[' + index + '].soTnCtdtKbt'"
+                          :v-model.sync="formDinhKemDanhSachCTDT.lstTkCtdt[index].soTnCtdtKbt"
+                          maxlength="21"
+                          number-gird-responsive="7"
+                        ></input-text>
+
+                        <input-date
+                          :prop="'lstTkCtdt[' + index + '].namTnCtdtKbt'"
+                          v-model="formDinhKemDanhSachCTDT.lstTkCtdt[index].namTnCtdtKbt"
+                          maxlength="21"
+                          date-type="year"
+                          format="yyyy"
+                          number-gird-responsive="7"
+                        ></input-date>
+
+                        <el-col :span="1" class="text-center">
+                          <el-tooltip :open-delay="400" content="Xóa" effect="light" placement="top">
+                            <div class="custom-delete-button" style="font-size: medium">
+                              <el-button
+                                size="mini"
+                                icon="el-icon-error"
+                                @click="delItem(formDinhKemDanhSachCTDT.lstTkCtdt, index)"
+                              />
+                            </div>
+                          </el-tooltip>
+                        </el-col>
+                      </el-row>
+                      <div class="EmptyBox20"></div>
+                    </el-form>
+
+                    <div class="text-left">
+                      <el-button
+                        type="primary"
+                        size="mini"
+                        plain
+                        icon="el-icon-circle-plus-outline"
+                        @click="addNewItem(formDinhKemDanhSachCTDT.lstTkCtdt, DEFAULT_VALUE_KHAI_BAO_DIEN_TU, 'formDinhKemDanhSachCTDT', true)"
+                      >
+                        <span>Thêm loại CTDT</span>
+                      </el-button>
+                    </div>
+
+                    <div class="EmptyBox20"></div>
+                  </el-col>
+                </el-row>
+            </div>
+
+            <!--            THÔNG TIN CHUNG TRUYỂN-->
+            <div v-if="flagShowContent === TAB_CONTENT.THONG_TIN_TRUNG_CHUYEN">
+              <el-form :label-position="'top'" label-width="100px" :model="formThongTinTrungChuyen" size="mini"
+                       :rules="ruleFormThongTinTrungChuyen"
+              >
+
+                <el-row :gutter="20">
+                  <input-date
+                    prop="ngayNhapKho"
+                    label="Ngày được phép nhập kho đầu tiên"
+                    v-model="formThongTinTrungChuyen.ngayNhapKho"
+                    :picker-options="disabledNotAfterToday"
+                    number-gird-responsive="8"
+                  ></input-date>
+
+                  <input-date
+                    prop="ngayKhoiHanhVc"
+                    label="Ngày khởi hành vận chuyển"
+                    v-model="formThongTinTrungChuyen.ngayKhoiHanhVc"
+                    number-gird-responsive="8"
+                  ></input-date>
+
+                  <input-date
+                    prop="ngayDen"
+                    label="Ngày dự kiến đến địa điểm đích"
+                    v-model="formThongTinTrungChuyen.ngayDen"
+                    type="year"
+                    number-gird-responsive="8"
+                  ></input-date>
+
+                  <input-select
+                    prop="diaDiemDichVcBaoThueMa"
+                    label="Địa điểm đích cho vận chuyển bảo thuế"
+                    :v-model.sync="formThongTinTrungChuyen.diaDiemDichVcBaoThueMa"
+                    :list-option-select="listHq"
+                    is-remote-search
+                    number-gird-responsive="8"
+                  ></input-select>
+                </el-row>
+
+                <p style="font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 19px;
+    color: #555555;
+    margin: 10px 0;"
+                >
+                  Khoản điều chỉnh
+                </p>
+
+                <el-row :gutter="20">
+                  <el-col :span="16">
+                    <div
+                      class="border-el-table"
+                      style="vertical-align: middle"
+                    >
+                      <el-row :gutter="20" class="text-center table-header-edit">
+                        <el-col :span="1" style="word-break: break-word; text-align: center">
+                          STT
+                        </el-col>
+                        <el-col :span="7" style="word-break: break-word; text-align: center">
+                          Mã địa điểm
+                        </el-col>
+                        <el-col :span="7" style="word-break: break-word; text-align: center">
+                          Ngày dự kiến đến (Địa điểm trung chuyển)
+                        </el-col>
+                        <el-col :span="7" style="word-break: break-word; text-align: center">
+                          Ngày khởi hành (Địa điểm trung chuyển)
+                        </el-col>
+                      </el-row>
+                    </div>
+
+                    <div
+                      v-if="!formThongTinTrungChuyen.lstTkTc || formThongTinTrungChuyen.lstTkTc.length === 0"
+                      class="el-table__empty-block"
+                      style="height: 100%; width: 100%;"
+                    >
+                      <span class="el-table__empty-text">Không có dữ liệu</span>
+                    </div>
+                    <el-form
+                      v-else
+                      ref="formThongTinTrungChuyen"
+                      :model="formThongTinTrungChuyen"
+                      :rules="ruleFormThongTinTrungChuyen"
+                      style="padding-top: 0px"
+                      size="mini"
+                      label-width="0px"
+                      label-position="top"
+
+                    >
+                      <el-row
+                        v-for="(value, index) in formThongTinTrungChuyen.lstTkTc"
+                        :key="index"
+                        :gutter="10"
+                        class="border-bot"
+                        style="padding: 15px 0 0 0; margin-top: 0px;"
+                      >
+
+                        <el-col :span="1" style="padding-top: 5px">
+                          {{ index + 1 }}
+                        </el-col>
+
+                        <input-text
+                          :prop="'lstTkTc[' + index + '].diaDiemTrungChuyenBcbt'"
+                          :v-model.sync="formThongTinTrungChuyen.lstTkTc[index].diaDiemTrungChuyenBcbt"
+                          maxlength="21"
+                          number-gird-responsive="8"
+                        ></input-text>
+
+                        <input-date
+                          :prop="'lstTkTc[' + index + '].ngayDen'"
+                          v-model="formThongTinTrungChuyen.lstTkTc[index].ngayDen"
+                          maxlength="21"
+                          number-gird-responsive="7"
+                        ></input-date>
+
+                        <input-date
+                          :prop="'lstTkKdc[' + index + '].ngayKhoiHanh'"
+                          v-model="formThongTinTrungChuyen.lstTkTc[index].ngayKhoiHanh"
+                          maxlength="21"
+                          number-gird-responsive="7"
+                        ></input-date>
+
+                        <el-col :span="1" class="text-center">
+                          <el-tooltip :open-delay="400" content="Xóa" effect="light" placement="top">
+                            <div class="custom-delete-button" style="font-size: medium">
+                              <el-button
+                                size="mini"
+                                icon="el-icon-error"
+                                @click="delItem(formThongTinTrungChuyen.lstTkTc, index, validateThongTinTrungChuyen)"
+                              />
+                            </div>
+                          </el-tooltip>
+                        </el-col>
+                      </el-row>
+                      <div class="EmptyBox20"></div>
+                    </el-form>
+
+                    <div class="text-left">
+                      <el-button
+                        type="primary"
+                        size="mini"
+                        plain
+                        icon="el-icon-circle-plus-outline"
+                        @click="addNewItem(formThongTinTrungChuyen.lstTkTc, DEFAULT_VALUE_THONG_TIN_TRUNG_CHUYEN, 'formThongTinTrungChuyen', true)"
+                      >
+                        <span>Thêm thông tin trung chuyển</span>
+                      </el-button>
+                    </div>
+
+                    <div class="EmptyBox20"></div>
+                  </el-col>
+                </el-row>
+
+              </el-form>
+            </div>
+
+            <!--           THÔNG TIN KHÁC-->
+            <div v-if="flagShowContent === TAB_CONTENT.THONG_TIN_KHAC">
+              <el-form :label-position="'top'" label-width="100px" :model="formThongTinKhac" size="mini" :rules="ruleFormThongTinKhac">
+                <el-row :gutter="20">
+                  <el-col :span="16">
+                    <el-form-item label="Số tờ khai xuất khẩu tại chỗ tương ứng">
+                      <el-row :gutter="20">
+                        <el-col
+                          v-for="(lstTkXktc, idx) in formThongTinKhac.lstTkXktc"
+                          :key="idx"
+                          :lg="8"
+                          :md="24"
+                          :sm="24"
+                          :xl="8"
+                          :xs="24"
+                        >
+                          <div class="custom_error">
+                            <el-form-item
+                              :rules="ruleFormThongTinKhac.lstTkXktc"
+                              :prop="'lstTkXktc[' + idx + '].soTkXktc'"
+                              label-width="50px"
+                            >
+                          <append-two-input
+                            :prefix-text="(idx + 1).toString()"
+                          >
+                            <div slot="input">
+                              <el-input
+                                v-model="formThongTinKhac.lstTkXktc[idx].soTkXktc"
+                                placeholder="Số tờ khai xuất khẩu tại chỗ"
+                                maxlength="12"
+                                show-word-limit
+                              ></el-input>
+                            </div>
+                            <div slot="suffix">
+                              <div class="custom-delete-button">
+                                <el-button
+                                  size="mini"
+                                  icon="el-icon-error"
+                                  @click="deleteLegal(idx)"
+                                />
+                              </div>
+                            </div>
+                          </append-two-input>
+                    </el-form-item>
+            </div>
+            </el-col>
+                      </el-row>
+                      <el-row>
+                        <div style="float: left">
+                          <el-button
+                            v-if="checkShowFields.buttonAdd"
+                            icon="el-icon-circle-plus-outline"
+                            size="mini"
+                            plain
+                            type="primary"
+                            :disabled="isAddLegalButtonDisabled"
+                            @click="addLegal"
+                          >Thêm số tờ khai</el-button>
+                        </div>
+                      </el-row>
+                    </el-form-item>
+                  </el-col>
+                </el-row>
+
+                <el-row :gutter="20">
+                  <input-select
+                    label="Phân loại hàng hóa đặc thù"
+                    :v-modal.sync="formToKhai.plHhDacthu"
+                    prop="plHhDacthu"
+                    :list-option-select="listHq"
+                    number-gird-responsive="8"
+                  >
+                  </input-select>
+
+                  <input-text
+                    prop="soQlNoiBoDn"
+                    label="Số quản lý của nội bộ doanh nghiệp"
+                    :v-model.sync="formToKhai.soQlNoiBoDn"
+                    maxlength="20"
+                    number-gird-responsive="8"
+                  ></input-text>
+                </el-row>
+
+                <el-row :gutter="20">
+                  <input-text
+                    prop="ghiChu"
+                    label="Ghi chú"
+                    :v-model.sync="formToKhai.ghiChu"
+                    type="textarea"
+                    maxlength="500"
+                    number-gird-responsive="16"
+                  ></input-text>
+                </el-row>
+              </el-form>
+            </div>
+          </div>
+
+        </div>
+<!--          class="footer-container"-->
+        <div style="background: #fafafa; margin: 15px -145px -17px -27px; padding: 12px 150px 12px 30px">
+            <el-row>
+                <el-col :span="8">
+                    <div style="padding-left: 10px">
+                        <el-button
+                                icon="el-icon-back"
+                                size="medium"
+                                :disabled="active === 0"
+                                @click="setActive(active - 1)"
+                        >
+                            Quay lại
+                        </el-button>
+                        <span class="step-name">{{ prevStep }}</span>
+                    </div>
+                </el-col>
+
+                <el-col :span="8">
+                    <div>
+                        <el-row>
+                            <el-col :xs="24" :sm="24" :md="24" :lg="4" :xl="4" style="margin-bottom: 0.5em">
+                                <el-link type="danger">Xóa tờ khai</el-link>
+                            </el-col>
+                            <el-col :xs="24" :sm="24" :md="24" :lg="7" :xl="7" style="margin-bottom: 0.5em">
+                                <el-dropdown >
+                                    <el-button size="medium" type="default" icon="el-icon-wallet" :hide-on-click="false">
+                                        Lưu tờ khai<i class="el-icon-caret-top el-icon--right"></i>
+                                    </el-button>
+                                    <el-dropdown-menu slot="dropdown">
+                                        <el-dropdown-item>
+                                            <label class="label-dropdown">Lưu</label>
+                                            <div class="desc">Lưu thông tin tờ khai</div>
+                                        </el-dropdown-item>
+                                        <el-dropdown-item>
+                                            <label class="label-dropdown">Lưu mẫu</label>
+                                            <div class="desc">Lưu thông tin tờ khai vào danh sách quản lý mẫu</div>
+                                        </el-dropdown-item>
+                                        <el-dropdown-item>
+                                            <label class="label-dropdown">Lưu và tạo mẫu</label>
+                                            <div class="desc">Lưu thông tin tờ khai vào hệ thống và danh sách quản lý mẫu</div>
+                                        </el-dropdown-item>
+                                        <el-dropdown-item divided disabled>Lựa chọn</el-dropdown-item>
+                                    </el-dropdown-menu>
+                                </el-dropdown>
+                            </el-col>
+                            <el-col :xs="24" :sm="24" :md="24" :lg="6" :xl="6" style="margin-bottom: 0.5em">
+                                <el-button type="primary" icon="el-icon-check" size="medium" @click="onGuiToKhaiTam">Gửi tờ khai tạm</el-button>
+                            </el-col>
+                        </el-row>
+                    </div>
+                </el-col>
+
+                <el-col :span="8">
+                    <div :style="{ 'visibility': active !== steps.length - 1 ? 'visible': 'hidden', float: 'right' }">
+                        <span class="step-name">{{ nextStep }}</span>
+                        <el-button size="medium" @click="setActive(active + 1)">
+                            Tiếp tục
+                            <i class="el-icon-arrow-right el-icon-right"></i>
+                        </el-button>
+                    </div>
+                </el-col>
+
+            </el-row>
+        </div>
+
+      </div>
+    </el-card>
+  </template>
+</div>
+</body>
+<!-- import Vue before Element -->
+<script src="https://unpkg.com/vue@2/dist/vue.js"></script>
+<!-- import JavaScript -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script src="https://unpkg.com/element-ui/lib/umd/locale/en.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+
+<script src="./input-etc.js"></script>
+<script src="./untils.js"></script>
+<script src="./pagination.js"></script>
+<script src="./CustomCollapse.js"></script>
+<script>
+  // import _ from 'lodash'
+  ELEMENT.locale(ELEMENT.lang.en)
+  const TAB_CONTENT = {
+    THONG_TIN_CHUNG: 0,
+    DANH_SACH_HANG: 1,
+    DON_VI_XUAT_NHAP: 2,
+    VAN_DON: 3,
+    HOP_DONG: 4,
+    TO_KHAI_TRI_GIA: 5,
+    THUE_BAO_LANH: 6,
+    DINH_KEM_KHAI_BAO: 7,
+    DINH_KEM_DANH_SACH_CTDT: 8,
+    THONG_TIN_TRUNG_CHUYEN: 9,
+    THONG_TIN_KHAC: 10
+  }
+
+  const DEFAULT_VALUE_KHOAN_DC = {
+    'sttHang': null,
+    'stt': null,
+    'soDc': null
+  }
+
+  const DEFAULT_VALUE_THUE_THU_KHAC = {
+    'sttHang': null,
+    'sttThue': null,
+    'thue': null,
+    'thueDvtTt': '',
+    'thueGiam': null,
+    'thueMaBieuThue': '',
+    'thueMaNtTt': '',
+    'thueMien': null,
+    'thueMienGiamDieuKhoan': '',
+    'thueMienGiamMa': '',
+    'thueMienGiamMaNt': '',
+    'thueMst': '',
+    'thuePlMienGiam': '',
+    'thuePlTs': '',
+    'thueSoLuongTt': null,
+    'thueTriGiaTt': null,
+    'thueTs': null,
+    'thueTsKhac': '',
+    'thueTsTuyetDoi': null,
+    'thueTsVnaccs': '',
+    'tsMaNt': ''
+  }
+
+  const DEFAULT_VALUE_KHOAN_DIEU_CHINH = {
+    // stt
+    dcTriGiaTongHsPhanBo: null,
+    dcTriGiaMa: '',
+    dcTriGiaMaPl: '',
+    dcTriGiaMaNt: '',
+    dcTriGia: null
+  }
+
+  const DEFAULT_VALUE_DINH_KEM_KHAI_BAO = {
+    giayPhepMa: '',
+    giayPhepNgay: '',
+    giayPhepNgayCap: '',
+    giayPhepNgayHh: '',
+    giayPhepNguoiCap: '',
+    giayPhepNoiCap: '',
+    giayPhepSo: '',
+    giayPhepTen: ''
+  }
+
+  const DEFAULT_VALUE_KHAI_BAO_DIEN_TU= {
+    giayPhepMa: '',
+    giayPhepNgay: '',
+    giayPhepNgayCap: '',
+    giayPhepNgayHh: '',
+    giayPhepNguoiCap: '',
+    giayPhepNoiCap: '',
+    giayPhepSo: '',
+    giayPhepTen: ''
+  }
+
+  const DEFAULT_VALUE_THONG_TIN_TRUNG_CHUYEN= {
+    diaDiemTrungChuyenBcbt: '',
+    ngayDen: '',
+    ngayKhoiHanhVc: ''
+  }
+
+  const DEFAULT_VALUE_CO = {
+    'stt': null,
+    'sttHang': null,
+    'coIsNo': 0,
+    'coLoai': '',
+    'coMaNuocNk': '',
+    'coMaNuocXk': '',
+    'coMoTaHangHoa': '',
+    'coNgay': new Date(),
+    'coNgayHh': new Date(),
+    'coNguoiCap': '',
+    'coNguoiNk': '',
+    'coNguoiXk': '',
+    'coNuocCap': '',
+    'coSo': '',
+    'coToChucCap': ''
+  }
+
+  const DEFAULT_VALUE_VAN_DON = {
+    'vanDonSo': null,
+    'ngayVanDon': null,
+    'soDinhDanh': null,
+    'soLuongKien': null,
+    'soLuongKienDvt': null,
+    'tongTrongLuong': null,
+    'tongTrongLuongDvt': null
+  }
+
+  const FIELDS = {
+    lstTkVbpqKhac: true,
+    buttonDelete: true,
+    buttonAdd: true,
+    giayPhepMa: true,
+    giayPhepSo: true,
+    hopDongSo: true,
+    hopDongNgay: true,
+    hoaDonTmLoai: true,
+    hoaDonTmSoTnDt: true,
+    hoaDonTmSo: true,
+    hoaDonTmNgay: true,
+    maPttt: true,
+    hoaDonTmMaPlGia: true,
+    maGiaoHang: true,
+    tongTgKb: true,
+    tongTgKbMaNt: true
+  }
+
+  const PATTERN = {
+    REGEX_20_DECIMAL_4: '/^\\d{1,16}(\\.\\d{1,4})?$/',
+    REGEX_NOT_TV_SPECIAL_EXCEPT_DASH: ' /^[\\da-z-]+$/gi',
+    REGEX_NOT_TV_SPECIAL: '/^[\\da-z]+$/gi',
+    REGEX_NOT_CHAR_ALLOW_SPECIAL: '/^[`\\d~!@#$%^&*()_|+\\-=?;:\'"ºÞÝÀÛ»½¾¿¼Ü<>{}\\[\\]\\\\\\/.,]+$/gi',
+    // REGEX_NOT_CHAR_ALLOW_SPECIAL: '/^[`\\d~!@#$%^&*()_|+\\-=?;:\'"ºÞÝÀÛ»½¾¿¼Ü<>{}\\[\\]\\\\\\/.,]+$/gi',
+    VNACCS_ALLOW_CHAR: '^[!"#$%&\'()*+,-.\\/\\0-9:;<=>?@A-Z[\\]\\\\^_`a-z{|}~ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚÝàáâãèéêìíòóôõùúýĂăĐđĨĩŨũƠơƯưẠạẢảẤấẦầẨẩẪẫẬậẮắẰằẲẳẴẵẶặẸẹẺẻẼẽẾếỀềỂểỄễỆệỈỉỊịỌọỎỏỐốỒồỔổỖỗỘộỚớỜờỞởỠỡỢợỤụỦủỨứỪừửỬỮữỰựỲỳỴỵỶỷỸỹ“”\\\\s\\\\r\\\\n]+$',
+    NAME_VIETNAMESE: '^[0-9a-zA-ZÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂẾưăạảấầẩẫậắằẳẵặẹẻẽềềểếỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ\\s]+$',
+    NAME_NON_LETTER: '^[0-9`~!@#$%^&*()_|+\\-=?;:\'"<>\\{\\}\\[\\]\\\\\\/.,\\s]+$',
+    NAME_NON_VIETNAMESE_WITH_SPECIAL: '^[0-9a-zA-z`~!@#$%^&*()_|+\\-=?;:\'"<>\\{\\}\\[\\]\\\\\\/.,\\s]+$',
+    NAME_NON_VI: '^[0-9a-zA-Z\\s]+$',
+    SO_VAN_DON: '^[0-9a-zA-Z\\s\\-]+$',
+    NAME_NON_VI_ALLOW_DOT: '^[0-9a-zA-Z.\\s]+$',
+    DECIMAL_20_4: '^\\d{1,16}(\\.\\d{1,4})?$',
+    REGEX_NOT_LOWER_CHAR_ALLOW_SPECIAL: /^[`A-Z0-9~!@#$%^&*()_|+\-=?;:'"ºÞÛ»½¾¿¼Ü<>{}\[\]\\\/., \n]+$/
+  }
+
+  new Vue({
+    el: '#app',
+    data: function() {
+      return {
+        syncLoadData: false,
+        page: 0,
+        size: 20,
+        showStepStatus: true,
+        notBeforeToday: {
+          disabledDate(date) {
+            const today = new Date()
+            today.setHours(0, 0, 0, 0)
+            return date < today
+          }
+        },
+        disabledNotAfterToday: {
+          disabledDate(date) {
+            const today = new Date()
+            today.setHours(0, 0, 0, 0)
+            return date > today
+          }
+        },
+        windowHeight: window.innerHeight,
+
+        lstTkHh: [
+          { maHang: 113, maHs: '42ff', nuocXxMa: 'ewqe', luong: 'd3333', maDvt: 'Man', luong2: 0, maDvt2: 'Shenzhen' },
+        ],
+
+        visible: false,
+        formToKhai: {
+          soTkDautien: '',
+          soTkNhanh: '',
+          soTkTong: '',
+          maHq: '54CE',
+          maBophan: '00',
+          loaiDnKb: '1',
+          ngayKhDk: new Date(),
+          maLh: 'A11',
+          plTcCn: '1',
+          maPlhh: 'A',
+          ptvtMa: '1',
+          soTkTnTx: '',
+          thoiHanTnTx: undefined,
+          maDnKb: '0106753003',
+          tenDnKb: 'Tên doanh nghiệp 0106753003'
+        },
+        ruleFormToKhai: {
+          soTkDautien: [this.notVnCharAndSpecial('Số TK đầu tiên')],
+          soTkNhanh: [this.numberRule('Số nhánh')],
+          soTkTong: [this.numberRule('Tổng số')],
+          nhomLoaiHinh: [this.requiredRule('Nhóm loại hình')],
+          loaiDnKb: [this.requiredRule('Kênh khai báo')],
+          maHq: [this.requiredRule('Hải quan tiếp nhận KB')],
+          soTkTnTx: [this.numberRule('Số TK TNTX tương ứng'),
+            { min: 12, max: 12, message: 'Số TK TNTX tương ứng gồm 12 chữ số' }],
+          maPlhh: [],
+          maLh: [this.requiredRule('Mã loại hình')],
+          plTcCn: [this.requiredRule('Phân loại cá nhân tổ chức')],
+          ptvtMa: [this.requiredRule('Phương thức vận chuyển')],
+          maBophan: [this.requiredRule('Mã bộ phận xử lý từ khai')],
+          huyMaLyDo: [this.requiredRule('Mã lý do')],
+          huyLyDo: [this.requiredRule('Lý do hủy')],
+          ngayKhDk : [this.requiredRule('Ngày khai dự kiến'), {
+            validator: this.validateNgayKhaiBao,
+            trigger: ['change', 'blur']
+          }],
+          thoiHanTnTx : [{
+            validator: this.validateThoiHanTnTx,
+            trigger: ['change', 'blur']
+          }],
+
+          maHq: [
+            { required: true, message: 'HQ tiếp nhận khai báo bắt buộc', trigger: 'change' }
+          ],
+          maBophan: [
+            { required: true, message: 'Mã bộ phận xử lý tờ khai (NK) bắt buộc', trigger: 'change' }
+          ],
+          loaiDnKb: [
+            { required: true, message: 'Kênh khai báo bắt buộc', trigger: 'change' }
+          ],
+          ngayKhDk: [
+            { type: 'date', required: true, message: 'Ngày khai báo dự kiến bắt buộc', trigger: 'change' }
+          ],
+          maLh: [
+            { required: true, message: 'Mã loại hình bắt buộc', trigger: 'change' }
+          ],
+          plTcCn: [
+            { required: true, message: 'Phân loại cá nhân/tổ chức bắt buộc', trigger: 'change' }
+          ],
+          ptvtMa: [
+            { required: true, message: 'Mã hiệu phương thức VC bắt buộc', trigger: 'change' }
+          ]
+        },
+        steps: [
+          {
+            title: 'Thông tin chung',
+            icon: 'el-icon-info',
+            props: {}
+          },
+          {
+            title: 'Danh sách hàng',
+            icon: 'el-icon-s-order',
+            props: {}
+          },
+          {
+            title: 'Đơn vị xuất nhập khẩu',
+            icon: 'el-icon-suitcase-1',
+            props: {}
+          },
+          {
+            title: 'Vận đơn',
+            icon: 'el-icon-document',
+            props: {}
+          },
+          {
+            title: 'Hợp đồng, Hóa đơn, Giấy phép',
+            icon: 'el-icon-ship',
+            props: {}
+          },
+          {
+            title: 'Tờ khai trị giá',
+            icon: 'el-icon-reading',
+            props: {}
+          },
+          {
+            title: 'Thuế và bảo lãnh',
+            icon: 'el-icon-document',
+            props: {}
+          },
+          {
+            title: 'Đính kèm khai báo điện tử',
+            icon: 'el-icon-paperclip',
+            props: {}
+          },
+          {
+            title: 'Đính kèm danh sách CTDT khai báo trước',
+            icon: 'el-icon-receiving',
+            props: {}
+          },
+          {
+            title: 'Thông tin trung chuyển',
+            icon: 'el-icon-truck',
+            props: {}
+          },
+          {
+            title: 'Thông tin khác',
+            icon: 'el-icon-chat-dot-square',
+            props: {}
+          }
+        ],
+        maxStep: 0,
+        active: 0,
+        stepStatusPass: new Array(11).fill('wait'),
+        flagShowContent: TAB_CONTENT.THONG_TIN_CHUNG,
+        tableData: [{
+          name: 'Tom',
+          state: 'Nguyên phụ liệu ',
+          city: 'M249',
+          zip: 10,
+          zip2: 1
+        }],
+        dialogHangHoaVisible: false,
+        formThemMoiHangHoa: {
+          maHang: '',
+          loaiHang: '',
+          tenHang: '',
+          maHs: '',
+          nuocXxMa: '',
+          maNgoaiHanNgach: '',
+          maQlr: '',
+          thueMaBieuThue: '',
+          maXdThueNkTheoLuong: '',
+          thueSuat: '',
+          thueSuatTuyetDoi: '',
+          thueSuatTuyetDoiDvt: '',
+          thueSuatTuyetDoiMaNt: '',
+          luong: '',
+          maDvt: '',
+          luong2: '',
+          maDvt2: '',
+          triGiaKb: '',
+          dgiaKb: '',
+          dgiaKbDvt: '',
+          dgiaKbMaNt: '',
+          triGiaTtKb: '',
+          triGiaTtKbMaNt: '',
+          lstTkHhMkdc: [],
+          sttHangTntx: '',
+          soDkMienThue: '',
+          sttHangDmMienThue: '',
+          thueMienGiamMa: '',
+          thueGiam: '',
+          lstTkHhThue: [],
+          lstTkHhCo: [],
+          loaiCo: ''
+        },
+        coLoai: '',
+        tuDongTinh: false,
+        rulesThemMoiHangHoa: {
+          maDvt: [this.requiredRule('Đơn vị tính')],
+          maDvt2: [],
+          maHang: [this.notVnCharAndSpecial('Mã hàng hóa (NPL, SP, TB, HM)')],
+          loaiHang: [],
+          tenHang: [this.requiredRule('Mô tả hàng hóa')],
+          maHs: [this.requiredRule('Mã số hàng hóa'), this.numberRule('Mã số hàng hóa')],
+          maQlr: [this.notVnCharAndSpecial('Mã quản lý riêng')],
+          nuocXxMa: [this.requiredRule('Mã nước xuất xứ')],
+          thueSuat: [this.decimalRule('Thuế suất')],
+          thueSuatTuyetDoi: [this.decimalRule('Mức thuế tuyệt đối')],
+          thueSuatTuyetDoiDvt: [],
+          thueSuatTuyetDoiMaNt: [],
+          luong: [this.requiredRule('Số lượng (1)'), this.decimalRule('Số lượng (1)')],
+          luong2: [this.decimalRule('Số lượng (2)')],
+          triGiaKb: [this.decimalRule('Trị giá hóa đơn')],
+          dgiaKb: [this.decimalRule('Đơn giá hóa đơn')],
+          triGiaTtKb: [this.decimalRule('Trị giá tính thuế')],
+          lstTkHhMkdc: [
+            {
+              soDc: [this.requiredRule('Số của mục khai khoản điều chỉnh'), {
+                validator: this.validateDuplicateMaSoDc,
+                trigger: ['blur', 'change']
+              }, this.numberRule('Số của mục khai khoản điều chỉnh')]
+            },
+            {
+              soDc: [this.requiredRule('Số của mục khai khoản điều chỉnh'), {
+                validator: this.validateDuplicateMaSoDc,
+                trigger: ['blur', 'change']
+              }, this.numberRule('Số của mục khai khoản điều chỉnh')]
+            },
+            {
+              soDc: [this.requiredRule('Số của mục khai khoản điều chỉnh'), {
+                validator: this.validateDuplicateMaSoDc,
+                trigger: ['blur', 'change']
+              }, this.numberRule('Số của mục khai khoản điều chỉnh')]
+            },
+            {
+              soDc: [this.requiredRule('Số của mục khai khoản điều chỉnh'), {
+                validator: this.validateDuplicateMaSoDc,
+                trigger: ['blur', 'change']
+              }, this.numberRule('Số của mục khai khoản điều chỉnh')]
+            },
+            {
+              soDc: [this.requiredRule('Số của mục khai khoản điều chỉnh'), {
+                validator: this.validateDuplicateMaSoDc,
+                trigger: ['blur', 'change']
+              }, this.numberRule('Số của mục khai khoản điều chỉnh')]
+            }
+          ],
+          sttHangTntx: [this.numberRule('STT của dòng hàng trên tờ khai TNTX tương ứng')],
+          soDkMienThue: [this.notVnCharAndSpecial('Số đăng ký danh mục miễn thuế NK')],
+          sttHangDmMienThue: [this.numberRule('Số dòng tương ứng trong danh mục')],
+          thueGiam: [this.decimalRule('Số tiền giảm thuế nhập khẩu')],
+          lstTkHhThue: [
+            {
+              thueMst: [this.requiredRule('Mã áp dụng thuế suất/Mức thuế'), {
+                validator: this.validateDuplicateThueMst,
+                trigger: ['blur', 'change']
+              }],
+              thueMienGiamMa: [{
+                validator: this.validateDuplicateThueMienGiamMa,
+                trigger: ['blur', 'change']
+              }],
+              thueGiam: [this.decimalRule('Số tiền giảm thuế')]
+            },
+            {
+              thueMst: [this.requiredRule('Mã áp dụng thuế suất/Mức thuế'), {
+                validator: this.validateDuplicateThueMst,
+                trigger: ['blur', 'change']
+              }],
+              thueMienGiamMa: [{
+                validator: this.validateDuplicateThueMienGiamMa,
+                trigger: ['blur', 'change']
+              }],
+              thueGiam: [this.decimalRule('Số tiền giảm thuế')]
+            },
+            {
+              thueMst: [this.requiredRule('Mã áp dụng thuế suất/Mức thuế'), {
+                validator: this.validateDuplicateThueMst,
+                trigger: ['blur', 'change']
+              }],
+              thueMienGiamMa: [{
+                validator: this.validateDuplicateThueMienGiamMa,
+                trigger: ['blur', 'change']
+              }],
+              thueGiam: [this.decimalRule('Số tiền giảm thuế')]
+            },
+            {
+              thueMst: [this.requiredRule('Mã áp dụng thuế suất/Mức thuế'), {
+                validator: this.validateDuplicateThueMst,
+                trigger: ['blur', 'change']
+              }],
+              thueMienGiamMa: [{
+                validator: this.validateDuplicateThueMienGiamMa,
+                trigger: ['blur', 'change']
+              }],
+              thueGiam: [this.decimalRule('Số tiền giảm thuế')]
+            },
+            {
+              thueMst: [this.requiredRule('Mã áp dụng thuế suất/Mức thuế'), {
+                validator: this.validateDuplicateThueMst,
+                trigger: ['blur', 'change']
+              }],
+              thueMienGiamMa: [{
+                validator: this.validateDuplicateThueMienGiamMa,
+                trigger: ['blur', 'change']
+              }],
+              thueGiam: [this.decimalRule('Số tiền giảm thuế')]
+            }
+          ],
+          coSo: [this.requiredRule('Số C/O'), {
+            validator: this.validateDuplicateSoCo,
+            trigger: ['blur', 'change']
+          }, this.validateRegex(PATTERN.NAME_NON_VIETNAMESE_WITH_SPECIAL, 'Số C/O')],
+          coNguoiCap: [this.requiredRule('Người cấp C/O')],
+          coToChucCap: [this.requiredRule('Nơi cấp C/O')],
+          coNgay: [this.requiredRule('Ngày cấp C/O'), {
+            validator: this.validateNgayCo,
+            trigger: ['change', 'blur']
+          }],
+          coNgayHh: [this.requiredRule('Ngày hết hạn C/O'), {
+            validator: this.validateNgayHhCo,
+            trigger: ['change', 'blur']
+          }]
+        },
+
+        isActive: true,
+        titleDialogHangHoa: 'Thêm mới hàng hóa',
+        listHq: [
+          { label: 'Chi cục Hải quan Hậu Giang', value: '54CE' },
+          { label: 'Cục hải quan thử nghiệm', value: '88ZZ' }
+        ],
+        listMaBp: [
+          { label: '00', value: '00' },
+        ],
+        listKenhKhaiBao: [
+          { label: 'DN tự khai', value: '1' },
+          { label: 'Đại lý khai', value: '2' }
+        ],
+        listLoaHinh: [
+          { label: 'Nhập kinh doanh tiêu dùng', value: 'A11' },
+          { label: ' Nhập kinh doanh sản xuất', value: 'A12' }
+        ],
+        listCaNhan: [
+          { label: 'Cá nhân', value: '1' },
+          { label: 'Tổ chức', value: '2' }
+        ],
+        listHangHoa: [
+          { label: 'NPL', value: '1' },
+          { label: 'SP', value: '2' }
+        ],
+        listNuocXuatXu: [
+          { label: 'Sierra', value: 'SL' },
+          { label: 'San Marino', value: 'SM' },
+          { label: 'Senegal', value: 'SN' },
+          { label: 'Somalia', value: 'SO' }
+        ],
+        listMienGiamMa: [
+          { label: 'Hàng hóa', value: 'XN190' },
+          { label: 'San Marino', value: 'XN103' },
+        ],
+        listNgoaiHanNgach: [
+          { label: 'Biểu thuế nhập khẩu ưu đãi', value: 'B01' },
+          { label: 'Chương 98 (1) - Biểu thuế nhập khẩu ưu đãi', value: 'B02' },
+        ],
+        listXdThueNkTheoLuong: [
+          { label: 'ô tô 9 chỗ', value: '1' },
+          { label: 'ô tô 16 chỗ', value: '2' },
+        ],
+        listDvt: [
+          { label: 'Số', value: 'SO' },
+          { label: 'VNĐ', value: 'VND' },
+        ],
+        listTienTe: [
+          { label: 'Bảng anh', value: 'BA' },
+          { label: 'Rúp Nga', value: 'RUB' },
+        ],
+        listMaBieuThue: [
+          { label: 'Nhập khẩu quá số lượng hạn ngạch', value: 'X' },
+        ],
+        listHoaHoc: [
+          { label: 'Hàng biếu, quà tặng', value: 'A' },
+          { label: 'Hàng an ninh, quốc phòng', value: 'B' }
+        ],
+        listPhuongThuc: [
+          { label: 'Đường không', value: '1' },
+          { label: 'Đường biển', value: '2' }
+        ],
+        // area data step dvi xuat nhap khau
+        formDonviXuatNhapKhau: {
+          dvXnkMa: '',
+          dvXnkTen: '',
+          dvXnkMaBuuChinh: '',
+          dvXnkDienThoai: '',
+          dvXnkDiaChi: '',
+          dvUyThacMa: '',
+          dvUyThacTen: '',
+          dvDoiTacMa: '',
+          dvDoiTacTen: '',
+          dvDoiTacDiaChi1: '',
+          dvDoiTacDiaChi2: '',
+          dvDoiTacDiaChi3: '',
+          dvDoiTacDiaChi4: '',
+          dvDoiTacMaBuuChinh: '',
+          nuocXkMa: '',
+          dlHqMa: '',
+          dvUyThacDoiTacTen: ''
+        },
+        rulesFormDonViXuatNhapKhau: {
+          dvXnkMa: [
+            this.requiredRule('Mã người nhập khẩu')
+          ],
+          dvXnkTen: [this.requiredRule('Tên người nhập khẩu')],
+          // dvXnkMaBuuChinh: [this.validateRegex(PATTERN.REGEX_NOT_CHAR_ALLOW_SPECIAL, 'Mã bưu chính người nhập khẩu')],
+          dvXnkDiaChi: [this.requiredRule('Địa chỉ người nhập khẩu')],
+          dvXnkDienThoai: [this.requiredRule('Điện thoại người nhập khẩu')],
+        // , this.validateRegex(PATTERN.REGEX_NOT_CHAR_ALLOW_SPECIAL, 'Điện thoại người nhập khẩu')
+          dvUyThacMa: [this.numberRule('Mã người ủy thác nhập khẩu')],
+          dvUyThacTen: [],
+          dvDoiTacMa: [this.numberRule('Mã người xuất khẩu')],
+          dvDoiTacTen: [this.requiredRule('Tên người xuất khẩu'), this.validateRegex(PATTERN.REGEX_NOT_LOWER_CHAR_ALLOW_SPECIAL, 'Tên người xuất khẩu')],
+          dvDoiTacDiaChi1: [this.requiredRule('Địa chỉ người xuất khẩu (1)'), this.validateRegex(PATTERN.REGEX_NOT_LOWER_CHAR_ALLOW_SPECIAL, 'Địa chỉ người xuất khẩu (1)')],
+          dvDoiTacDiaChi2: [this.validateRegex(PATTERN.REGEX_NOT_LOWER_CHAR_ALLOW_SPECIAL, 'Địa chỉ người xuất khẩu (2)')],
+          dvDoiTacDiaChi3: [this.validateRegex(PATTERN.REGEX_NOT_LOWER_CHAR_ALLOW_SPECIAL, 'Địa chỉ người xuất khẩu (3)')],
+          dvDoiTacDiaChi4: [this.validateRegex(PATTERN.REGEX_NOT_LOWER_CHAR_ALLOW_SPECIAL, 'Địa chỉ người xuất khẩu (4)')],
+          dvDoiTacMaBuuChinh: [this.validateRegex(PATTERN.REGEX_NOT_CHAR_ALLOW_SPECIAL, 'Mã bưu chính người xuất khẩu')],
+          // nuocXkMa: [this.requiredRule('Mã nước người xuất khẩu')],
+          dvUyThacDoiTacTen: [],
+          // dlHqMa: [this.validateRegex(PATTERN.REGEX_NOT_TV_SPECIAL, 'Mã đại lý hải quan')]
+        },
+        // area data step van don
+        formVanDon: {
+          lstTkVd: [],
+          soLuong: '',
+          soLuongDvt: '',
+
+          soLuong: '',
+          soLuongDvt: '',
+          soLuong: '',
+          soLuongDvt: '',
+          soLuong: '',
+          soLuongDvt: '',
+          soLuong: '',
+          soLuongDvt: '',
+
+        },
+        rulesFormVanDon: {
+          lstTkVd: {
+            vanDonSo: [this.requiredRule('Số vận đơn'), this.validateRegex(PATTERN.REGEX_NOT_TV_SPECIAL_EXCEPT_DASH, 'Số vận đơn'), {
+              validator: this.validateDuplicateVanDonSo,
+              trigger: ['change', 'blur']
+            }],
+            ngayVanDon: [this.requiredRule('Ngày vận đơn')],
+            soDinhDanh: [this.requiredRule('Số định danh'), this.validateRegex(PATTERN.REGEX_NOT_TV_SPECIAL, 'Số định danh')],
+            soLuongKien: [this.requiredRule('Số lượng kiện'), this.numberRule('Số lượng kiện')],
+            soLuongKienDvt: [this.requiredRule('Số lượng kiện đơn vị tính')],
+            tongTrongLuong: [this.requiredRule('Tổng trọng lượng'), this.decimalRule('Tổng trọng lượng')],
+            tongTrongLuongDvt: [this.requiredRule('Tổng trọng lượng đơn vị tính')]
+          }
+        },
+        formHopDong: {
+          lstTkVbpqKhac: [],
+          lstTkGp: []
+        },
+        rulesFormHopDong: {
+          lstTkVd: {
+            vanDonSo: [this.requiredRule('Số vận đơn'), this.validateRegex(PATTERN.REGEX_NOT_TV_SPECIAL_EXCEPT_DASH, 'Số vận đơn'), {
+              validator: this.validateDuplicateVanDonSo,
+              trigger: ['change', 'blur']
+            }],
+            ngayVanDon: [this.requiredRule('Ngày vận đơn')],
+            soDinhDanh: [this.requiredRule('Số định danh'), this.validateRegex(PATTERN.REGEX_NOT_TV_SPECIAL, 'Số định danh')],
+            soLuongKien: [this.requiredRule('Số lượng kiện'), this.numberRule('Số lượng kiện')],
+            soLuongKienDvt: [this.requiredRule('Số lượng kiện đơn vị tính')],
+            tongTrongLuong: [this.requiredRule('Tổng trọng lượng'), this.decimalRule('Tổng trọng lượng')],
+            tongTrongLuongDvt: [this.requiredRule('Tổng trọng lượng đơn vị tính')]
+          }
+        },
+        //area data step to khai tri gia
+        formToKhaiTriGia: {
+          maPlTg: '',
+          soTnTktg: '',
+          vanChuyenMaPl: '',
+          vanChuyenPhi: '',
+          vanChuyenMaNt: '',
+          baoHiemMaPl: '',
+          baoHiemSoDk: '',
+          phiBaoHiem: '',
+          baoHiemMaNt: '',
+          lstTkKdc: [],
+        },
+        rulesFormToKhaiTriGia: {
+          // maPlTg: [this.requiredRule('Mã phân loại tờ khai trị giá', ['change', 'blur'])],
+          soTnTktg: [this.numberRule('Số tiếp nhận tờ khai giá trị tổng hợp')],
+          phiBaoHiem: [],
+          baoHiemMaNt: [],
+          baoHiemMaPl: [],
+          vanChuyenMaPl: [],
+          vanChuyenPhi: [this.numberRule('Phí vận chuyển'), this.validateRegex(PATTERN.REGEX_20_DECIMAL_4, 'Phí vận chuyển')],
+          vanChuyenMaNt: [],
+          dcTriGiaMa: [this.requiredRule('Mã tên khoản điều chỉnh', ['change', 'blur']), {
+            validator: this.validateDuplicateTriGiaMa,
+            trigger: ['change', 'blur']
+          }],
+          dcTriGiaMaPl: [this.requiredRule('Mã phân loại', ['change', 'blur']), {
+            validator: this.validateDuplicateTriGiaMaPl,
+            trigger: ['change', 'blur']
+          }],
+          dcTriGia: [this.requiredRule('Trị giá khoản điều chỉnh', ['change', 'blur']), this.numberRule('Trị giá khoản điều chỉnh'), this.validateRegex(PATTERN.REGEX_20_DECIMAL_4, 'Trị giá khoản điều chỉnh')],
+          dcTriGiaMaNt: [this.requiredRule('Mã tiền tệ', ['change', 'blur'])],
+          dcTriGiaTongHsPhanBo: [this.requiredRule('Tổng hệ số phân bổ trị giá', ['change', 'blur']), this.numberRule('Tổng hệ số phân bổ trị giá'), this.validateRegex(PATTERN.REGEX_20_DECIMAL_4, 'Tổng hệ số phân bổ trị giá'),
+            {
+              validator: this.validateDcTriGiaTongHsPhanBo,
+              trigger: ['blur', 'change']
+            }],
+          tongHsPhanBoTg: [this.numberRule('Tổng hệ số phân bổ trị giá tính thuế'), this.validateRegex(PATTERN.REGEX_20_DECIMAL_4, 'Tổng hệ số phân bổ trị giá tính thuế'),
+            {
+              validator: this.validateTongHsPhanBoTg,
+              trigger: ['blur', 'change']
+            }],
+          ctKhaiTriGia: [this.requiredRule('Chi tiết khai trị giá', ['change', 'blur'])],
+          baoHiemSoDk: [this.validateRegex(PATTERN.REGEX_NOT_TV_SPECIAL, 'Số đăng ký bảo hiểm tổng hợp')]
+        },
+        //area data step thue va bao lanh
+        formThueBaoLanh: {
+          nguoiNopThue: '',
+          maLyDoBp: '',
+          loaiAh: '',
+          maNh: '',
+          namNh: '',
+          kyhieuNh: '',
+          soNh: '',
+          maNhBl: '',
+          namBl: '',
+          kyhieuBl: '',
+          soBl: '',
+        },
+        ruleFormBaoLanh: {
+          nguoiNopThue: this.requiredRule('Người nộp thuế')
+        },
+        //area data step dính kem khai bao
+        formDinhKemKhaiBao: {
+          lstTkKbdt: []
+        },
+        ruleFormDinhKemKhaiBao: {},
+        //area data step dính kem danh sach
+        formDinhKemDanhSachCTDT: {
+          lstTkCtdt: []
+        },
+        ruleFormDinhKemDanhSachCTDT: {
+        },
+        //area data step thong tin trung chuyen
+        formThongTinTrungChuyen: {
+          ngayNhapKho: '',
+          ngayKhoiHanhVc: '',
+          ngayDen: '',
+          vanChuyenMaPl: '',
+          diaDiemDichVcBaoThueMa: '',
+          lstTkTc: [],
+        },
+        ruleFormThongTinTrungChuyen: {
+        },
+        //area data step thong tin khac
+        formThongTinKhac: {
+          lstTkXktc: [],
+          plHhDacthu: '',
+          ghiChu: '',
+          soQlNoiBoDn: '',
+        },
+        ruleFormThongTinKhac: {
+          soQlNoiBoDn: [this.validateRegex(PATTERN.REGEX_NOT_LOWER_CHAR_ALLOW_SPECIAL, 'Số quản lý nội bộ của doanh nghiệp')],
+          lstTkXktc: [this.requiredRule('Số tờ khai xuất khẩu tại chỗ tương ứng'), this.numberRule('Số tờ khai xuất khẩu tại chỗ tương ứng'),
+            { min: 12, max: 12, message: 'Số tờ khai xuất khẩu tại chỗ tương ứng gồm 12 chữ số' },
+            {
+              validator: this.validateDuplicateSoTk,
+              trigger: ['change', 'blur']
+            }
+          ]
+        },
+        TAB_CONTENT,
+        DEFAULT_VALUE_KHOAN_DC,
+        DEFAULT_VALUE_THUE_THU_KHAC,
+        DEFAULT_VALUE_CO,
+        DEFAULT_VALUE_KHOAN_DIEU_CHINH,
+        DEFAULT_VALUE_DINH_KEM_KHAI_BAO,
+        DEFAULT_VALUE_KHAI_BAO_DIEN_TU,
+        DEFAULT_VALUE_THONG_TIN_TRUNG_CHUYEN
+
+      }
+    },
+    computed: {
+/*      lstTkHh: {
+        get() {
+          return this.lstTkHh
+        },
+        set(newData) {
+          // this.$emit('update:listDataTable', newData)
+          this.lstTkHh = newData
+        }
+      },*/
+      syncTotal: {
+        get() {
+          return this.total
+        },
+        set(total) {
+          // this.$emit('update:total', total)
+          this.total = total
+        }
+      },
+      total() {
+        return this.lstTkHh.length
+      },
+      classObj() {
+        return this.isActive ? '' : 'is-collapse'
+        /*   return {
+             'custom-collapse': true,
+             'is-collapse': !this.isActive
+           }*/
+      },
+         stepStatus() {
+           if (_.size(this.stepStatusPass) === 0) {
+             return new Array(this.steps.length).fill('wait')
+           } else {
+             return this.stepStatusPass
+           }
+         },
+      titleStep() {
+        switch (this.flagShowContent) {
+          case TAB_CONTENT.THONG_TIN_CHUNG:
+            return 'Thông tin chung'
+            break
+          case TAB_CONTENT.DANH_SACH_HANG:
+            return 'Danh sách hàng'
+            break
+          case TAB_CONTENT.DON_VI_XUAT_NHAP:
+            return 'ĐƠN VỊ XUẤT NHẬP KHẨU'
+            break
+          case TAB_CONTENT.VAN_DON:
+            return 'VẬN ĐƠN'
+            break
+          case TAB_CONTENT.HOP_DONG:
+            return 'HỢP ĐỒNG, HÓA ĐƠN, GIẤY PHÉP'
+            break
+          case TAB_CONTENT.TO_KHAI_TRI_GIA:
+            return 'TỜ KHAI TRỊ GIÁ'
+            break
+          case TAB_CONTENT.THUE_BAO_LANH:
+            return 'THUẾ VÀ BẢO LÃNH'
+            break
+          case TAB_CONTENT.DINH_KEM_KHAI_BAO:
+            return 'ĐÍNH KÈM KHAI BÁO ĐIỆN TỬ'
+            break
+          case TAB_CONTENT.DINH_KEM_DANH_SACH_CTDT:
+            return 'ĐÍNH KÈM DANH SÁCH CTDT KHAI BÁO TRƯỚC'
+            break
+          case TAB_CONTENT.THONG_TIN_TRUNG_CHUYEN:
+            return 'THÔNG TIN TRUNG CHUYỂN'
+            break
+          default:
+            return 'THÔNG TIN KHÁC'
+            break
+          // code block
+        }
+      },
+      prevStep() {
+        if (this.active === 0) {
+          return ''
+        }
+        return this.steps[this.active - 1]?.title
+      },
+      nextStep() {
+        if (this.active === this.steps.length - 1) {
+          return ''
+        }
+        return this.steps[this.active + 1]?.title
+      },
+      isAddLegalButtonDisabled() {
+        if (!this.formHopDong.lstTkVbpqKhac || this.formHopDong.lstTkVbpqKhac.length === 0) {
+          return false
+        }
+        return (
+          this.formHopDong.lstTkVbpqKhac.length === 5 ||
+          !this.formHopDong.lstTkVbpqKhac[this.formHopDong.lstTkVbpqKhac.length - 1].maVb
+        )
+      },
+      isDeleteLegalButtonDisabled() {
+        return this.formHopDong.lstTkVbpqKhac && this.formHopDong.lstTkVbpqKhac.length === 0
+      },
+      checkShowFields() {
+        return _.cloneDeep(FIELDS)
+      },
+      isAddButtonDisabledCo() {
+        if (!this.coLoai) return true
+        if (
+                !this.formThemMoiHangHoa.lstTkHhCo ||
+                this.formThemMoiHangHoa.lstTkHhCo.length === 0
+        ) {
+          return false
+        }
+        const lastIndex = this.formThemMoiHangHoa.lstTkHhCo.length - 1
+        return (
+                !this.formThemMoiHangHoa.lstTkHhCo[lastIndex].coSo ||
+                !this.formThemMoiHangHoa.lstTkHhCo[lastIndex].coNgayHh ||
+                !this.formThemMoiHangHoa.lstTkHhCo[lastIndex].coNgay ||
+                !this.formThemMoiHangHoa.lstTkHhCo[lastIndex].coToChucCap ||
+                !this.formThemMoiHangHoa.lstTkHhCo[lastIndex].coNguoiCap
+        )
+      },
+    },
+    watch: {
+      'formThemMoiHangHoa.thueSuatTuyetDoi': {
+        // immediate: true,
+        handler: function(val) {
+          if (val !== null &&
+            val !== undefined &&
+            `${val}`.length > 0) {
+            this.rulesThemMoiHangHoa.thueSuatTuyetDoiDvt = [this.requiredRule('Đơn vị tính')]
+            this.rulesThemMoiHangHoa.thueSuatTuyetDoiMaNt = [this.requiredRule('Đơn vị tiền tệ')]
+          } else {
+            this.formThemMoiHangHoa.thueSuatTuyetDoiDvt = ''
+            this.formThemMoiHangHoa.thueSuatTuyetDoiMaNt = ''
+            this.rulesThemMoiHangHoa.thueSuatTuyetDoiDvt = []
+            this.$refs['formThemMoiHangHoa']?.clearValidate('thueSuatTuyetDoiDvt')
+            this.rulesThemMoiHangHoa.thueSuatTuyetDoiMaNt = []
+            this.$refs['formThemMoiHangHoa']?.clearValidate('thueSuatTuyetDoiMaNt')
+          }
+        }
+      },
+      'formThemMoiHangHoa.dgiaKb': {
+        immediate: true,
+        handler: function(val) {
+          if (val !== null &&
+            val !== undefined &&
+            `${val}`.length > 0) {
+            this.rulesThemMoiHangHoa.dgiaKbMaNt = [this.requiredRule('Đơn vị tiền tệ')]
+            this.rulesThemMoiHangHoa.dgiaKbDvt = [this.requiredRule('Đơn vị tính')]
+          } else {
+            this.formThemMoiHangHoa.dgiaKbMaNt = ''
+            this.formThemMoiHangHoa.dgiaKbDvt = ''
+            this.rulesThemMoiHangHoa.dgiaKbMaNt = []
+            this.$refs['formThemMoiHangHoa']?.clearValidate('dgiaKbMaNt')
+            this.rulesThemMoiHangHoa.dgiaKbDvt = []
+            this.$refs['formThemMoiHangHoa']?.clearValidate('dgiaKbDvt')
+          }
+        }
+      },
+      'formThemMoiHangHoa.triGiaTtKb': {
+        immediate: true,
+        handler: function(val) {
+          if (val !== null &&
+            val !== undefined &&
+            `${val}`.length > 0) {
+            this.rulesThemMoiHangHoa.triGiaTtKbMaNt = [this.requiredRule('Mã tiền tệ')]
+          } else {
+            this.formThemMoiHangHoa.triGiaTtKbMaNt = ''
+            this.rulesThemMoiHangHoa.triGiaTtKbMaNt = []
+            this.$refs['formThemMoiHangHoa']?.clearValidate('triGiaTtKbMaNt')
+          }
+        }
+      }
+    },
+    mounted() {
+      this.$nextTick(() => {
+        window.addEventListener('resize', this.onResize)
+      })
+      this.maxStep = this.steps.length
+    },
+    beforeDestroy() {
+      window.removeEventListener('resize', this.onResize)
+    },
+    methods: {
+      validateNgay(info, value, callback, label1, label2, valueCompare, greaterThan = true) {
+        if (value && valueCompare) {
+          const diff = moment(value).startOf('day').diff(moment(valueCompare).startOf('day'))
+          if ((greaterThan && diff > 0) || (!greaterThan && diff < 0)) {
+            callback(new Error(`${label1} không được nhập ${greaterThan ? 'lớn hơn' : 'nhỏ hơn'} ${label2}`))
+          }
+          return callback()
+        }
+        callback()
+      },
+      validateNgayKhaiBao(_info, value, callback) {
+        if (value) {
+          let diff = moment(value).startOf('day').diff(moment(new Date()).startOf('day'))
+          if ((diff < 0)) {
+            return callback(new Error(`Ngày khai báo dự kiến không được nhập ${'nhỏ hơn'} ${'Ngày hiện tại'}`))
+          }
+          if (this.formToKhai.thoiHanTnTx) {
+            diff = moment(value).startOf('day').diff(moment(this.formToKhai.thoiHanTnTx).startOf('day'))
+            if ((diff > 0)) {
+              return callback(new Error(`Ngày khai báo dự kiến không được nhập ${'lớn hơn'} ${'Thời hạn tái xuất'}`))
+            } else {
+              setTimeout(() => {
+                this.$refs['thongTinChung']?.validateField('objTk.thoiHanTnTx')
+              })
+            }
+          }
+          return callback()
+        }
+        callback()
+      },
+      validateThoiHanTnTx(_info, value, callback) {
+        if (value && this.formToKhai.ngayKhDk) {
+          const diff = moment(value).startOf('day').diff(moment(this.formToKhai.ngayKhDk).startOf('day'))
+          if ((diff < 0)) {
+            return callback(new Error(`Thời hạn tái xuất không được nhập ${'nhỏ hơn'} ${'Ngày khai báo dự kiến'}`))
+          } else {
+            setTimeout(() => {
+              this.$refs['thongTinChung']?.validateField('objTk.ngayKhDk')
+            })
+          }
+          return callback()
+        }
+        callback()
+      },
+      validateNgayCo(info, value, callback) {
+        const index = info.field.substring(info.field.indexOf('[') + 1, info.field.indexOf(']')) * 1
+        this.$refs.lstTkHhCo.clearValidate('lstTkHhCo[' + index + '].coNgayHh')
+        this.$refs.lstTkHhCo.clearValidate('lstTkHhCo[' + index + '].coNgay')
+        this.validateNgay(info, value, callback, 'Ngày C/O', 'Ngày hết hạn C/O', this.formThemMoiHangHoa.lstTkHhCo[index].coNgayHh, true)
+      },
+      validateNgayHhCo(info, value, callback) {
+        const index = info.field.substring(info.field.indexOf('[') + 1, info.field.indexOf(']')) * 1
+        this.$refs.lstTkHhCo.clearValidate('lstTkHhCo[' + index + '].coNgayHh')
+        this.$refs.lstTkHhCo.clearValidate('lstTkHhCo[' + index + '].coNgay')
+        this.validateNgay(info, value, callback, 'Ngày hết hạn C/O', 'Ngày C/O', this.formThemMoiHangHoa.lstTkHhCo[index].coNgay, false)
+      },
+      onResize() {
+        this.windowHeight = window.innerHeight
+      },
+
+      //step area
+      async setActive(step) {
+     /*   if (step < 0 || step > this.maxStep + 1) {
+          return
+        }
+        if (step > this.maxStep) {
+          this.maxStep++
+        }
+        this.active = step*/
+        this.flagShowContent = step
+               if (step < 0 || step > this.maxStep + 1) {
+                 return
+               }
+               if (this.showStepStatus) {
+                 this.onUpdateValidation(this.active, await this.validateCurrentComponent())
+               }
+               if (step > this.maxStep) {
+                 this.maxStep++
+               }
+               // this.touched[this.active] = true
+               this.stepStatus[step] = 'process'
+               this.active = step
+      },
+      onUpdateValidation(stepIndex, validationResult) {
+        this.stepStatus.splice(
+                stepIndex,
+                1,
+                validationResult ? 'success' : 'error'
+        )
+        this.$forceUpdate()
+      },
+      async validateCurrentComponent() {
+        try {
+          return await this.$refs['thongTinChung'].validate((valid) => {
+            if (!valid) return false
+          })
+        } catch (e) {
+          return true
+        }
+      },
+
+            //table area
+      pagination() {
+        this.syncLoadData = true
+        const pageIndex = this.page === 0 ? 0 : this.page - 1
+        if (pageIndex > (this.syncTotal / this.size)) {
+          return
+        }
+        const pageData = this.lstTkHh.slice(pageIndex * this.size, pageIndex * this.size + this.size)
+   /*     if (this.calculateSumRow()) {
+          pageData.push(this.calculateSumRow())
+        }*/
+        this.lstTkHh = pageData
+        this.syncTotal = this.lstTkHh.length
+        setTimeout(() => {
+          this.syncLoadData = false
+        }, 200)
+      },
+
+      onCalcDonGia() {
+        if (this.tuDongTinh && this.formThemMoiHangHoa.luong && !isNaN(this.formThemMoiHangHoa.triGiaKb) && !isNaN(this.formThemMoiHangHoa.luong)) {
+          if (Number(this.formThemMoiHangHoa.luong) === 0) return
+          const dgiaKb = this.formThemMoiHangHoa.triGiaKb / this.formThemMoiHangHoa.luong
+          if (dgiaKb.toString().indexOf('.') !== -1 && dgiaKb.toString().length - dgiaKb.toString().indexOf('.') > 4) {
+            this.formThemMoiHangHoa.dgiaKb = `${dgiaKb.toFixed(4)}`
+            if (this.formThemMoiHangHoa.dgiaKb === '0.0000') this.formThemMoiHangHoa.dgiaKb = '0'
+          } else {
+            this.formThemMoiHangHoa.dgiaKb = `${dgiaKb}`
+          }
+          this.$forceUpdate()
+        }
+      },
+
+      onCalcTriGia() {
+        if (this.tuDongTinh && this.formThemMoiHangHoa.luong && !isNaN(this.formThemMoiHangHoa.luong) && !isNaN(this.formThemMoiHangHoa.dgiaKb)) {
+          if (Number(this.formThemMoiHangHoa.luong) === 0) return
+          const triGiaKb = this.formThemMoiHangHoa.dgiaKb * this.formThemMoiHangHoa.luong
+          if (triGiaKb.toString().indexOf('.') !== -1 && triGiaKb.toString().length - triGiaKb.toString().indexOf('.') > 4) {
+            this.formThemMoiHangHoa.triGiaKb = `${triGiaKb.toFixed(4)}`
+          } else {
+            this.formThemMoiHangHoa.triGiaKb = `${triGiaKb}`
+          }
+          this.$forceUpdate()
+        }
+      },
+
+      onDeleteGoods(scope) {
+        const index = this.lstTkHh.indexOf(scope.row)
+        showConfirm(this, 'Bạn có chắc chắn muốn xóa?', () => {
+          this.lstTkHh.splice(index, 1)
+          showAlert(this, SUCCESS, 'Xóa thành công')
+        })
+      },
+      onCopyRow(scope) {
+        this.titleDialogHangHoa = `Thêm mới hàng hóa`
+        this.formThemMoiHangHoa = scope.row
+        this.dialogHangHoaVisible = true
+        // this.popupMode = FORM_MODE.CREATE
+        // this.isCopy = true
+      },
+      onEditDetailGoods(scope) {
+        this.titleDialogHangHoa = `Sửa hàng hóa`
+        this.formThemMoiHangHoa = scope.row
+        this.dialogHangHoaVisible = true
+        console.log('this.formThemMoiHangHoa', this.formThemMoiHangHoa)
+      },
+      onShowDialogHangHoa() {
+        this.dialogHangHoaVisible = true
+      },
+      onCopyQuantity1To2() {
+        if (this.formThemMoiHangHoa.luong) {
+          this.formThemMoiHangHoa.luong2 = this.formThemMoiHangHoa.luong
+        }
+        if (this.formThemMoiHangHoa.maDvt) {
+          this.formThemMoiHangHoa.maDvt2 = this.formThemMoiHangHoa.maDvt
+        }
+      },
+/*      getSummaries(param) {
+        const { columns, data } = param;
+        const sums = [];
+        const a = columns.find(e => e.label === 'Trị giá hóa đơn' || e.label === 'Trị giá tính thuế')
+        if (a) {
+          columns.forEach((column, index) => {
+            if (index === 0) {
+              sums[index] = 'Tổng';
+              return;
+            }
+            console.log('tổng', a)
+            const values = data.map(item => Number(item[column.property]));
+            if (!values.every(value => isNaN(value))) {
+              sums[index] = values.reduce((prev, curr) => {
+                const value = Number(curr);
+                if (!isNaN(value)) {
+                  return prev + curr;
+                } else {
+                  return prev;
+                }
+              }, 0);
+            } else {
+              sums[index] = 'N/A';
+            }
+          });
+        }
+
+
+        return sums;
+      },*/
+
+      //common func add and del item
+      addNewItem(listItem, valueAdd, refValidate, isLimitItem = false) {
+        if (isLimitItem) {
+          if (listItem.length > 5) return
+        }
+        if (listItem && listItem.length === 0) {
+          listItem.push(_.cloneDeep(valueAdd))
+        } else {
+          this.$refs[refValidate].validate((valid) => {
+            if (!valid) return false
+            listItem.push(_.cloneDeep(valueAdd))
+          })
+        }
+      },
+      delItem(listItem, itemDel, handleValidate) {
+        listItem.splice(itemDel, 1)
+        this.validateCacField(listItem, -1, handleValidate)
+      },
+      validateCacField(listItem, idx, handleValidate) {
+        for (let i = 0; i < listItem.length; i++) {
+          if (i !== idx) {
+            handleValidate();
+          }
+        }
+      },
+      validateField(formName, fieldName) {
+        this.$refs[formName].validateField(fieldName)
+      },
+
+      validateKhoanDc() {
+        if (this.formThemMoiHangHoa.lstTkHhMkdc[i].soDc) this.validateField('formThemMoiHangHoa', 'lstTkHhMkdc[' + i + '].soDc')
+      },
+
+      validateTriGia() {
+        if (this.formToKhaiTriGia.lstTkKdc[i].dcTriGiaMa) this.validateField('formToKhaiTriGia', 'lstTkKdc[' + i + '].dcTriGiaMa')
+      },
+
+      validateDinhKem() {
+        if (this.formDinhKemKhaiBao.lstTkKbdt[i].soDinhKemDt) this.validateField('formDinhKemKhaiBao', 'lstTkKbdt[' + i + '].soDinhKemDt')
+      },
+
+      validateThueThuKhac() {
+        if (this.formThemMoiHangHoa.lstTkHhThue[i].thueMst) this.$refs.thueThuKhac.validateField('lstTkHhThue[' + i + '].thueMst')
+        if (this.formThemMoiHangHoa.lstTkHhThue[i].thueMienGiamMa) this.$refs.thueThuKhac.validateField('lstTkHhThue[' + i + '].thueMienGiamMa')
+      },
+
+      validateCo() {
+        if (this.formThemMoiHangHoa.lstTkHhCo[i].coSo) this.validateField('formThemMoiHangHoa', 'lstTkHhCo[' + i + '].coSo')
+      },
+       validateVanDon() {
+        if (this.formVanDon.lstTkVd[i].vanDonSo) this.validateField('formVanDon', 'lstTkVd[' + i + '].vanDonSo')
+      },
+      validateThongTinTrungChuyen() {
+        if (this.formThongTinTrungChuyen.lstTkTc[i].diaDiemTrungChuyenBcbt) this.validateField('formThongTinTrungChuyen', 'lstTkTc[' + i + '].diaDiemTrungChuyenBcbt')
+      },
+
+
+      onChangeCoLoai() {
+        if (!this.coLoai) {
+          this.formThemMoiHangHoa.lstTkHhCo = []
+        }
+        if (!!this.coLoai && this.formThemMoiHangHoa.lstTkHhCo.length < 1) {
+          this.addNewItemCo()
+        }
+        this.formThemMoiHangHoa.lstTkHhCo.forEach(s => {
+          s.coLoai = this.coLoai
+        })
+      },
+
+      addNewItemCo() {
+        const lastIndex = this.formThemMoiHangHoa.lstTkHhCo.length - 1
+        if (lastIndex >= 0) {
+          if (!this.checkValidFields(this.$refs['formThemMoiHangHoa'], [
+            `lstTkHhCo[${lastIndex}].coSo`,
+            `lstTkHhCo[${lastIndex}].coNguoiCap`,
+            `lstTkHhCo[${lastIndex}].coToChucCap`,
+            `lstTkHhCo[${lastIndex}].coNgay`,
+            `lstTkHhCo[${lastIndex}].coNgayHh`
+          ])) {
+            return
+          }
+        }
+        const itemCo = _.cloneDeep(DEFAULT_VALUE_CO)
+        itemCo.coLoai = this.coLoai
+        this.formThemMoiHangHoa.lstTkHhCo.push(itemCo)
+      },
+
+      addLegal() {
+        const lastIndex = this.formHopDong.lstTkVbpqKhac.length - 1
+        /*    if (lastIndex >= 0) {
+              if (!checkValidFields(this.$refs['formHopDong'], [
+                `lstTkVbpqKhac[${lastIndex}].maVb`
+              ])) {
+                return
+              }
+            }*/
+        this.formHopDong.lstTkVbpqKhac.push(_.cloneDeep({
+          'stt': null,
+          'maVb': ''
+        }))
+
+        this.formThongTinKhac.lstTkXktc.push(_.cloneDeep({
+          stt: null,
+          soTkXktc: ''
+        }))
+      },
+
+      deleteLegal(index) {
+        this.formHopDong.lstTkVbpqKhac.splice(index, 1)
+        this.formThongTinKhac.lstTkXktc.splice(index, 1)
+        // this.validateCacFieldVanBan(-1)
+      },
+
+      addNewItemGiayPhepNhapKhau() {
+        if (this.formHopDong.lstTkGp.length === 0) {
+          this.formHopDong.lstTkGp.push(_.cloneDeep({
+            'giayPhepMa': '',
+            'giayPhepNgay': '',
+            'giayPhepNgayCap': '',
+            'giayPhepNgayHh': '',
+            'giayPhepNguoiCap': '',
+            'giayPhepNoiCap': '',
+            'giayPhepSo': '',
+            'giayPhepTen': ''
+          }))
+        } else {
+          this.$refs.formHopDong.validate((valid) => {
+            if (!valid) return false
+            this.formHopDong.lstTkGp.push(_.cloneDeep({
+              'giayPhepMa': '',
+              'giayPhepNgay': '',
+              'giayPhepNgayCap': '',
+              'giayPhepNgayHh': '',
+              'giayPhepNguoiCap': '',
+              'giayPhepNoiCap': '',
+              'giayPhepSo': '',
+              'giayPhepTen': ''
+            }))
+          })
+        }
+      },
+
+      deleteItemGiayPhepNhapKhau(index) {
+        this.formHopDong.lstTkGp.splice(index, 1)
+        // this.validateCacFieldGiayPhep(-1)
+      },
+
+      checkValidFields(ref, arrFieldNames) {
+        let allValid = true
+        arrFieldNames.forEach(s => {
+          ref.validateField(s, valid => {
+            if (valid) {
+              allValid = false
+            }
+          })
+        })
+        return allValid
+      },
+
+      deleteItemGiayPhepNhapKhau(index) {
+        this.formHopDong.lstTkGp.splice(index, 1)
+        // this.validateCacFieldGiayPhep(-1)
+      },
+
+      handleClose(done) {
+        showConfirm(this, 'Tất cả thông tin đã điền sẽ không được lưu. Tiếp tục?', () => {
+          this.dialogHangHoaVisible = false
+        })
+      },
+      onAddItemHangHoa() {
+        let valid = true
+        let valid1 = true
+        let valid2 = true
+        this.$refs['formThemMoiHangHoa'].validate(isValid => {
+          valid = isValid
+        })
+        this.$refs.thueThuKhac?.validate(isValid => {
+          valid1 = isValid
+        })
+        this.$refs.lstTkHhMkdc?.validate(isValid => {
+          valid2 = isValid
+        })
+        if (!valid || !valid1 || !valid2) {
+          this.$message({
+            type: 'error',
+            showClose: true,
+            message: 'Thông tin hàng hoá chưa đầy đủ'
+          })
+          return
+        }
+        this.lstTkHh.push(this.formThemMoiHangHoa)
+        showAlert(this, SUCCESS, 'Thêm mới thông tin hàng hóa thành công')
+     /*   if (this.mode === FORM_MODE.CREATE) {
+          this.formDataModel.lstTkHh.push(this.formValues)
+          showAlert(this, SUCCESS, 'Thêm mới thông tin hàng hóa thành công')
+        } else {
+          this.formDataModel.lstTkHh.splice(this.editingIdx, 1, this.formValues)
+          showAlert(this, SUCCESS, 'Cập nhật thông tin hàng hóa thành công')
+        }
+        this.showDialog = false*/
+
+        this.dialogHangHoaVisible = false
+      },
+      onCollapse(e) {
+        this.isActive = e
+        this.$emit('change', e)
+      },
+
+      objReponsive(number) {
+        return {
+          xs: 24,
+          sm: 24,
+          md: number,
+          lg: number,
+          xl: number
+        }
+      },
+
+      // ara step van don
+      validateCacField(idx) {
+        for (let i = 0; i < this.formVanDon.lstTkVd.length; i++) {
+          if (i !== idx) {
+            if (this.formVanDon.lstTkVd[i].vanDonSo) this.validateField('lstTkVd[' + i + '].vanDonSo')
+          }
+        }
+      },
+
+      delListItem (ItemParam) {
+         if (ItemParam)  delete ItemParam
+      },
+
+      onGuiToKhaiTam() {
+        this.formVanDon.lstTkVd.map(item => {
+
+        })
+        for (let i = 0; i < this.formVanDon.lstTkVd.length; i++) {
+          this.formVanDon.lstTkVd[i].push({stt: i})
+        }
+
+const paramList = {
+  lstTkHh : this.formThemMoiHangHoa.lstTkHh,
+  lstTkVd: this.formVanDon.lstTkVd,
+  lstTkVbpqKhac: this.formHopDong.lstTkVbpqKhac,
+  lstTkGp: this.formHopDong.lstTkGp,
+  lstTkKdc: this.formToKhaiTriGia.lstTkKdc,
+  lstTkKbdt: this.formDinhKemKhaiBao.lstTkKbdt,
+  lstTkTc: this.formThongTinTrungChuyen.lstTkTc,
+  lstTkXktc: this.formThongTinKhac.lstTkXktc,
+}
+
+this.delListItem(this.formThemMoiHangHoa.lstTkHh)
+        this.delListItem(this.formHopDong.lstTkGp)
+        this.delListItem(this.formVanDon.lstTkVd)
+        this.delListItem(this.formHopDong.lstTkVbpqKhac)
+        this.delListItem(this.formToKhaiTriGia.lstTkKdc)
+        this.delListItem(this.formDinhKemKhaiBao.lstTkKbdt)
+        this.delListItem(this.formThongTinTrungChuyen.lstTkTc)
+        this.delListItem(this.formThongTinKhac.lstTkXktc)
+
+
+const paramObjTk = {
+  objTk: {
+    ...this.formToKhai,
+    ...this.formThemMoiHangHoa,
+    ...this.formDonviXuatNhapKhau,
+    ...this.formVanDon,
+    ...this.formHopDong,
+    ...this.formToKhaiTriGia,
+    ...this.formThueBaoLanh,
+    ...this.formDinhKemKhaiBao,
+    ...this.formDinhKemDanhSachCTDT,
+    ...this.formThongTinTrungChuyen,
+    ...this.formThongTinKhac,
+  }
+}
+
+const params = {
+  ...paramList, ...paramObjTk
+}
+        console.log('params', params)
+      },
+
+      // area validate
+      requiredRule(label, trigger) {
+        return {
+          required: true,
+          message: `${label} bắt buộc`,
+          trigger: trigger
+        }
+      },
+      decimalRule(label, whole, fraction) {
+        return {
+          validator: (rule, value, callback) =>
+            this.validateDecimal(rule, value, callback, label, whole, fraction),
+          trigger: ['change', 'blur']
+        }
+      },
+      validateDecimal(rule,
+        value,
+        callback,
+        label,
+        whole = 16,
+        fraction = 4) {
+        if (value) {
+          if (!(value + '').match('^[0-9.]*$')) {
+            callback(new Error(`${label} là kiểu số`))
+            return
+          } else if (
+            !(value + '').match(`^\\d{1,${whole}}(\\.\\d{1,${fraction}})?$`)
+          ) {
+            callback(new Error(`${label} không đúng định dạng`))
+            return
+          }
+        }
+        callback()
+      },
+      notVnCharAndSpecial(label, trigger) {
+        return {
+          pattern: PATTERN.NAME_NON_VI,
+          message: `${label} không đúng định dạng`,
+          trigger: trigger || ['change', 'blur']
+        }
+      },
+      numberRule(label, trigger) {
+        return {
+          validator: (_rule, value, cb) => {
+            if (value && isNaN(value)) {
+              cb(new Error(`${label} là kiểu số`))
+            } else {
+              cb()
+            }
+          },
+          trigger: trigger || ['change', 'blur']
+        }
+      },
+      validateRegex(regex, label, trigger) {
+        return {
+          pattern: regex,
+          message: `${label} không đúng định dạng`,
+          trigger: trigger || ['change', 'blur']
+        }
+      },
+      validateDuplicateSoTk(info, value, callback) {
+        this.validateDuplicateMa(info, value, callback, this.formThongTinKhac.lstTkXktc, 'lstTkXktc', 'soTkXktc', 'Số tờ khai xuất khẩu tại chỗ tương ứng')
+      },
+      validateDuplicateTriGiaMa(info, value, callback) {
+        this.validateDuplicateMa(info, value, callback, 'dcTriGiaMa')
+      },
+      validateDuplicateThueMst(info, value, callback) {
+        this.validateDuplicateMa(info, value, callback, 'thueMst', 22)
+      },
+      validateDuplicateMaSoDc(info, value, callback) {
+        this.validateDuplicateMa(info, value, callback, this.formThemMoiHangHoa.lstTkHhMkdc, 'lstTkHhMkdc', 'soDc', 'Số của mục khai khoản điều chỉnh', this.$refs.lstTkHhMkdc, 19)
+      },
+      validateDuplicateVanDonSo(info, value, callback) {
+        this.validateDuplicateMa(info, value, callback, this.formVanDon.lstTkVd, 'lstTkVd', 'vanDonSo', 'Số vận đơn')
+      },
+      validateDuplicateMa(info, value, callback, arr, labelArr, propField, labelField, refs, lengthField = 21) {
+        const checkArr = [...arr]
+        checkArr.pop()
+        const indexLength = 1 + info.field.length - lengthField
+        const index = info.field.substr(info.field.indexOf('[') + 1, indexLength)
+        _.pullAt(checkArr, index)
+        if (_.size(checkArr) > 0) {
+          if (this.checkPropertyValueExists(checkArr, value, propField)) {
+            callback(new Error(`${labelField} [${value}] bị trùng lặp`))
+          } else {
+            // arr.forEach((v, i) => refs.clearValidate(`${labelArr}[${i}].${propField}`))
+          }
+        }
+        return callback()
+      },
+      checkPropertyValueExists(arr, value, property) {
+        return !_.isNil(
+          _.find(arr, elem => {
+            return elem[property] ? elem[property] === value : false
+          })
+        )
+      }
+    }
+  })
+</script>
+</html>
+
+

@@ -1,0 +1,2873 @@
+﻿
+[
+  {
+    "code": "01NV",
+    "codeParent": "3",
+    "name": "Chi cục hải quan Bắc Thăng Long",
+    "status": 1,
+    "mpk": "01NV"
+  },
+  {
+    "code": "01PJ",
+    "codeParent": "3",
+    "name": "Chi cục hải quan Việt Trì",
+    "status": 1,
+    "mpk": "01PJ"
+  },
+  {
+    "code": "01PL",
+    "codeParent": "3",
+    "name": "CC HQ quản lý hàng ĐT-GC Hà Nội",
+    "status": 1,
+    "mpk": "01PL"
+  },
+  {
+    "code": "01PM",
+    "codeParent": "3",
+    "name": "CC HQ Hà Tây (Thuộc HQ Hà Nội)",
+    "status": 1,
+    "mpk": "01PM"
+  },
+  {
+    "code": "01PQ",
+    "codeParent": "3",
+    "name": "Chi cục Hải quan Hòa Bình",
+    "status": 1,
+    "mpk": "01PQ"
+  },
+  {
+    "code": "01PR",
+    "codeParent": "3",
+    "name": "CC HQ Vĩnh Phúc (HQ Hà Nội)",
+    "status": 1,
+    "mpk": "01PR"
+  },
+  {
+    "code": "01QQ",
+    "codeParent": "3",
+    "name": "Chi cục KTSTQ HN",
+    "status": 1,
+    "mpk": "01QQ"
+  },
+  {
+    "code": "01SI",
+    "codeParent": "3",
+    "name": "CC HQ Ga Yên Viên (Hà Nội)",
+    "status": 1,
+    "mpk": "01SI"
+  },
+  {
+    "code": "01TE",
+    "codeParent": "3",
+    "name": "CCHQ Bắc Hà Nội",
+    "status": 1,
+    "mpk": "01TE"
+  },
+  {
+    "code": "01ZZ",
+    "codeParent": "2",
+    "name": "Cục Hải quan TP Hà Nội",
+    "status": 1,
+    "mpk": "01ZZ"
+  },
+  {
+    "code": "02AB",
+    "codeParent": "3",
+    "name": "CC HQ Sân bay QT Tân Sơn Nhất",
+    "status": 1,
+    "mpk": "02AB"
+  },
+  {
+    "code": "02B1",
+    "codeParent": "3",
+    "name": "Đội TT HH XNK TCS - SB TSN HCM",
+    "status": 1,
+    "mpk": "02B1"
+  },
+  {
+    "code": "02B4",
+    "codeParent": "3",
+    "name": "Đội TT HH XNK SCSC - SB TSN HCM",
+    "status": 1,
+    "mpk": "02B4"
+  },
+  {
+    "code": "02CC",
+    "codeParent": "3",
+    "name": "CC HQ CK Cảng Sài Gòn KV II",
+    "status": 1,
+    "mpk": "02CC"
+  },
+  {
+    "code": "02CH",
+    "codeParent": "3",
+    "name": "CC HQ CK Cảng Sài Gòn KV III",
+    "status": 1,
+    "mpk": "02CH"
+  },
+  {
+    "code": "02CI",
+    "codeParent": "3",
+    "name": "CC HQ CK Cảng Sài Gòn KV I",
+    "status": 1,
+    "mpk": "02CI"
+  },
+  {
+    "code": "02CV",
+    "codeParent": "3",
+    "name": "CC HQ CK Cảng Hiệp Phước (HCM)",
+    "status": 1,
+    "mpk": "02CV"
+  },
+  {
+    "code": "02CX",
+    "codeParent": "3",
+    "name": "CC HQ CK Tân Cảng (Hồ Chí Minh)",
+    "status": 1,
+    "mpk": "02CX"
+  },
+  {
+    "code": "02DS",
+    "codeParent": "3",
+    "name": "CC HQ Chuyển phát nhanh",
+    "status": 1,
+    "mpk": "02DS"
+  },
+  {
+    "code": "02F1",
+    "codeParent": "3",
+    "name": "HQ KCX Linh Trung I (Hồ Chí Minh)",
+    "status": 1,
+    "mpk": "02F1"
+  },
+  {
+    "code": "02F2",
+    "codeParent": "3",
+    "name": "HQ KCX Linh Trung II (Hồ Chí Minh)",
+    "status": 1,
+    "mpk": "02F2"
+  },
+  {
+    "code": "02F3",
+    "codeParent": "3",
+    "name": "HQ KCX Linh Trung - Khu CNC",
+    "status": 1,
+    "mpk": "02F3"
+  },
+  {
+    "code": "02H1",
+    "codeParent": "3",
+    "name": "Đội TT Cảng Bến Nghé-CSG KV III",
+    "status": 1,
+    "mpk": "02H1"
+  },
+  {
+    "code": "02H2",
+    "codeParent": "3",
+    "name": "Đội TT và GS XDầu XNK-CSG KVIII",
+    "status": 1,
+    "mpk": "02H2"
+  },
+  {
+    "code": "02H3",
+    "codeParent": "3",
+    "name": "Đội TT Cảng VICT-CSG KV III",
+    "status": 1,
+    "mpk": "02H3"
+  },
+  {
+    "code": "02IK",
+    "codeParent": "3",
+    "name": "CC HQ CK Cảng Sài Gòn khu vực IV",
+    "status": 1,
+    "mpk": "02IK"
+  },
+  {
+    "code": "02K1",
+    "codeParent": "3",
+    "name": "CC HQ KV IV ( ICD Tanamexco)",
+    "status": 1,
+    "mpk": "02K1"
+  },
+  {
+    "code": "02K2",
+    "codeParent": "3",
+    "name": "CC HQ KV IV ( ICD Transimex)",
+    "status": 1,
+    "mpk": "02K2"
+  },
+  {
+    "code": "02K3",
+    "codeParent": "3",
+    "name": "CC HQ KV IV (ICD Sotrans)",
+    "status": 1,
+    "mpk": "02K3"
+  },
+  {
+    "code": "02PG",
+    "codeParent": "3",
+    "name": "CC HQ quản lý hàng đầu tư HCM",
+    "status": 1,
+    "mpk": "02PG"
+  },
+  {
+    "code": "02PJ",
+    "codeParent": "3",
+    "name": "CC HQ quản lý hàng gia công HCM",
+    "status": 1,
+    "mpk": "02PJ"
+  },
+  {
+    "code": "02QQ",
+    "codeParent": "3",
+    "name": "Chi cục KTSTQ HQ TP Hồ Chí Minh",
+    "status": 1,
+    "mpk": "02QQ"
+  },
+  {
+    "code": "02XE",
+    "codeParent": "3",
+    "name": "CC HQ KCX Tân Thuận (HCM)",
+    "status": 1,
+    "mpk": "02XE"
+  },
+  {
+    "code": "02XF",
+    "codeParent": "3",
+    "name": "CC HQ KCX Linh Trung (HCM)",
+    "status": 1,
+    "mpk": "02XF"
+  },
+  {
+    "code": "02ZZ",
+    "codeParent": "2",
+    "name": "Cục Hải quan TP Hồ Chí Minh",
+    "status": 1,
+    "mpk": "02ZZ"
+  },
+  {
+    "code": "03CC",
+    "codeParent": "3",
+    "name": "CC HQ CK cảng HP KV I",
+    "status": 1,
+    "mpk": "03CC"
+  },
+  {
+    "code": "03CD",
+    "codeParent": "3",
+    "name": "CC HQ Thái Bình",
+    "status": 1,
+    "mpk": "03CD"
+  },
+  {
+    "code": "03CE",
+    "codeParent": "3",
+    "name": "CC HQ CK cảng HP KV II",
+    "status": 1,
+    "mpk": "03CE"
+  },
+  {
+    "code": "03EE",
+    "codeParent": "3",
+    "name": "CC HQ Cảng Đình Vũ  Hải Phòng",
+    "status": 1,
+    "mpk": "03EE"
+  },
+  {
+    "code": "03NK",
+    "codeParent": "3",
+    "name": "CC HQ KCX và KCN Hải Phòng",
+    "status": 1,
+    "mpk": "03NK"
+  },
+  {
+    "code": "03PA",
+    "codeParent": "3",
+    "name": "CC HQ QL hàng ĐT-GC Hải Phòng",
+    "status": 1,
+    "mpk": "03PA"
+  },
+  {
+    "code": "03PJ",
+    "codeParent": "3",
+    "name": "CC HQ Hải dương",
+    "status": 1,
+    "mpk": "03PJ"
+  },
+  {
+    "code": "03PL",
+    "codeParent": "3",
+    "name": "CC HQ Hưng yên",
+    "status": 1,
+    "mpk": "03PL"
+  },
+  {
+    "code": "03QM",
+    "codeParent": "3",
+    "name": "Chi cục kiểm tra sau thông quan",
+    "status": 1,
+    "mpk": "03QM"
+  },
+  {
+    "code": "03RR",
+    "codeParent": "3",
+    "name": "Phòng QLRR Hải Phòng",
+    "status": 1,
+    "mpk": "03RR"
+  },
+  {
+    "code": "03TG",
+    "codeParent": "3",
+    "name": "CC HQ CK cảng HP KV III",
+    "status": 1,
+    "mpk": "03TG"
+  },
+  {
+    "code": "03ZZ",
+    "codeParent": "2",
+    "name": "Cục Hải quan TP Hải Phòng",
+    "status": 1,
+    "mpk": "03ZZ"
+  },
+  {
+    "code": "10BB",
+    "codeParent": "3",
+    "name": "CC HQ CK Thanh Thủy Hà Giang",
+    "status": 1,
+    "mpk": "10BB"
+  },
+  {
+    "code": "10BC",
+    "codeParent": "3",
+    "name": "CC HQ CK Xín Mần Hà Giang",
+    "status": 1,
+    "mpk": "10BC"
+  },
+  {
+    "code": "10BD",
+    "codeParent": "3",
+    "name": "CC HQ CK Phó Bảng Hà Giang",
+    "status": 1,
+    "mpk": "10BD"
+  },
+  {
+    "code": "10BF",
+    "codeParent": "3",
+    "name": "CC HQ CK Săm Pun",
+    "status": 1,
+    "mpk": "10BF"
+  },
+  {
+    "code": "10BI",
+    "codeParent": "3",
+    "name": "CC HQ Tuyên Quang",
+    "status": 1,
+    "mpk": "10BI"
+  },
+  {
+    "code": "10QG",
+    "codeParent": "3",
+    "name": "Chi cục KTSTQ HQ Hà Giang",
+    "status": 1,
+    "mpk": "10QG"
+  },
+  {
+    "code": "10ZZ",
+    "codeParent": "2",
+    "name": "Cục Hải quan Hà Giang",
+    "status": 1,
+    "mpk": "10ZZ"
+  },
+  {
+    "code": "11B1",
+    "codeParent": "3",
+    "name": "CC HQ CK Tà Lùng Cao Bằng",
+    "status": 1,
+    "mpk": "11B1"
+  },
+  {
+    "code": "11B2",
+    "codeParent": "3",
+    "name": "Đội NV số 2 Nà Lạn",
+    "status": 1,
+    "mpk": "11B2"
+  },
+  {
+    "code": "11BB",
+    "codeParent": "3",
+    "name": "CC HQ CK Tà Lùng Cao Bằng",
+    "status": 1,
+    "mpk": "11BB"
+  },
+  {
+    "code": "11BE",
+    "codeParent": "3",
+    "name": "CC HQ CK Trà Lĩnh Cao Bằng",
+    "status": 1,
+    "mpk": "11BE"
+  },
+  {
+    "code": "11BF",
+    "codeParent": "3",
+    "name": "CC HQ CK Sóc Giang Cao Bằng",
+    "status": 1,
+    "mpk": "11BF"
+  },
+  {
+    "code": "28PE",
+    "codeParent": "3",
+    "name": "CC HQ Nam Định",
+    "status": 1,
+    "mpk": "28PE"
+  },
+  {
+    "code": "28ZZ",
+    "codeParent": "2",
+    "name": "Cục Hải quan Hà Nam Ninh",
+    "status": 1,
+    "mpk": "28ZZ"
+  },
+  {
+    "code": "29BB",
+    "codeParent": "3",
+    "name": "CC HQ CK Nậm Cắn Nghệ An",
+    "status": 1,
+    "mpk": "29BB"
+  },
+  {
+    "code": "29BH",
+    "codeParent": "3",
+    "name": "Chi cục HQ CK Thanh Thủy",
+    "status": 1,
+    "mpk": "29BH"
+  },
+  {
+    "code": "29C1",
+    "codeParent": "3",
+    "name": "Đội TT - CC HQ Cảng Nghệ An",
+    "status": 1,
+    "mpk": "29C1"
+  },
+  {
+    "code": "29C2",
+    "codeParent": "3",
+    "name": "Đội TTSB Vinh-CCHQ Cảng Nghệ An",
+    "status": 1,
+    "mpk": "29C2"
+  },
+  {
+    "code": "29CC",
+    "codeParent": "3",
+    "name": "Chi cục HQ CK Cảng Nghệ An",
+    "status": 1,
+    "mpk": "29CC"
+  },
+  {
+    "code": "29PF",
+    "codeParent": "3",
+    "name": "CC HQ Vinh Nghệ An",
+    "status": 1,
+    "mpk": "29PF"
+  },
+  {
+    "code": "29QG",
+    "codeParent": "3",
+    "name": "Chi cục KTSTQ HQ Nghệ An",
+    "status": 1,
+    "mpk": "29QG"
+  },
+  {
+    "code": "29ZZ",
+    "codeParent": "2",
+    "name": "Cục Hải quan Nghệ An",
+    "status": 1,
+    "mpk": "29ZZ"
+  },
+  {
+    "code": "30BB",
+    "codeParent": "3",
+    "name": "CC HQ CK Cầu Treo Hà Tĩnh",
+    "status": 1,
+    "mpk": "30BB"
+  },
+  {
+    "code": "30BE",
+    "codeParent": "3",
+    "name": "CC HQ Hồng Lĩnh Hà Tĩnh",
+    "status": 1,
+    "mpk": "30BE"
+  },
+  {
+    "code": "30BI",
+    "codeParent": "3",
+    "name": "CC HQ khu kinh tế CK Cầu Treo",
+    "status": 1,
+    "mpk": "30BI"
+  },
+  {
+    "code": "30CC",
+    "codeParent": "3",
+    "name": "CC HQ CK Cảng Xuân Hải Hà Tĩnh",
+    "status": 1,
+    "mpk": "30CC"
+  },
+  {
+    "code": "30CF",
+    "codeParent": "3",
+    "name": "CC HQ CK Cảng Vũng Áng Hà Tĩnh",
+    "status": 1,
+    "mpk": "30CF"
+  },
+  {
+    "code": "30F1",
+    "codeParent": "3",
+    "name": "CC HQ CK Cảng Vũng Áng Hà Tĩnh",
+    "status": 1,
+    "mpk": "30F1"
+  },
+  {
+    "code": "30F2",
+    "codeParent": "3",
+    "name": "Đội nghiệp vụ cảng Sơn Dương",
+    "status": 1,
+    "mpk": "30F2"
+  },
+  {
+    "code": "30QH",
+    "codeParent": "3",
+    "name": "Chi cục KTSTQ - Hà Tĩnh",
+    "status": 1,
+    "mpk": "30QH"
+  },
+  {
+    "code": "30ZZ",
+    "codeParent": "2",
+    "name": "Cục Hải quan Hà Tĩnh",
+    "status": 1,
+    "mpk": "30ZZ"
+  },
+  {
+    "code": "31BB",
+    "codeParent": "3",
+    "name": "CC HQ CK Cha Lo Quảng Bình",
+    "status": 1,
+    "mpk": "31BB"
+  },
+  {
+    "code": "31BF",
+    "codeParent": "3",
+    "name": "CC HQ CK Cà Roòng Quảng Bình",
+    "status": 1,
+    "mpk": "31BF"
+  },
+  {
+    "code": "31CD",
+    "codeParent": "3",
+    "name": "CC HQ CK Cảng Hòn La",
+    "status": 1,
+    "mpk": "31CD"
+  },
+  {
+    "code": "31D1",
+    "codeParent": "3",
+    "name": "Đội Nghiệp vụ Cảng Hòn La",
+    "status": 1,
+    "mpk": "31D1"
+  },
+  {
+    "code": "31D2",
+    "codeParent": "3",
+    "name": "Đội Nghiệp vụ Đồng Hới",
+    "status": 1,
+    "mpk": "31D2"
+  },
+  {
+    "code": "31D3",
+    "codeParent": "3",
+    "name": "Đội Nghiệp vụ Cảng Gianh",
+    "status": 1,
+    "mpk": "31D3"
+  },
+  {
+    "code": "31QG",
+    "codeParent": "3",
+    "name": "Chi cục KTSTQ HQ Quảng Bình",
+    "status": 1,
+    "mpk": "31QG"
+  },
+  {
+    "code": "31ZZ",
+    "codeParent": "2",
+    "name": "Cục Hải quan Quảng Bình",
+    "status": 1,
+    "mpk": "31ZZ"
+  },
+  {
+    "code": "32BB",
+    "codeParent": "3",
+    "name": "CC HQ CK Lao Bảo Quảng Trị",
+    "status": 1,
+    "mpk": "32BB"
+  },
+  {
+    "code": "32BC",
+    "codeParent": "3",
+    "name": "CC HQ CK La Lay Quảng Trị",
+    "status": 1,
+    "mpk": "32BC"
+  },
+  {
+    "code": "32BD",
+    "codeParent": "3",
+    "name": "CC HQ Khu Thương mại Lao Bảo",
+    "status": 1,
+    "mpk": "32BD"
+  },
+  {
+    "code": "32CD",
+    "codeParent": "3",
+    "name": "CC HQ CK Cảng Cửa Việt Quảng Trị",
+    "status": 1,
+    "mpk": "32CD"
+  },
+  {
+    "code": "32QH",
+    "codeParent": "3",
+    "name": "Chi cục KTSTQ HQ Quảng Trị",
+    "status": 1,
+    "mpk": "32QH"
+  },
+  {
+    "code": "32VG",
+    "codeParent": "3",
+    "name": "Đội Kiểm soát HQ Quảng Trị",
+    "status": 1,
+    "mpk": "32VG"
+  },
+  {
+    "code": "32ZZ",
+    "codeParent": "2",
+    "name": "Cục Hải quan Quảng Trị",
+    "status": 1,
+    "mpk": "32ZZ"
+  },
+  {
+    "code": "33A1",
+    "codeParent": "3",
+    "name": "Đội Nghiệp vụ - CC HQ CK AĐớt",
+    "status": 1,
+    "mpk": "33A1"
+  },
+  {
+    "code": "33A2",
+    "codeParent": "3",
+    "name": "Đội NV Hồng Vân - CC HQ CK AĐớt",
+    "status": 1,
+    "mpk": "33A2"
+  },
+  {
+    "code": "33BA",
+    "codeParent": "3",
+    "name": "CC HQ CK Ađớt",
+    "status": 1,
+    "mpk": "33BA"
+  },
+  {
+    "code": "33CC",
+    "codeParent": "3",
+    "name": "CC HQ Cảng Thuận An TT Huế",
+    "status": 1,
+    "mpk": "33CC"
+  },
+  {
+    "code": "33CF",
+    "codeParent": "3",
+    "name": "CC HQ CK Cảng Chân Mây TT Huế",
+    "status": 1,
+    "mpk": "33CF"
+  },
+  {
+    "code": "33PD",
+    "codeParent": "3",
+    "name": "CC HQ Thuỷ An",
+    "status": 1,
+    "mpk": "33PD"
+  },
+  {
+    "code": "33QG",
+    "codeParent": "3",
+    "name": "Chi cục KTSTQ HQ Thừa Thiên - Huế",
+    "status": 1,
+    "mpk": "33QG"
+  },
+  {
+    "code": "33ZZ",
+    "codeParent": "2",
+    "name": "Cục Hải quan Thừa thiên - Huế",
+    "status": 1,
+    "mpk": "33ZZ"
+  },
+  {
+    "code": "34AB",
+    "codeParent": "3",
+    "name": "CC HQ Sân bay QT  Đà Nẵng",
+    "status": 1,
+    "mpk": "34AB"
+  },
+  {
+    "code": "34CC",
+    "codeParent": "3",
+    "name": "CC quản lý hàng đầu tư gia công",
+    "status": 1,
+    "mpk": "34CC"
+  },
+  {
+    "code": "34CE",
+    "codeParent": "3",
+    "name": "CC HQ CK Cảng Đà Nẵng",
+    "status": 1,
+    "mpk": "34CE"
+  },
+  {
+    "code": "28NJ01",
+    "codeParent": "4",
+    "name": "Đội Hải quan Hà Nam",
+    "status": 1,
+    "mpk": "28NJ01"
+  },
+  {
+    "code": "22ZZ",
+    "codeParent": "2",
+    "name": "Hải quan Thái Bình",
+    "status": 1,
+    "mpk": "22ZZ"
+  },
+  {
+    "code": "DD",
+    "codeParent": "1",
+    "name": "dd",
+    "status": 1,
+    "mpk": "DD"
+  },
+  {
+    "code": "28NK",
+    "codeParent": "3",
+    "name": "Chi cục Hải quan Hà Nam 01",
+    "status": 1,
+    "mpk": "28NK"
+  },
+  {
+    "code": "00S9",
+    "codeParent": "1",
+    "name": "Blue co test phan quyena",
+    "status": 1,
+    "mpk": "00S9"
+  },
+  {
+    "code": "34S1",
+    "codeParent": "4",
+    "name": "Đội Hải quan sân bay Đà Nẵng",
+    "status": 1,
+    "mpk": "34S1"
+  },
+  {
+    "code": "01KS",
+    "codeParent": "4",
+    "name": "Đội Kiểm soát - HQ Hà Nội",
+    "status": 1,
+    "mpk": "01KS"
+  },
+  {
+    "code": "02KS",
+    "codeParent": "4",
+    "name": "Đội Kiểm soát - HQ Hồ Chí Minh",
+    "status": 1,
+    "mpk": "02KS"
+  },
+  {
+    "code": "15KS",
+    "codeParent": "4",
+    "name": "Đội Kiểm soát - HQ Lạng Sơn",
+    "status": 1,
+    "mpk": "15KS"
+  },
+  {
+    "code": "47KS",
+    "codeParent": "4",
+    "name": "Đội Kiểm soát - HQ Đồng Nai",
+    "status": 1,
+    "mpk": "47KS"
+  },
+  {
+    "code": "43KS",
+    "codeParent": "4",
+    "name": "Đội Kiểm soát - HQ Bình Dương",
+    "status": 1,
+    "mpk": "43KS"
+  },
+  {
+    "code": "34KS",
+    "codeParent": "4",
+    "name": "Đội Kiểm soát - HQ Đà Nẵng",
+    "status": 1,
+    "mpk": "34KS"
+  },
+  {
+    "code": "03KS",
+    "codeParent": "4",
+    "name": "Đội Kiểm soát - HQ Hải Phòng",
+    "status": 1,
+    "mpk": "03KS"
+  },
+  {
+    "code": "15BEHN",
+    "codeParent": "4",
+    "name": "Đội nghiệp vụ Hữu Nghị",
+    "status": 1,
+    "mpk": "15BEHN"
+  },
+  {
+    "code": "00T1",
+    "codeParent": "3",
+    "name": "Test",
+    "status": 0,
+    "mpk": "00T1"
+  },
+  {
+    "code": "96BN",
+    "codeParent": "4",
+    "name": "Đội xử lý vi phạm Ba Đình",
+    "status": 1,
+    "mpk": "96BN"
+  },
+  {
+    "code": "0001TS",
+    "codeParent": "1",
+    "name": "test đb ADM",
+    "status": 0,
+    "mpk": "0001TS"
+  },
+  {
+    "code": "003TS",
+    "codeParent": "2",
+    "name": "Test 003",
+    "status": 1,
+    "mpk": "003TS"
+  },
+  {
+    "code": "002TS",
+    "codeParent": "1",
+    "name": "test ADM 02",
+    "status": 0,
+    "mpk": "002TS"
+  },
+  {
+    "code": "111",
+    "codeParent": "2",
+    "name": "Test 003",
+    "status": 1,
+    "mpk": "111"
+  },
+  {
+    "code": "1",
+    "codeParent": "2",
+    "name": "abc",
+    "status": 0,
+    "mpk": "1"
+  },
+  {
+    "code": "66ZZ",
+    "codeParent": "2",
+    "name": "Cục trưởng Ann",
+    "status": 0,
+    "mpk": "66ZZ"
+  },
+  {
+    "code": "66AB01",
+    "codeParent": "4",
+    "name": "Đội trưởng Ann",
+    "status": 0,
+    "mpk": "66AB01"
+  },
+  {
+    "code": "01AB01",
+    "codeParent": "4",
+    "name": "Đội Giám sát hải quan",
+    "status": 1,
+    "mpk": "01AB01"
+  },
+  {
+    "code": "00AN",
+    "codeParent": "1",
+    "name": "Tổng cục trưởng Ann",
+    "status": 0,
+    "mpk": "00AN"
+  },
+  {
+    "code": "44ZZ",
+    "codeParent": "2",
+    "name": "Test đồng bộ cục_Again",
+    "status": 1,
+    "mpk": "44ZZ"
+  },
+  {
+    "code": "66AB",
+    "codeParent": "3",
+    "name": "Chi cục trưởng Ann",
+    "status": 0,
+    "mpk": "66AB"
+  },
+  {
+    "code": "0012",
+    "codeParent": "1",
+    "name": "Tổng cục trưởng Hải Anh",
+    "status": 0,
+    "mpk": "0012"
+  },
+  {
+    "code": "17ZZ",
+    "codeParent": "2",
+    "name": "Cục trưởng Hải Anh",
+    "status": 1,
+    "mpk": "17ZZ"
+  },
+  {
+    "code": "13AA",
+    "codeParent": "3",
+    "name": "Chi cục test UAT",
+    "status": 1,
+    "mpk": "13AA"
+  },
+  {
+    "code": "97ZZ",
+    "codeParent": "2",
+    "name": "Văn phòng Tổng cục Hải quan",
+    "status": 1,
+    "mpk": "97ZZ"
+  },
+  {
+    "code": "90ZZ",
+    "codeParent": "2",
+    "name": "Báo Hải quan",
+    "status": 1,
+    "mpk": "90ZZ"
+  },
+  {
+    "code": "20BB01",
+    "codeParent": "4",
+    "name": "Đội hải quan số 1",
+    "status": 1,
+    "mpk": "20BB01"
+  },
+  {
+    "code": "ASDE3",
+    "codeParent": "2",
+    "name": "thông tin",
+    "status": 1,
+    "mpk": "ASDE3"
+  },
+  {
+    "code": "453GT",
+    "codeParent": "2",
+    "name": "CC HQ Ga Đồng Đăng (Lạng Sơn)",
+    "status": 1,
+    "mpk": "453GT"
+  },
+  {
+    "code": "453Q",
+    "codeParent": "3",
+    "name": "hải quan hải quan hải quan hải quan hải quan hải quan hải quan hải quan hải quan hải quan hải quan hải quan",
+    "status": 1,
+    "mpk": "453Q"
+  },
+  {
+    "code": "FEG334",
+    "codeParent": "4",
+    "name": "grgrg",
+    "status": 1,
+    "mpk": "FEG334"
+  },
+  {
+    "code": "ABC",
+    "codeParent": "1",
+    "name": "Abc",
+    "status": 0,
+    "mpk": "ABC"
+  },
+  {
+    "code": "01TEA1",
+    "codeParent": "4",
+    "name": "Đội HQ 01TE A1",
+    "status": 1,
+    "mpk": "01TEA1"
+  },
+  {
+    "code": "00K1",
+    "codeParent": "2",
+    "name": "Chi cục 1",
+    "status": 0,
+    "mpk": "00K1"
+  },
+  {
+    "code": "99ZZ",
+    "codeParent": "4",
+    "name": "Phòng STQ thuộc TCHQ",
+    "status": 1,
+    "mpk": "99ZZ"
+  },
+  {
+    "code": "93ZZ",
+    "codeParent": "2",
+    "name": "Cục Tài vụ quản trị",
+    "status": 1,
+    "mpk": "93ZZ"
+  },
+  {
+    "code": "34NG",
+    "codeParent": "3",
+    "name": "CC HQ KCN Hòa khánh-Liên chiểu",
+    "status": 1,
+    "mpk": "34NG"
+  },
+  {
+    "code": "34NH",
+    "codeParent": "3",
+    "name": "CC HQ KCN Đà Nẵng",
+    "status": 1,
+    "mpk": "34NH"
+  },
+  {
+    "code": "34QN",
+    "codeParent": "3",
+    "name": "Chi cục KTSTQ Đà Nẵng",
+    "status": 1,
+    "mpk": "34QN"
+  },
+  {
+    "code": "34ZZ",
+    "codeParent": "2",
+    "name": "Cục Hải quan TP Đà Nẵng",
+    "status": 1,
+    "mpk": "34ZZ"
+  },
+  {
+    "code": "35CB",
+    "codeParent": "3",
+    "name": "CC HQ CK Cảng Dung Quất",
+    "status": 1,
+    "mpk": "35CB"
+  },
+  {
+    "code": "35NC",
+    "codeParent": "3",
+    "name": "CC HQ các KCN Quảng Ngãi",
+    "status": 1,
+    "mpk": "35NC"
+  },
+  {
+    "code": "35QE",
+    "codeParent": "3",
+    "name": "Chi cục KTSTQ HQ Quảng Ngãi",
+    "status": 1,
+    "mpk": "35QE"
+  },
+  {
+    "code": "35ZZ",
+    "codeParent": "2",
+    "name": "Cục Hải quan Quảng Ngãi",
+    "status": 1,
+    "mpk": "35ZZ"
+  },
+  {
+    "code": "37CB",
+    "codeParent": "3",
+    "name": "CC HQ Cảng Qui Nhơn Bình Định",
+    "status": 1,
+    "mpk": "37CB"
+  },
+  {
+    "code": "37QF",
+    "codeParent": "3",
+    "name": "Chi cục KTSTQ HQ Bình Định",
+    "status": 1,
+    "mpk": "37QF"
+  },
+  {
+    "code": "37TC",
+    "codeParent": "3",
+    "name": "CC HQ Phú Yên Bình Định",
+    "status": 1,
+    "mpk": "37TC"
+  },
+  {
+    "code": "37ZZ",
+    "codeParent": "2",
+    "name": "Cục Hải quan Bình Định",
+    "status": 1,
+    "mpk": "37ZZ"
+  },
+  {
+    "code": "38B1",
+    "codeParent": "3",
+    "name": "Đội NVụ THợp-CC HQ CK Lệ Thanh",
+    "status": 1,
+    "mpk": "38B1"
+  },
+  {
+    "code": "38B2",
+    "codeParent": "3",
+    "name": "Đội TT-CC HQ CK Lệ Thanh",
+    "status": 1,
+    "mpk": "38B2"
+  },
+  {
+    "code": "38BB",
+    "codeParent": "3",
+    "name": "CC HQCK Lệ Thanh (Gia Lai)",
+    "status": 1,
+    "mpk": "38BB"
+  },
+  {
+    "code": "38BC",
+    "codeParent": "3",
+    "name": "CC HQCK Quốc tế Bờ Y (Kon Tum)",
+    "status": 1,
+    "mpk": "38BC"
+  },
+  {
+    "code": "38PD",
+    "codeParent": "3",
+    "name": "CC HQ CK Kon Tum",
+    "status": 1,
+    "mpk": "38PD"
+  },
+  {
+    "code": "38QF",
+    "codeParent": "3",
+    "name": "Chi cục KTSTQ HQ Gia Lai - Kontum",
+    "status": 1,
+    "mpk": "38QF"
+  },
+  {
+    "code": "38ZZ",
+    "codeParent": "2",
+    "name": "Cục Hải quan Gia Lai",
+    "status": 1,
+    "mpk": "38ZZ"
+  },
+  {
+    "code": "40B1",
+    "codeParent": "3",
+    "name": "Đội Nghiệp vụ I – CCHQ CK Buprăng",
+    "status": 1,
+    "mpk": "40B1"
+  },
+  {
+    "code": "40BB",
+    "codeParent": "3",
+    "name": "CC HQ CK BupRăng Đăk Lăk",
+    "status": 1,
+    "mpk": "40BB"
+  },
+  {
+    "code": "40BC",
+    "codeParent": "3",
+    "name": "CC HQ Buôn Mê Thuột",
+    "status": 1,
+    "mpk": "40BC"
+  },
+  {
+    "code": "40D1",
+    "codeParent": "3",
+    "name": "Đội Nghiệp vụ - CC HQ Đà Lạt",
+    "status": 1,
+    "mpk": "40D1"
+  },
+  {
+    "code": "40PD",
+    "codeParent": "3",
+    "name": "CC HQ Đà lạt",
+    "status": 1,
+    "mpk": "40PD"
+  },
+  {
+    "code": "40QF",
+    "codeParent": "3",
+    "name": "Chi cục KTSTQ HQ Đăk Lăk",
+    "status": 1,
+    "mpk": "40QF"
+  },
+  {
+    "code": "40ZZ",
+    "codeParent": "2",
+    "name": "Cục Hải quan Đăk Lăk",
+    "status": 1,
+    "mpk": "40ZZ"
+  },
+  {
+    "code": "41AB",
+    "codeParent": "3",
+    "name": "Chi cục HQCK Sân bay quốc tế Cam Ranh",
+    "status": 1,
+    "mpk": "41AB"
+  },
+  {
+    "code": "41BH",
+    "codeParent": "3",
+    "name": "CC HQ Ninh Thuận Khánh Hòa",
+    "status": 1,
+    "mpk": "41BH"
+  },
+  {
+    "code": "41CB",
+    "codeParent": "3",
+    "name": "CC HQ CK Cảng Nha Trang KH",
+    "status": 1,
+    "mpk": "41CB"
+  },
+  {
+    "code": "41CC",
+    "codeParent": "3",
+    "name": "CC HQ CK cảng Cam Ranh Khánh Hòa",
+    "status": 1,
+    "mpk": "41CC"
+  },
+  {
+    "code": "41PE",
+    "codeParent": "3",
+    "name": "CC HQ Vân Phong Khánh Hoà",
+    "status": 1,
+    "mpk": "41PE"
+  },
+  {
+    "code": "41QG",
+    "codeParent": "3",
+    "name": "Chi cục HQ STQ",
+    "status": 1,
+    "mpk": "41QG"
+  },
+  {
+    "code": "41ZZ",
+    "codeParent": "2",
+    "name": "Cục Hải quan Khánh Hoà",
+    "status": 1,
+    "mpk": "41ZZ"
+  },
+  {
+    "code": "43CN",
+    "codeParent": "3",
+    "name": "CC HQ CK Cảng tổng hợp Bình Dương",
+    "status": 1,
+    "mpk": "43CN"
+  },
+  {
+    "code": "43IH",
+    "codeParent": "3",
+    "name": "CC HQ Sóng Thần",
+    "status": 1,
+    "mpk": "43IH"
+  },
+  {
+    "code": "43K1",
+    "codeParent": "3",
+    "name": "Đội nghiệp vụ-CC HQ KCN Mỹ Phước",
+    "status": 1,
+    "mpk": "43K1"
+  },
+  {
+    "code": "43K2",
+    "codeParent": "3",
+    "name": "CC HQ Mỹ Phước-Đội TT Khu liên hợp",
+    "status": 1,
+    "mpk": "43K2"
+  },
+  {
+    "code": "43K3",
+    "codeParent": "3",
+    "name": "Đội TT K.Liên hợp-CCHQ Mỹ Phước",
+    "status": 1,
+    "mpk": "43K3"
+  },
+  {
+    "code": "43ND",
+    "codeParent": "3",
+    "name": "CC HQ KCN Sóng thần Bình Dương",
+    "status": 1,
+    "mpk": "43ND"
+  },
+  {
+    "code": "43NF",
+    "codeParent": "3",
+    "name": "CC HQ KCN Viet Nam - Singapore",
+    "status": 1,
+    "mpk": "43NF"
+  },
+  {
+    "code": "43NG",
+    "codeParent": "3",
+    "name": "CC HQ KCN Việt Hương",
+    "status": 1,
+    "mpk": "43NG"
+  },
+  {
+    "code": "43NK",
+    "codeParent": "3",
+    "name": "CC HQ KCN Mỹ Phước Bình Dương",
+    "status": 1,
+    "mpk": "43NK"
+  },
+  {
+    "code": "43PB",
+    "codeParent": "3",
+    "name": "CC HQ QL ngoài KCN Bình Dương",
+    "status": 1,
+    "mpk": "43PB"
+  },
+  {
+    "code": "43PC",
+    "codeParent": "3",
+    "name": "Chi Cục Hải quan Thủ Dầu Một",
+    "status": 1,
+    "mpk": "43PC"
+  },
+  {
+    "code": "43QL",
+    "codeParent": "3",
+    "name": "Chi cục KTSTQ HQ Bình Dương",
+    "status": 1,
+    "mpk": "43QL"
+  },
+  {
+    "code": "43ZZ",
+    "codeParent": "2",
+    "name": "Cục Hải quan Bình Dương",
+    "status": 1,
+    "mpk": "43ZZ"
+  },
+  {
+    "code": "45B1",
+    "codeParent": "3",
+    "name": "Đội Nghiệp vụ - CCHQ Mộc Bài TN",
+    "status": 1,
+    "mpk": "45B1"
+  },
+  {
+    "code": "45B2",
+    "codeParent": "3",
+    "name": "Đội Quản lý Khu TM - CN Mộc Bài",
+    "status": 1,
+    "mpk": "45B2"
+  },
+  {
+    "code": "45BB",
+    "codeParent": "3",
+    "name": "CC HQ CK Mộc Bài Tây Ninh",
+    "status": 1,
+    "mpk": "45BB"
+  },
+  {
+    "code": "45BC",
+    "codeParent": "3",
+    "name": "CC HQ CK Xa Mát Tây Ninh",
+    "status": 1,
+    "mpk": "45BC"
+  },
+  {
+    "code": "45BD",
+    "codeParent": "3",
+    "name": "CC HQ Phước Tân Tây Ninh",
+    "status": 1,
+    "mpk": "45BD"
+  },
+  {
+    "code": "45BE",
+    "codeParent": "3",
+    "name": "CC HQ CK Katum Tây Ninh",
+    "status": 1,
+    "mpk": "45BE"
+  },
+  {
+    "code": "45C1",
+    "codeParent": "3",
+    "name": "Đội Nghiệp vụ - CCHQ Xa Mát TN",
+    "status": 1,
+    "mpk": "45C1"
+  },
+  {
+    "code": "45C2",
+    "codeParent": "3",
+    "name": "Đội TT Chàng Riệc-CCHQ Xa Mát TN",
+    "status": 1,
+    "mpk": "45C2"
+  },
+  {
+    "code": "45F1",
+    "codeParent": "3",
+    "name": "Đội Nghiệp vụ-CCHQ Trảng Bàng TN",
+    "status": 1,
+    "mpk": "45F1"
+  },
+  {
+    "code": "45F2",
+    "codeParent": "3",
+    "name": "Đội TTHQ Khu C.Nghiệp Phước Đông",
+    "status": 1,
+    "mpk": "45F2"
+  },
+  {
+    "code": "45NF",
+    "codeParent": "3",
+    "name": "CC HQ KCN Trảng Bàng Tây Ninh",
+    "status": 1,
+    "mpk": "45NF"
+  },
+  {
+    "code": "45QH",
+    "codeParent": "3",
+    "name": "Chi cục KTSTQ HQ Tây Ninh",
+    "status": 1,
+    "mpk": "45QH"
+  },
+  {
+    "code": "45ZZ",
+    "codeParent": "2",
+    "name": "Cục Hải quan Tây Ninh",
+    "status": 1,
+    "mpk": "45ZZ"
+  },
+  {
+    "code": "47CD",
+    "codeParent": "3",
+    "name": "CC HQ Long Thành Đồng Nai",
+    "status": 1,
+    "mpk": "47CD"
+  },
+  {
+    "code": "47CI",
+    "codeParent": "3",
+    "name": "CC HQ Long Bình Tân",
+    "status": 1,
+    "mpk": "47CI"
+  },
+  {
+    "code": "47D1",
+    "codeParent": "3",
+    "name": "Đội nghiệp vụ - HQ Long Thành",
+    "status": 1,
+    "mpk": "47D1"
+  },
+  {
+    "code": "47D2",
+    "codeParent": "3",
+    "name": "Đội nghiệp vụ 2 - HQ Long Thành",
+    "status": 1,
+    "mpk": "47D2"
+  },
+  {
+    "code": "47D3",
+    "codeParent": "3",
+    "name": "Đội NV3, HQ Long Thành, Đồng Nai",
+    "status": 1,
+    "mpk": "47D3"
+  },
+  {
+    "code": "47I1",
+    "codeParent": "3",
+    "name": "Đội nghiệp vụ - HQ Long Bình Tân",
+    "status": 1,
+    "mpk": "47I1"
+  },
+  {
+    "code": "47I2",
+    "codeParent": "3",
+    "name": "Đội NV2, HQ Long Bình Tân, Đ.Nai",
+    "status": 1,
+    "mpk": "47I2"
+  },
+  {
+    "code": "47NB",
+    "codeParent": "3",
+    "name": "CC HQ Biên Hoà",
+    "status": 1,
+    "mpk": "47NB"
+  },
+  {
+    "code": "47NF",
+    "codeParent": "3",
+    "name": "CC HQ Thống Nhất Đồng Nai",
+    "status": 1,
+    "mpk": "47NF"
+  },
+  {
+    "code": "47NG",
+    "codeParent": "3",
+    "name": "CC HQ Nhơn Trạch Đồng Nai",
+    "status": 1,
+    "mpk": "47NG"
+  },
+  {
+    "code": "47NM",
+    "codeParent": "3",
+    "name": "CC HQ QL KCN Bình Thuận Đồng Nai",
+    "status": 1,
+    "mpk": "47NM"
+  },
+  {
+    "code": "47QN",
+    "codeParent": "3",
+    "name": "Chi cục KTSTQ HQ Đồng Nai",
+    "status": 1,
+    "mpk": "47QN"
+  },
+  {
+    "code": "47XE",
+    "codeParent": "3",
+    "name": "CC HQ KCX Long Bình Đồng Nai",
+    "status": 1,
+    "mpk": "47XE"
+  },
+  {
+    "code": "47ZZ",
+    "codeParent": "2",
+    "name": "Cục Hải quan Đồng Nai",
+    "status": 1,
+    "mpk": "47ZZ"
+  },
+  {
+    "code": "48BC",
+    "codeParent": "3",
+    "name": "CC HQ Mỹ Quý Tây Long An",
+    "status": 1,
+    "mpk": "48BC"
+  },
+  {
+    "code": "48BD",
+    "codeParent": "3",
+    "name": "Chi cục HQCK Quốc Tế Bình Hiệp",
+    "status": 1,
+    "mpk": "48BD"
+  },
+  {
+    "code": "48BE",
+    "codeParent": "3",
+    "name": "CC HQ Hưng Điền Long An",
+    "status": 1,
+    "mpk": "48BE"
+  },
+  {
+    "code": "48BF",
+    "codeParent": "3",
+    "name": "CC HQ Bến Lức",
+    "status": 1,
+    "mpk": "48BF"
+  },
+  {
+    "code": "48BI",
+    "codeParent": "3",
+    "name": "CC HQ Đức Hòa Long An",
+    "status": 1,
+    "mpk": "48BI"
+  },
+  {
+    "code": "48CG",
+    "codeParent": "3",
+    "name": "Chi cục HQCK Cảng Mỹ Tho",
+    "status": 1,
+    "mpk": "48CG"
+  },
+  {
+    "code": "48F1",
+    "codeParent": "3",
+    "name": "Đội nghiệp vụ KCN Long Hậu",
+    "status": 1,
+    "mpk": "48F1"
+  },
+  {
+    "code": "48F2",
+    "codeParent": "3",
+    "name": "Đội thủ tục- Chi cục HQ Bến Lức",
+    "status": 1,
+    "mpk": "48F2"
+  },
+  {
+    "code": "48QH",
+    "codeParent": "3",
+    "name": "Chi cục KTSTQ HQ Long An",
+    "status": 1,
+    "mpk": "48QH"
+  },
+  {
+    "code": "48ZZ",
+    "codeParent": "2",
+    "name": "Cục Hải quan Long An",
+    "status": 1,
+    "mpk": "48ZZ"
+  },
+  {
+    "code": "49BB",
+    "codeParent": "3",
+    "name": "CC HQ CK Thường Phước Đồng Tháp",
+    "status": 1,
+    "mpk": "49BB"
+  },
+  {
+    "code": "49BE",
+    "codeParent": "3",
+    "name": "Chi cục HQ Sở Thượng Đồng Tháp",
+    "status": 1,
+    "mpk": "49BE"
+  },
+  {
+    "code": "49BF",
+    "codeParent": "3",
+    "name": "CC HQ CK Thông Bình Đồng Tháp",
+    "status": 1,
+    "mpk": "49BF"
+  },
+  {
+    "code": "49BG",
+    "codeParent": "3",
+    "name": "CC HQ cửa khẩu Dinh Bà",
+    "status": 1,
+    "mpk": "49BG"
+  },
+  {
+    "code": "49C1",
+    "codeParent": "3",
+    "name": "CCHQ CK Cảng Đ.Tháp-KV Cao Lãnh",
+    "status": 1,
+    "mpk": "49C1"
+  },
+  {
+    "code": "49C2",
+    "codeParent": "3",
+    "name": "CCHQ CK Cảng Đ.Tháp-KV Sa Đéc",
+    "status": 1,
+    "mpk": "49C2"
+  },
+  {
+    "code": "49CC",
+    "codeParent": "3",
+    "name": "CC HQ Cảng Đồng Tháp",
+    "status": 1,
+    "mpk": "49CC"
+  },
+  {
+    "code": "49QJ",
+    "codeParent": "3",
+    "name": "Chi cục KTSTQ HQ Đồng Tháp",
+    "status": 1,
+    "mpk": "49QJ"
+  },
+  {
+    "code": "49ZZ",
+    "codeParent": "2",
+    "name": "Cục Hải quan Đồng Tháp",
+    "status": 1,
+    "mpk": "49ZZ"
+  },
+  {
+    "code": "50BB",
+    "codeParent": "3",
+    "name": "CC HQ CK Tịnh Biên An Giang",
+    "status": 1,
+    "mpk": "50BB"
+  },
+  {
+    "code": "50BC",
+    "codeParent": "3",
+    "name": "CC HQ Vĩnh Hội Đông An Giang",
+    "status": 1,
+    "mpk": "50BC"
+  },
+  {
+    "code": "50BD",
+    "codeParent": "3",
+    "name": "CC HQ CK Vĩnh Xương An Giang",
+    "status": 1,
+    "mpk": "50BD"
+  },
+  {
+    "code": "50BJ",
+    "codeParent": "3",
+    "name": "CC HQ Bắc Đai An Giang",
+    "status": 1,
+    "mpk": "50BJ"
+  },
+  {
+    "code": "50BK",
+    "codeParent": "3",
+    "name": "CC HQ Khánh Bình An Giang",
+    "status": 1,
+    "mpk": "50BK"
+  },
+  {
+    "code": "50CE",
+    "codeParent": "3",
+    "name": "CC HQ Cảng Mỹ Thới An Giang",
+    "status": 1,
+    "mpk": "50CE"
+  },
+  {
+    "code": "50QM",
+    "codeParent": "3",
+    "name": "Chi cục KTSTQ HQ An Giang",
+    "status": 1,
+    "mpk": "50QM"
+  },
+  {
+    "code": "50ZZ",
+    "codeParent": "2",
+    "name": "Cục Hải quan An Giang",
+    "status": 1,
+    "mpk": "50ZZ"
+  },
+  {
+    "code": "51BE",
+    "codeParent": "3",
+    "name": "CC HQ Cảng Cát Lở Vũng Tàu",
+    "status": 1,
+    "mpk": "51BE"
+  },
+  {
+    "code": "51C1",
+    "codeParent": "3",
+    "name": "Đội TTHHXNK Kho ngoại quan",
+    "status": 1,
+    "mpk": "51C1"
+  },
+  {
+    "code": "51C2",
+    "codeParent": "3",
+    "name": "CC HQCK Phú Mỹ V.Tàu-Đội TT SP-PSA",
+    "status": 1,
+    "mpk": "51C2"
+  },
+  {
+    "code": "51CB",
+    "codeParent": "3",
+    "name": "Chi cục HQ CK cảng Vũng tàu",
+    "status": 1,
+    "mpk": "51CB"
+  },
+  {
+    "code": "51CC",
+    "codeParent": "3",
+    "name": "CC HQ CK Cảng Phú Mỹ Vũng Tàu",
+    "status": 1,
+    "mpk": "51CC"
+  },
+  {
+    "code": "51CH",
+    "codeParent": "3",
+    "name": "CC HQ CK Cảng Côn Đảo Vũng Tàu",
+    "status": 1,
+    "mpk": "51CH"
+  },
+  {
+    "code": "51CI",
+    "codeParent": "3",
+    "name": "CC HQ CK cảng Cái Mép (Vũng Tàu)",
+    "status": 1,
+    "mpk": "51CI"
+  },
+  {
+    "code": "51QJ",
+    "codeParent": "3",
+    "name": "Chi cục KTSTQ HQ Bà Rịa - Vũng Tàu",
+    "status": 1,
+    "mpk": "51QJ"
+  },
+  {
+    "code": "51ZZ",
+    "codeParent": "2",
+    "name": "Cục Hải quan Bà Rịa - Vũng Tàu",
+    "status": 1,
+    "mpk": "51ZZ"
+  },
+  {
+    "code": "53BC",
+    "codeParent": "3",
+    "name": "Đội TT - CC HQCK Quốc Tế Hà Tiên",
+    "status": 1,
+    "mpk": "53BC"
+  },
+  {
+    "code": "53BK",
+    "codeParent": "3",
+    "name": "CC HQ CK Giang Thành",
+    "status": 1,
+    "mpk": "53BK"
+  },
+  {
+    "code": "53CD",
+    "codeParent": "3",
+    "name": "CC HQ CK Cảng Hòn Chông KG",
+    "status": 1,
+    "mpk": "53CD"
+  },
+  {
+    "code": "53CH",
+    "codeParent": "3",
+    "name": "CC HQ Phú Quốc",
+    "status": 1,
+    "mpk": "53CH"
+  },
+  {
+    "code": "53QJ",
+    "codeParent": "3",
+    "name": "Chi cục KTSTQ HQ Kiên Giang",
+    "status": 1,
+    "mpk": "53QJ"
+  },
+  {
+    "code": "53ZZ",
+    "codeParent": "2",
+    "name": "Cục Hải quan Kiên Giang",
+    "status": 1,
+    "mpk": "53ZZ"
+  },
+  {
+    "code": "54CB",
+    "codeParent": "3",
+    "name": "CC HQ CK Cảng Cần Thơ",
+    "status": 1,
+    "mpk": "54CB"
+  },
+  {
+    "code": "54CD",
+    "codeParent": "3",
+    "name": "CC HQ CK Vĩnh Long",
+    "status": 1,
+    "mpk": "54CD"
+  },
+  {
+    "code": "54PH",
+    "codeParent": "3",
+    "name": "CC HQ Tây Đô Cần Thơ",
+    "status": 1,
+    "mpk": "54PH"
+  },
+  {
+    "code": "54PK",
+    "codeParent": "3",
+    "name": "CC HQ Sóc Trăng",
+    "status": 1,
+    "mpk": "54PK"
+  },
+  {
+    "code": "54QJ",
+    "codeParent": "3",
+    "name": "Chi cục KTSTQ",
+    "status": 1,
+    "mpk": "54QJ"
+  },
+  {
+    "code": "54ZZ",
+    "codeParent": "2",
+    "name": "Cục Hải quan TP Cần Thơ",
+    "status": 1,
+    "mpk": "54ZZ"
+  },
+  {
+    "code": "59BD",
+    "codeParent": "3",
+    "name": "Chi cục HQ CK Cảng Năm Căn",
+    "status": 1,
+    "mpk": "59BD"
+  },
+  {
+    "code": "59CB",
+    "codeParent": "3",
+    "name": "CC HQ CK Cảng Năm Căn Cà Mau",
+    "status": 1,
+    "mpk": "59CB"
+  },
+  {
+    "code": "59QE",
+    "codeParent": "3",
+    "name": "Chi cục KTSTQ HQ Cà Mau",
+    "status": 1,
+    "mpk": "59QE"
+  },
+  {
+    "code": "59ZZ",
+    "codeParent": "2",
+    "name": "Cục Hải quan Cà Mau",
+    "status": 1,
+    "mpk": "59ZZ"
+  },
+  {
+    "code": "60BD",
+    "codeParent": "3",
+    "name": "CC HQ CK Nam Giang (Quảng Nam)",
+    "status": 1,
+    "mpk": "60BD"
+  },
+  {
+    "code": "60C1",
+    "codeParent": "3",
+    "name": "Đội NV-KCN ĐNam ĐNgọc QN",
+    "status": 1,
+    "mpk": "60C1"
+  },
+  {
+    "code": "60C2",
+    "codeParent": "3",
+    "name": "Đội Tây Giang-KCN ĐNam ĐNgọc QN",
+    "status": 1,
+    "mpk": "60C2"
+  },
+  {
+    "code": "60CB",
+    "codeParent": "3",
+    "name": "CC HQ CK Cảng Kỳ Hà",
+    "status": 1,
+    "mpk": "60CB"
+  },
+  {
+    "code": "60NC",
+    "codeParent": "3",
+    "name": "CC HQ KCN Điện Nam - Điện Ngọc",
+    "status": 1,
+    "mpk": "60NC"
+  },
+  {
+    "code": "60QE",
+    "codeParent": "3",
+    "name": "Chi cục KTSTQ",
+    "status": 1,
+    "mpk": "60QE"
+  },
+  {
+    "code": "60ZZ",
+    "codeParent": "2",
+    "name": "Cục Hải quan Quảng Nam",
+    "status": 1,
+    "mpk": "60ZZ"
+  },
+  {
+    "code": "61A1",
+    "codeParent": "4",
+    "name": "Đội Nghiệp vụ Tổng hợp",
+    "status": 1,
+    "mpk": "61A1"
+  },
+  {
+    "code": "61A2",
+    "codeParent": "3",
+    "name": "Đội Thủ tục HQCK Tà Vát",
+    "status": 1,
+    "mpk": "61A2"
+  },
+  {
+    "code": "61A3",
+    "codeParent": "3",
+    "name": "Đội Nghiệp vụ - CC HQ Chơn Thành",
+    "status": 1,
+    "mpk": "61A3"
+  },
+  {
+    "code": "61A4",
+    "codeParent": "3",
+    "name": "Đội Nghiệp vụ 2 - CC HQ Chơn Thành",
+    "status": 1,
+    "mpk": "61A4"
+  },
+  {
+    "code": "61B1",
+    "codeParent": "3",
+    "name": "Đội NV Tổng hợp-CC Hoàng Diệu",
+    "status": 1,
+    "mpk": "61B1"
+  },
+  {
+    "code": "61B2",
+    "codeParent": "3",
+    "name": "Đội NV CK Tân Tiến-CC Hoàng Diệu",
+    "status": 1,
+    "mpk": "61B2"
+  },
+  {
+    "code": "61BA",
+    "codeParent": "3",
+    "name": "Chi cục HQCK QT Hoa Lư",
+    "status": 1,
+    "mpk": "61BA"
+  },
+  {
+    "code": "61BB",
+    "codeParent": "3",
+    "name": "CC HQ CK Hoàng Diệu Bình Phước",
+    "status": 1,
+    "mpk": "61BB"
+  },
+  {
+    "code": "61BC",
+    "codeParent": "3",
+    "name": "CC HQ Cửa Khẩu Lộc Thịnh",
+    "status": 1,
+    "mpk": "61BC"
+  },
+  {
+    "code": "61PA",
+    "codeParent": "3",
+    "name": "CC Hải quan Chơn Thành",
+    "status": 1,
+    "mpk": "61PA"
+  },
+  {
+    "code": "61QC",
+    "codeParent": "3",
+    "name": "Chi cục KTSTQ HQ Bình Phước",
+    "status": 1,
+    "mpk": "61QC"
+  },
+  {
+    "code": "61ZZ",
+    "codeParent": "2",
+    "name": "Cục Hải quan Bình Phước",
+    "status": 1,
+    "mpk": "61ZZ"
+  },
+  {
+    "code": "03XY",
+    "codeParent": "3",
+    "name": "Chi cuc HQ Test",
+    "status": 1,
+    "mpk": "03XY"
+  },
+  {
+    "code": "48CF",
+    "codeParent": "3",
+    "name": "Chi cục HQ Bến Lức",
+    "status": 1,
+    "mpk": "48CF"
+  },
+  {
+    "code": "54CE",
+    "codeParent": "3",
+    "name": "Chi cục Hải quan Hậu Giang",
+    "status": 1,
+    "mpk": "54CE"
+  },
+  {
+    "code": "88ZZ",
+    "codeParent": "2",
+    "name": "Cục hải quan thử nghiệm",
+    "status": 1,
+    "mpk": "88ZZ"
+  },
+  {
+    "code": "88AC",
+    "codeParent": "3",
+    "name": "Chi  cục hải quan thử nghiệm 01",
+    "status": 1,
+    "mpk": "88AC"
+  },
+  {
+    "code": "88AB",
+    "codeParent": "3",
+    "name": "Chi  cục hải quan thử nghiệm 02",
+    "status": 1,
+    "mpk": "88AB"
+  },
+  {
+    "code": "43K4",
+    "codeParent": "3",
+    "name": "Đội nghiệp vụ Bàu Bàng",
+    "status": 1,
+    "mpk": "43K4"
+  },
+  {
+    "code": "11BG",
+    "codeParent": "3",
+    "name": "CC HQ CK Bí Hà Cao Bằng",
+    "status": 1,
+    "mpk": "11BG"
+  },
+  {
+    "code": "11BH",
+    "codeParent": "3",
+    "name": "CC HQ CK Pò Peo Cao Bằng",
+    "status": 1,
+    "mpk": "11BH"
+  },
+  {
+    "code": "11G1",
+    "codeParent": "3",
+    "name": "Chi cục HQ Lý Vạn",
+    "status": 1,
+    "mpk": "11G1"
+  },
+  {
+    "code": "11G2",
+    "codeParent": "3",
+    "name": "Đội NV Lý Vạn - Chi cục HQCK Bí Hà",
+    "status": 1,
+    "mpk": "11G2"
+  },
+  {
+    "code": "11PK",
+    "codeParent": "3",
+    "name": "CC HQ Bắc Kạn Cao Bằng",
+    "status": 1,
+    "mpk": "11PK"
+  },
+  {
+    "code": "11QL",
+    "codeParent": "3",
+    "name": "Chi cục KTSTQ HQ Cao Bằng",
+    "status": 1,
+    "mpk": "11QL"
+  },
+  {
+    "code": "11ZZ",
+    "codeParent": "2",
+    "name": "Cục Hải quan Cao Bằng",
+    "status": 1,
+    "mpk": "11ZZ"
+  },
+  {
+    "code": "12B1",
+    "codeParent": "3",
+    "name": "Đội Nghiệp vụ - CC Tây Trang ĐB",
+    "status": 1,
+    "mpk": "12B1"
+  },
+  {
+    "code": "12B2",
+    "codeParent": "3",
+    "name": "Đội TT Huổi Puốc-CC Tây Trang ĐB",
+    "status": 1,
+    "mpk": "12B2"
+  },
+  {
+    "code": "12BB",
+    "codeParent": "3",
+    "name": "CC HQ CK Tây Trang Điện Biên",
+    "status": 1,
+    "mpk": "12BB"
+  },
+  {
+    "code": "12BE",
+    "codeParent": "3",
+    "name": "CC HQ CK Lóng Sập Điện Biên",
+    "status": 1,
+    "mpk": "12BE"
+  },
+  {
+    "code": "12BH",
+    "codeParent": "3",
+    "name": "CC HQ CK Ma Lu Thàng Điện Biên",
+    "status": 1,
+    "mpk": "12BH"
+  },
+  {
+    "code": "12BI",
+    "codeParent": "3",
+    "name": "CC HQ CK Chiềng Khương Điện Biên",
+    "status": 1,
+    "mpk": "12BI"
+  },
+  {
+    "code": "12F1",
+    "codeParent": "3",
+    "name": "HQ Thị xã Sơn La - Điện Biên",
+    "status": 1,
+    "mpk": "12F1"
+  },
+  {
+    "code": "12F2",
+    "codeParent": "3",
+    "name": "Đội NV HQCK Nà Cài-HQ Sơn La ĐB",
+    "status": 1,
+    "mpk": "12F2"
+  },
+  {
+    "code": "12H1",
+    "codeParent": "3",
+    "name": "Đội Nghiệp vụ-CC Ma Lu Thàng ĐB",
+    "status": 1,
+    "mpk": "12H1"
+  },
+  {
+    "code": "12H2",
+    "codeParent": "3",
+    "name": "Đội HQ Pô Tô-CC Ma Lu Thàng ĐB",
+    "status": 1,
+    "mpk": "12H2"
+  },
+  {
+    "code": "12PF",
+    "codeParent": "3",
+    "name": "HQ Thị xã Sơn La - Điện Biên",
+    "status": 1,
+    "mpk": "12PF"
+  },
+  {
+    "code": "12QK",
+    "codeParent": "3",
+    "name": "Chi cục KTSTQ HQ Điện Biên",
+    "status": 1,
+    "mpk": "12QK"
+  },
+  {
+    "code": "12ZZ",
+    "codeParent": "2",
+    "name": "Cục Hải quan Điện Biên",
+    "status": 1,
+    "mpk": "12ZZ"
+  },
+  {
+    "code": "13BB",
+    "codeParent": "3",
+    "name": "CC HQ CK QT Lào Cai",
+    "status": 1,
+    "mpk": "13BB"
+  },
+  {
+    "code": "13BC",
+    "codeParent": "3",
+    "name": "CC HQ CK Mường Khương Lào Cai",
+    "status": 1,
+    "mpk": "13BC"
+  },
+  {
+    "code": "13BD",
+    "codeParent": "3",
+    "name": "CC HQ Bát Xát Lào Cai",
+    "status": 1,
+    "mpk": "13BD"
+  },
+  {
+    "code": "13G1",
+    "codeParent": "4",
+    "name": "Đội Nghiệp vụ-CC Ga Đường Sắt LC",
+    "status": 1,
+    "mpk": "13G1"
+  },
+  {
+    "code": "13G2",
+    "codeParent": "3",
+    "name": "ICD Vinalines-CC Ga Đường Sắt LC",
+    "status": 1,
+    "mpk": "13G2"
+  },
+  {
+    "code": "13QH",
+    "codeParent": "3",
+    "name": "Chi cục KTSTQ HQ Lào Cai",
+    "status": 1,
+    "mpk": "13QH"
+  },
+  {
+    "code": "13SG",
+    "codeParent": "3",
+    "name": "CC HQ Ga Đường sắt QT Lào Cai",
+    "status": 1,
+    "mpk": "13SG"
+  },
+  {
+    "code": "13ZZ",
+    "codeParent": "2",
+    "name": "Cục Hải quan Lào Cai",
+    "status": 1,
+    "mpk": "13ZZ"
+  },
+  {
+    "code": "15B1",
+    "codeParent": "3",
+    "name": "Đội nghiệp vụ chi cục HQ Hữu Nghị",
+    "status": 1,
+    "mpk": "15B1"
+  },
+  {
+    "code": "15B2",
+    "codeParent": "3",
+    "name": "Đội nghiệp vụ Con Sâu - chi cục Hữu nghị",
+    "status": 1,
+    "mpk": "15B2"
+  },
+  {
+    "code": "15B3",
+    "codeParent": "3",
+    "name": "Đội nghiệp vụ Pò Nhùng",
+    "status": 1,
+    "mpk": "15B3"
+  },
+  {
+    "code": "15BB",
+    "codeParent": "3",
+    "name": "CC HQ CK Hữu Nghị Lạng Sơn",
+    "status": 1,
+    "mpk": "15BB"
+  },
+  {
+    "code": "15BC",
+    "codeParent": "3",
+    "name": "CC HQ CK Chi Ma Lạng Sơn",
+    "status": 1,
+    "mpk": "15BC"
+  },
+  {
+    "code": "15BD",
+    "codeParent": "3",
+    "name": "CC HQ Cốc Nam Lạng Sơn",
+    "status": 1,
+    "mpk": "15BD"
+  },
+  {
+    "code": "15BE",
+    "codeParent": "3",
+    "name": "CC HQ Tân Thanh Lạng Sơn",
+    "status": 1,
+    "mpk": "15BE"
+  },
+  {
+    "code": "15E1",
+    "codeParent": "3",
+    "name": "Đội Nghiệp vụ Na Hình",
+    "status": 1,
+    "mpk": "15E1"
+  },
+  {
+    "code": "15E2",
+    "codeParent": "3",
+    "name": "Đội nghiệp vụ Nà Nưa",
+    "status": 1,
+    "mpk": "15E2"
+  },
+  {
+    "code": "15E3",
+    "codeParent": "3",
+    "name": "Đội nghiệp vụ Bình Nghi",
+    "status": 1,
+    "mpk": "15E3"
+  },
+  {
+    "code": "15E4",
+    "codeParent": "3",
+    "name": "Đội nghiệp vụ Tân Thanh",
+    "status": 1,
+    "mpk": "15E4"
+  },
+  {
+    "code": "15QL",
+    "codeParent": "3",
+    "name": "Chi cục kiểm tra STQ",
+    "status": 1,
+    "mpk": "15QL"
+  },
+  {
+    "code": "15SI",
+    "codeParent": "3",
+    "name": "CC HQ Ga đường sắt QT Đồng Đăng",
+    "status": 1,
+    "mpk": "15SI"
+  },
+  {
+    "code": "15ZZ",
+    "codeParent": "2",
+    "name": "Cục Hải quan Lạng Sơn",
+    "status": 1,
+    "mpk": "15ZZ"
+  },
+  {
+    "code": "18A1",
+    "codeParent": "3",
+    "name": "Đội TT HQ quản lý KCN Yên Phong",
+    "status": 1,
+    "mpk": "18A1"
+  },
+  {
+    "code": "18A2",
+    "codeParent": "3",
+    "name": "Đội TT HQ quản lý KCN Quế Võ",
+    "status": 1,
+    "mpk": "18A2"
+  },
+  {
+    "code": "18A3",
+    "codeParent": "3",
+    "name": "Đội nghiệp vụ CC HQ Bắc Ninh",
+    "status": 1,
+    "mpk": "18A3"
+  },
+  {
+    "code": "18B1",
+    "codeParent": "3",
+    "name": "CC Hải quan Thái Nguyên",
+    "status": 1,
+    "mpk": "18B1"
+  },
+  {
+    "code": "18B2",
+    "codeParent": "3",
+    "name": "Đội TT HQ Yên Bình - Thái Nguyên",
+    "status": 1,
+    "mpk": "18B2"
+  },
+  {
+    "code": "18BA",
+    "codeParent": "3",
+    "name": "CC Hải quan Bắc Ninh",
+    "status": 1,
+    "mpk": "18BA"
+  },
+  {
+    "code": "18BB",
+    "codeParent": "3",
+    "name": "CC Hải quan Thái Nguyên",
+    "status": 1,
+    "mpk": "18BB"
+  },
+  {
+    "code": "18BC",
+    "codeParent": "3",
+    "name": "CC HQ Quản lý các KCN Bắc Giang",
+    "status": 1,
+    "mpk": "18BC"
+  },
+  {
+    "code": "18BE",
+    "codeParent": "3",
+    "name": "Chi cục quản lý các KCN Yên Phong",
+    "status": 1,
+    "mpk": "18BE"
+  },
+  {
+    "code": "18ID",
+    "codeParent": "3",
+    "name": "CC HQ Cảng nội địa Tiên Sơn",
+    "status": 1,
+    "mpk": "18ID"
+  },
+  {
+    "code": "18QE",
+    "codeParent": "3",
+    "name": "Chi cục Kiểm tra sau thông quan - Cục Hải quan tỉnh Bắc Ninh",
+    "status": 1,
+    "mpk": "18QE"
+  },
+  {
+    "code": "18ZZ",
+    "codeParent": "2",
+    "name": "Cục Hải quan Bắc Ninh",
+    "status": 1,
+    "mpk": "18ZZ"
+  },
+  {
+    "code": "20B1",
+    "codeParent": "3",
+    "name": "HQ Cửa khẩu Bắc Luân",
+    "status": 1,
+    "mpk": "20B1"
+  },
+  {
+    "code": "20B2",
+    "codeParent": "3",
+    "name": "HQ Cửa khẩu Ka Long",
+    "status": 1,
+    "mpk": "20B2"
+  },
+  {
+    "code": "20B3",
+    "codeParent": "3",
+    "name": "Đội nghiệp vụ IDC Thành Đạt",
+    "status": 1,
+    "mpk": "20B3"
+  },
+  {
+    "code": "20BB",
+    "codeParent": "3",
+    "name": "CC HQ CK Móng Cái",
+    "status": 1,
+    "mpk": "20BB"
+  },
+  {
+    "code": "20BC",
+    "codeParent": "3",
+    "name": "CC HQ CK Hoành Mô Quảng Ninh",
+    "status": 1,
+    "mpk": "20BC"
+  },
+  {
+    "code": "20BD",
+    "codeParent": "3",
+    "name": "CC HQ Bắc Phong Sinh Quảng Ninh",
+    "status": 1,
+    "mpk": "20BD"
+  },
+  {
+    "code": "20CD",
+    "codeParent": "3",
+    "name": "HQ Cảng Biển Cái Lân",
+    "status": 1,
+    "mpk": "20CD"
+  },
+  {
+    "code": "20CE",
+    "codeParent": "3",
+    "name": "CC HQ cửa khẩu Cảng Vạn Gia",
+    "status": 1,
+    "mpk": "20CE"
+  },
+  {
+    "code": "20CF",
+    "codeParent": "3",
+    "name": "CC HQ CK Cảng Hòn Gai",
+    "status": 1,
+    "mpk": "20CF"
+  },
+  {
+    "code": "20CG",
+    "codeParent": "3",
+    "name": "CC HQ CK Cảng Cẩm Phả",
+    "status": 1,
+    "mpk": "20CG"
+  },
+  {
+    "code": "20QK",
+    "codeParent": "3",
+    "name": "Chi cục KTSTQ HQ Quảng Ninh",
+    "status": 1,
+    "mpk": "20QK"
+  },
+  {
+    "code": "20ZZ",
+    "codeParent": "2",
+    "name": "Cục Hải quan Quảng Ninh",
+    "status": 1,
+    "mpk": "20ZZ"
+  },
+  {
+    "code": "27B1",
+    "codeParent": "3",
+    "name": "CC HQ CK Na Mèo Thanh Hoá",
+    "status": 1,
+    "mpk": "27B1"
+  },
+  {
+    "code": "27B2",
+    "codeParent": "3",
+    "name": "Đội thủ tục Hải quan CK Tén Tằn",
+    "status": 1,
+    "mpk": "27B2"
+  },
+  {
+    "code": "27BB",
+    "codeParent": "3",
+    "name": "CC HQ CK Na Mèo Thanh Hoá",
+    "status": 1,
+    "mpk": "27BB"
+  },
+  {
+    "code": "27CF",
+    "codeParent": "3",
+    "name": "CC HQ Cảng Thanh Hoá",
+    "status": 1,
+    "mpk": "27CF"
+  },
+  {
+    "code": "27F1",
+    "codeParent": "3",
+    "name": "Đội thủ tục-CCHQ Cảng Thanh Hóa",
+    "status": 1,
+    "mpk": "27F1"
+  },
+  {
+    "code": "27F2",
+    "codeParent": "3",
+    "name": "Chi cục Hải quan cửa khẩu cảng Nghi Sơn",
+    "status": 1,
+    "mpk": "27F2"
+  },
+  {
+    "code": "27NJ",
+    "codeParent": "3",
+    "name": "CC HQ KCN tỉnh Hà Nam",
+    "status": 1,
+    "mpk": "27NJ"
+  },
+  {
+    "code": "27PC",
+    "codeParent": "3",
+    "name": "CC HQ Ninh Bình",
+    "status": 1,
+    "mpk": "27PC"
+  },
+  {
+    "code": "27PE",
+    "codeParent": "3",
+    "name": "CC HQ Nam Định",
+    "status": 1,
+    "mpk": "27PE"
+  },
+  {
+    "code": "27QH",
+    "codeParent": "3",
+    "name": "Chi cục kiểm tra Sau thông quan",
+    "status": 1,
+    "mpk": "27QH"
+  },
+  {
+    "code": "27ZZ",
+    "codeParent": "2",
+    "name": "Cục Hải quan Thanh Hoá",
+    "status": 1,
+    "mpk": "27ZZ"
+  },
+  {
+    "code": "28NJ",
+    "codeParent": "3",
+    "name": "Chi cục Hải quan Hà Nam",
+    "status": 1,
+    "mpk": "28NJ"
+  },
+  {
+    "code": "28PC",
+    "codeParent": "3",
+    "name": "CC HQ Ninh Bình",
+    "status": 1,
+    "mpk": "28PC"
+  },
+  {
+    "code": "48BG",
+    "codeParent": "3",
+    "name": "Chi cục HQ Bến Tre",
+    "status": 1,
+    "mpk": "48BG"
+  },
+  {
+    "code": "53BE",
+    "codeParent": "3",
+    "name": "Chi cục HQ Rạch Giá",
+    "status": 1,
+    "mpk": "53BE"
+  },
+  {
+    "code": "20CK",
+    "codeParent": "3",
+    "name": "Chi cục HQ Hòn Gai",
+    "status": 1,
+    "mpk": "20CK"
+  },
+  {
+    "code": "50NB",
+    "codeParent": "3",
+    "name": "Chi cục HQ Vĩnh Hội Đông",
+    "status": 1,
+    "mpk": "50NB"
+  },
+  {
+    "code": "59BE",
+    "codeParent": "3",
+    "name": "Chi cục Hải quan Bạc Liêu",
+    "status": 1,
+    "mpk": "59BE"
+  },
+  {
+    "code": "00S1",
+    "codeParent": "1",
+    "name": "Phòng Tổng hợp – Phòng 1 – Cục KTSTQ",
+    "status": 1,
+    "mpk": "00S1"
+  },
+  {
+    "code": "00S2",
+    "codeParent": "1",
+    "name": "Phòng tham mưu xử lý và quản lý DNUT – Phòng 2 – Cục KTSTQ",
+    "status": 1,
+    "mpk": "00S2"
+  },
+  {
+    "code": "00S3",
+    "codeParent": "1",
+    "name": "Phòng tham mưu hướng dẫn KTSTQ hàng hóa XNK theo LH KD – Phòng 3 – Cục KTSTQ",
+    "status": 1,
+    "mpk": "00S3"
+  },
+  {
+    "code": "00S4",
+    "codeParent": "1",
+    "name": "Phòng tham mưu, hướng dẫn KTSTQ hàng hóa XNK theo LH khác – Phòng 4 – Cục KTSTQ",
+    "status": 1,
+    "mpk": "00S4"
+  },
+  {
+    "code": "00S5",
+    "codeParent": "1",
+    "name": "Phòng thu thập xác minh và xử lý thông tin – Phòng 5 – Cục KTSTQ",
+    "status": 1,
+    "mpk": "00S5"
+  },
+  {
+    "code": "00S6",
+    "codeParent": "1",
+    "name": "Chi cục KTSTQ KV miền Bắc (Chi cục 1) – Cục KTSTQ",
+    "status": 1,
+    "mpk": "00S6"
+  },
+  {
+    "code": "00S7",
+    "codeParent": "1",
+    "name": "Chi cục KTSTQ KV miền Trung (Chi cục 2) – Cục KTSTQ",
+    "status": 1,
+    "mpk": "00S7"
+  },
+  {
+    "code": "00S8",
+    "codeParent": "1",
+    "name": "Chi cục KTSTQ KV miền Nam (Chi cục 3) – Cục KTSTQ",
+    "status": 1,
+    "mpk": "00S8"
+  },
+  {
+    "code": "28QH",
+    "codeParent": "3",
+    "name": "CC KTSTQ Hà Nam Ninh",
+    "status": 1,
+    "mpk": "28QH"
+  },
+  {
+    "code": "00ZZ",
+    "codeParent": "1",
+    "name": "Tổng cục Hải quan",
+    "status": 1,
+    "mpk": "00ZZ"
+  },
+  {
+    "code": "01AB",
+    "codeParent": "3",
+    "name": "CC HQ CK Sân bay QT Nội Bài",
+    "status": 1,
+    "mpk": "01AB"
+  },
+  {
+    "code": "01AC",
+    "codeParent": "3",
+    "name": "CC HQ Gia Lâm Hà Nội",
+    "status": 1,
+    "mpk": "01AC"
+  },
+  {
+    "code": "01B1",
+    "codeParent": "3",
+    "name": "CC HQ Sân bay Nội bài-Đội Xuất",
+    "status": 1,
+    "mpk": "01B1"
+  },
+  {
+    "code": "01B2",
+    "codeParent": "3",
+    "name": "CC HQ Sân bay Nội bài-Đội CPN",
+    "status": 1,
+    "mpk": "01B2"
+  },
+  {
+    "code": "01B3",
+    "codeParent": "3",
+    "name": "CC HQ Sân bay Nội bài-Đội Nhập",
+    "status": 1,
+    "mpk": "01B3"
+  },
+  {
+    "code": "01B5",
+    "codeParent": "3",
+    "name": "Chi cục HQ SB Nội Bài - Đội hành lý XC",
+    "status": 1,
+    "mpk": "01B5"
+  },
+  {
+    "code": "01B6",
+    "codeParent": "3",
+    "name": "Chi cục HQ SB Nội Bài - Đội hành lý NC",
+    "status": 1,
+    "mpk": "01B6"
+  },
+  {
+    "code": "01BT",
+    "codeParent": "3",
+    "name": "CC HQ Yên Bái",
+    "status": 1,
+    "mpk": "01BT"
+  },
+  {
+    "code": "01D1",
+    "codeParent": "3",
+    "name": "HQ Mỹ Đình (thuộc HQ Bưu điện HN)",
+    "status": 1,
+    "mpk": "01D1"
+  },
+  {
+    "code": "01D2",
+    "codeParent": "3",
+    "name": "HQ Bưu điện Hà Nội - FeDex",
+    "status": 1,
+    "mpk": "01D2"
+  },
+  {
+    "code": "01D3",
+    "codeParent": "3",
+    "name": "HQ Bưu điện Hà Nội - UPS",
+    "status": 1,
+    "mpk": "01D3"
+  },
+  {
+    "code": "01DD",
+    "codeParent": "3",
+    "name": "Chi cục Hải quan Chuyển phát nhanh",
+    "status": 1,
+    "mpk": "01DD"
+  },
+  {
+    "code": "01E1",
+    "codeParent": "3",
+    "name": "Đội Nghiệp vụ - CCHQ Bắc Hà Nội",
+    "status": 1,
+    "mpk": "01E1"
+  },
+  {
+    "code": "01E2",
+    "codeParent": "3",
+    "name": "Đội hàng không - CC HQ Bắc Hà Nội",
+    "status": 1,
+    "mpk": "01E2"
+  },
+  {
+    "code": "01E3",
+    "codeParent": "3",
+    "name": "Đội TT  CPN - CC HQ Bắc Hà Nội",
+    "status": 1,
+    "mpk": "01E3"
+  },
+  {
+    "code": "01IK",
+    "codeParent": "3",
+    "name": "CC HQ Gia Thụy  Hà Nội",
+    "status": 1,
+    "mpk": "01IK"
+  },
+  {
+    "code": "01KK",
+    "codeParent": "3",
+    "name": "Phòng thuế XNK",
+    "status": 1,
+    "mpk": "01KK"
+  },
+  {
+    "code": "01M1",
+    "codeParent": "3",
+    "name": "CC HQ Hà Tây - Đội TT HQ Hà Đông",
+    "status": 1,
+    "mpk": "01M1"
+  },
+  {
+    "code": "01M2",
+    "codeParent": "3",
+    "name": "Đội TT HQ Khu CNC Hoà Lạc",
+    "status": 1,
+    "mpk": "01M2"
+  }
+]
